@@ -26,13 +26,16 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="UsuarioBase.h">
+    <ClInclude Include="Persona.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="UsuarioCliente.h">
+    <ClInclude Include="Actor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Administrador.h">
+    <ClInclude Include="Director.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resenia.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -46,13 +49,16 @@
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="UsuarioBase.cpp">
+    <ClCompile Include="Persona.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="UsuarioCliente.cpp">
+    <ClCompile Include="Actor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Administrador.cpp">
+    <ClCompile Include="Director.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Resenia.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
