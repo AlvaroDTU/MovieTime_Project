@@ -10,49 +10,23 @@ private:
     int longitud;
 
 public:
-    ListaSimple() : cabeza(nullptr), longitud(0) {}
 
-    void agregarFinal(T valor) {
-        Nodo<T>* nuevo = new Nodo<T>(valor);
-
-        if (cabeza == nullptr) {
-            cabeza = nuevo;
-            longitud++;
-            return;
+    ~ListaSimple() {
+        while (cabeza != nullptr) {
+            eliminarInicio();
         }
-
-        Nodo<T>* aux = cabeza;
-        while (aux->siguiente != nullptr) {
-            aux = aux->siguiente;
-        }
-
-        aux->siguiente = nuevo;
-        longitud++;
     }
 
-    void agregarPos(T valor, int pos) {
-        if (pos == 0) {
-            agregarInicio(valor);
-        }
-        else if (pos == longitud) {
-            agregarFinal(valor);
-        }
-        else if (pos > longitud || pos < 0) {
-            cout << "Posicion invalida, longitud de la lista es de: " << longitud << " elementos" << endl;
-        }
-        else {
-            Nodo<T>* nuevo = new Nodo<T>(valor);
-            Nodo<T>* aux = cabeza;
+    ListaSimple() : cabeza(nullptr), longitud(0) {}
+    int getLongitud() const { return longitud; }
+    bool esVacia() const { return cabeza == nullptr; }
+    Nodo<T>* getCabeza() const { return cabeza; }
 
-            // Nos detenemos en el nodo anterior a la posición deseada
-            for (int i = 0; i < pos - 1; i++) {
-                aux = aux->siguiente;
-            }
-
-            nuevo->siguiente = aux->siguiente;
-            aux->siguiente = nuevo;
-            longitud++;
-        }
+    void agregarInicio(T valor) {
+        Nodo<T>* nuevo = new Nodo<T>(valor);
+        nuevo->siguiente = cabeza;
+        cabeza = nuevo;
+        longitud++;
     }
 
     void eliminarInicio() {
@@ -147,6 +121,7 @@ public:
     }
 
     // --- MÉTODO RECURSIVO EXIGIDO EN LA RÚBRICA ---
+    // JEFFERSON
     // Buscar la presencia de un elemento de forma recursiva
     bool buscarRecursivo(Nodo<T>* nodoActual, function<bool(T)> criterio) {
         if (nodoActual == nullptr) return false;                 // Caso Base 1: No encontrado

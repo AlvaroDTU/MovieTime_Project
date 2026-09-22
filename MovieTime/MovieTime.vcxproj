@@ -140,8 +140,10 @@
   <ItemGroup>
     <ClInclude Include="Actor.h" />
     <ClInclude Include="Director.h" />
+    <ClInclude Include="ListaDoble.h" />
     <ClInclude Include="ListaSimple.h" />
     <ClInclude Include="Nodo.h" />
+    <ClInclude Include="NodoDoble.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Persona.h" />
     <ClInclude Include="Resenia.h" />
@@ -153,9 +155,11 @@
     <ClCompile Include="Actor.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="Director.cpp" />
+    <ClCompile Include="ListaDoble.cpp" />
     <ClCompile Include="ListaSimple.cpp" />
     <ClCompile Include="MovieTime.cpp" />
     <ClCompile Include="Nodo.cpp" />
+    <ClCompile Include="NodoDoble.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
