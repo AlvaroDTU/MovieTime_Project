@@ -14,9 +14,10 @@ public:
         : Audiovisual(id, titulo, anio, categoria),
         numeroTemporadas(numeroTemporadas),
         numeroEpisodios(numeroEpisodios),
-        enEmision(enEmision) {}
+        enEmision(enEmision) {
+    }
 
-    virtual ~Serie() {}
+    virtual ~Serie() override {}
 
     int getNumeroTemporadas() const { return numeroTemporadas; }
     int getNumeroEpisodios() const { return numeroEpisodios; }
@@ -29,15 +30,10 @@ public:
     std::string getTipo() const override { return "Serie"; }
 
     void mostrar() const override {
-        std::cout << "Serie [" << id << "] " << titulo
-            << " (" << anio << ")\n";
-        std::cout << "  Temporadas: " << numeroTemporadas
-            << " | Episodios: " << numeroEpisodios << "\n";
-        std::cout << "  Estado: "
-            << (enEmision ? "En emision" : "Finalizada") << "\n";
-        std::cout << "  Categoria: " << categoria->getNombre() << "\n";
-        std::cout << "  Rating: " << rating
-            << " | Popularidad: " << popularidad << "\n";
+        std::cout << "[SERIE] ID: " << id << " | " << titulo << " (" << anio << ")\n"
+            << "  Temporadas: " << numeroTemporadas << " | Episodios: " << numeroEpisodios << "\n"
+            << "  Estado: " << (enEmision ? "En emisión" : "Finalizada") << "\n"
+            << "  Categoría: " << (categoria ? categoria->getNombre() : "Sin Categoría") << "\n"
+            << "  Rating: " << rating << " | Popularidad: " << popularidad << "\n";
     }
 };
-

@@ -1,16 +1,23 @@
 #pragma once
-#include <vector>
+#include <string>
 #include "Persona.h"
+#include "ListaSimple.h"
 
-class Audiovisual;
+class Audiovisual; // Declaración adelantada
 
-class Actor : public Persona
-{
+class Actor : public Persona {
 private:
-	std::vector<Audiovisual*> proyectos;
-public:
-	Actor(std::string nombres, std::string apellidos) : 
-		Persona(nombres,apellidos) {}
-	~Actor() {}
-};
+    ListaSimple<Audiovisual*> proyectos;
 
+public:
+    Actor(const std::string& nombres, const std::string& apellidos)
+        : Persona(nombres, apellidos) {
+    }
+    ~Actor() {}
+
+    void agregarProyecto(Audiovisual* proyecto) {
+        proyectos.agregarInicio(proyecto);
+    }
+
+    ListaSimple<Audiovisual*>& getProyectos() { return proyectos; }
+};

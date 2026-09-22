@@ -1,16 +1,18 @@
 #pragma once
 #include <string>
 
-class Persona
-{
+class Persona {
 protected:
-	std::string nombres;
-	std::string apellidos;
-public:
-	Persona(std::string nombres, std::string apellidos) : 
-		nombres(nombres), apellidos(apellidos) {}
-	~Persona() {}
-	std::string getNombres() { return nombres; }
-	std::string getApellidos() { return apellidos; }
-};
+    std::string nombres;
+    std::string apellidos;
 
+public:
+    Persona(const std::string& nombres, const std::string& apellidos)
+        : nombres(nombres), apellidos(apellidos) {
+    }
+    virtual ~Persona() {}
+
+    std::string getNombres() const { return nombres; }
+    std::string getApellidos() const { return apellidos; }
+    std::string getNombreCompleto() const { return nombres + " " + apellidos; }
+};

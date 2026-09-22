@@ -153,6 +153,7 @@
     <ClInclude Include="Resenia.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Serie.h" />
+    <ClInclude Include="UsuarioAdministrador.h" />
     <ClInclude Include="UsuarioBase.h" />
     <ClInclude Include="UsuarioCliente.h" />
   </ItemGroup>
@@ -165,6 +166,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="UsuarioAdministrador.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="app.ico" />

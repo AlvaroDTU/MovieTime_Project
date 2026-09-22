@@ -1,29 +1,29 @@
 #pragma once
 #include <string>
 #include <iostream>
-#include <vector>
 #include "Categoria.h"
 #include "Resenia.h"
-// #include "ListaSimple.h" // <-- Para reemplazar el vector más adelante
+#include "ListaSimple.h"
 
 class Actor;
 class Director;
 
 class Audiovisual {
 protected:
-	int id;
-	std::string titulo;
-	int anio;
-	double rating;
-	int popularidad;
-	Categoria* categoria;
-	std::vector<Resenia*> resenias;
-	std::vector<Actor*> actores;
-	std::vector<Director*> directores;
+    int id;
+    std::string titulo;
+    int anio;
+    double rating;
+    int popularidad;
+    Categoria* categoria;
 
-    // cambiar a listaSimple
+    // Cambiados de std::vector a ListaSimple
+    ListaSimple<Resenia*> resenias;
+    ListaSimple<Actor*> actores;
+    ListaSimple<Director*> directores;
+
 public:
-    Audiovisual(int id, std::string titulo, int anio, Categoria* categoria)
+    Audiovisual(int id, const std::string& titulo, int anio, Categoria* categoria)
         : id(id), titulo(titulo), anio(anio), rating(0.0), popularidad(0), categoria(categoria) {
     }
 
@@ -44,6 +44,15 @@ public:
     void setCategoria(Categoria* c) { categoria = c; }
 
     void incrementarPopularidad() { ++popularidad; }
+
+    // Gestión de Listas Simples
+    void agregarActor(Actor* actor) { actores.agregarInicio(actor); }
+    void agregarDirector(Director* director) { directores.agregarInicio(director); }
+    void agregarResenia(Resenia* resenia) { resenias.agregarInicio(resenia); }
+
+    ListaSimple<Actor*>& getActores() { return actores; }
+    ListaSimple<Director*>& getDirectores() { return directores; }
+    ListaSimple<Resenia*>& getResenias() { return resenias; }
 
     bool operator==(const Audiovisual& otra) const { return id == otra.id; }
     bool operator>(const Audiovisual& otra) const { return rating > otra.rating; }
