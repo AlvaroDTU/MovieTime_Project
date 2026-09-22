@@ -50,6 +50,12 @@
     <ClInclude Include="ListaSimple.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="NodoDoble.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ListaDoble.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MovieTime.cpp">
@@ -77,6 +83,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ListaSimple.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NodoDoble.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ListaDoble.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
