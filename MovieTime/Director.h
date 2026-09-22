@@ -20,4 +20,15 @@ public:
     }
 
     ListaSimple<Audiovisual*>& getProyectosDirigidos() { return proyectosDirigidos; }
+};public:
+    Director(const std::string& nombres, const std::string& apellidos)
+        : Persona(nombres, apellidos) {
+    }
+    ~Director() {}
+
+    void agregarProyecto(Audiovisual* proyecto) {
+        proyectosDirigidos.agregarInicio(proyecto);
+    }
+
+    ListaSimple<Audiovisual*>& getProyectosDirigidos() { return proyectosDirigidos; }
 };
