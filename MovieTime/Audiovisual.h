@@ -2,11 +2,12 @@
 #include <string>
 #include <iostream>
 #include <vector>
-#include "Categoria.h"
-#include "Resenia.h"
 // #include "ListaSimple.h" // <-- Para reemplazar el vector más adelante
-#include "Actor.h"
-#include "Director.h"
+
+class Categoria;
+class Resenia;
+class Actor;
+class Director;
 
 class Audiovisual {
 protected:

@@ -3,8 +3,6 @@
 #include <iostream>
 #include <functional>
 
-using namespace std;
-
 template <class T>
 class ListaDoble {
 private:
@@ -92,7 +90,7 @@ public:
     // --- MÉTODOS AVANZADOS (Soportan Lambdas) ---
 
     // 1. Recorrer de Inicio a Fin (Para avanzar en el menú)
-    void recorrer(function<void(T)> accion) const {
+    void recorrer(std::function<void(T)> accion) const {
         NodoDoble<T>* aux = cabeza;
         while (aux != nullptr) {
             accion(aux->valor);
@@ -101,7 +99,7 @@ public:
     }
 
     // 2. Recorrer de Fin a Inicio (Navegación Inversa / Exclusivo de Lista Doble)
-    void recorrerInverso(function<void(T)> accion) const {
+    void recorrerInverso(std::function<void(T)> accion) const {
         NodoDoble<T>* aux = cola;
         while (aux != nullptr) {
             accion(aux->valor);
@@ -110,7 +108,7 @@ public:
     }
 
     // 3. Buscar por Criterio / Condición
-    T* buscarSi(function<bool(T)> criterio) {
+    T* buscarSi(std::function<bool(T)> criterio) {
         NodoDoble<T>* aux = cabeza;
         while (aux != nullptr) {
             if (criterio(aux->valor)) {
@@ -122,7 +120,7 @@ public:
     }
 
     // 4. Filtrar Elementos (Retorna una nueva ListaDoble con el resultado)
-    ListaDoble<T> filtrar(function<bool(T)> criterio) const {
+    ListaDoble<T> filtrar(std::function<bool(T)> criterio) const {
         ListaDoble<T> resultado;
         NodoDoble<T>* aux = cabeza;
         while (aux != nullptr) {
