@@ -22,18 +22,18 @@ private:
     UsuarioBase* usuarioLogueado;
 
     void inicializarUsuarios() {
-        // Usuarios de prueba
         usuarios.agregarInicio(new UsuarioCliente("1", "Juan", "Perez", "Peru", "1234", "cliente@mail.com", "2000-01-01"));
         usuarios.agregarInicio(new UsuarioAdministrador("2", "Admin", "General", "Peru", "admin123", "admin@mail.com", "1995-05-05", "SuperAdmin"));
     }
 
     void cargarTendenciasIniciales() {
         NodoDoble<Audiovisual*>* aux = catalogo.getCabeza();
-        int contador = 0;
-        while (aux != nullptr && contador < 5) {
-            colaTendencias.insertar(aux->valor);
+        while (aux != nullptr) {
+            // Entran a la cola los títulos con alto rating o popularidad
+            if (aux->valor->getRating() >= 4.0 || aux->valor->getPopularidad() > 5) {
+                colaTendencias.insertar(aux->valor);
+            }
             aux = aux->siguiente;
-            contador++;
         }
     }
 
@@ -79,6 +79,7 @@ private:
                 else {
                     catalogo.recorrer([](Audiovisual* item) {
                         item->mostrar();
+                        std::cout << "Rating: " << item->getRating() << " | Popularidad: " << item->getPopularidad() << "\n";
                         std::cout << "----------------------------------------\n";
                         });
                 }
@@ -87,17 +88,18 @@ private:
             case 2:
                 std::cout << "\n--- TENDENCIAS ACTUALES (COLA) ---\n";
                 if (colaTendencias.empty()) {
-                    std::cout << "No hay tendencias por mostrar.\n";
+                    std::cout << "No hay tendencias por mostrar actualmente.\n";
                 }
                 else {
                     Audiovisual* top = colaTendencias.extraer();
                     std::cout << "Top en Tendencia consumido de la cola:\n";
                     top->mostrar();
+                    std::cout << "Rating: " << top->getRating() << " | Popularidad: " << top->getPopularidad() << "\n";
                 }
                 break;
 
             case 3: {
-                std::cout << "\n--- DEJAR RESENA ---\n";
+                std::cout << "\n--- DEJAR RESEÑA ---\n";
                 if (catalogo.esVacia()) {
                     std::cout << "No hay peliculas o series para reseñar.\n";
                     break;
@@ -123,28 +125,45 @@ private:
 
                     Resenia* nuevaResenia = new Resenia(estrellas, comentario);
 
-                    // Se vincula al objeto Audiovisual y al historial del Cliente
+                    // 1. Agregar la reseña al contenido (recalcula el Rating y sube Popularidad)
                     (*buscado)->agregarResenia(nuevaResenia);
+
+                    // 2. Guardar en el historial personal del Cliente
                     if (cliente != nullptr) {
                         cliente->agregarResenia(nuevaResenia);
                     }
 
-                    std::cout << "\n[OK] ¡Reseña agregada exitosamente a \"" << (*buscado)->getTitulo() << "\"!\n";
+                    // 3. Evaluar si ingresa a Tendencia tras el cambio
+                    if ((*buscado)->getRating() >= 4.0) {
+                        colaTendencias.insertar(*buscado);
+                    }
+
+                    // 4. Guardar inmediatamente los datos numericos actualizados en el .txt
+                    GestorArchivos::guardarCatalogo("catalogo.txt", catalogo);
+
+                    std::cout << "\n[OK] Reseña agregada correctamente.\n";
+                    std::cout << "Nuevo Rating de \"" << (*buscado)->getTitulo() << "\": " << (*buscado)->getRating() << "\n";
                 }
                 else {
-                    std::cout << "\n[!] No se encontro ninguna pelicula/serie con el ID " << idBuscado << ".\n";
+                    std::cout << "\n[!] ID no encontrado.\n";
                 }
                 break;
             }
 
             case 4:
-                std::cout << "\nCerrando sesion de cliente...\n";
+                if (cliente != nullptr) {
+                    cliente->mostrarMisResenas();
+                }
+                break;
+
+            case 5:
+                std::cout << "\nCerrando sesion...\n";
                 break;
 
             default:
                 std::cout << "\nOpcion no valida.\n";
             }
-        } while (opcion != 4);
+        } while (opcion != 5);
     }
 
     void menuAdmin() {
@@ -172,9 +191,9 @@ private:
 
                 Pelicula* p = new Pelicula(id, titulo, anio, duracion, cat);
                 catalogo.agregarFinal(p);
-                colaTendencias.insertar(p); // Se vuelve tendencia al agregarse
 
-                std::cout << "[OK] Pelicula agregada al catalogo en memoria.\n";
+                GestorArchivos::guardarCatalogo("catalogo.txt", catalogo);
+                std::cout << "[OK] Pelicula agregada y archivo 'catalogo.txt' actualizado.\n";
                 break;
             }
             case 2:
@@ -185,6 +204,7 @@ private:
                 else {
                     catalogo.recorrer([](Audiovisual* item) {
                         item->mostrar();
+                        std::cout << "Rating: " << item->getRating() << " | Popularidad: " << item->getPopularidad() << "\n";
                         std::cout << "----------------------------------------\n";
                         });
                 }

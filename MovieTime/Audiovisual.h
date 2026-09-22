@@ -3,6 +3,8 @@
 #include <iostream>
 #include "ListaSimple.h"
 #include "Categoria.h"
+#include "Director.h"
+#include "Actor.h"
 #include "Resenia.h"
 
 class Audiovisual {
@@ -13,6 +15,8 @@ protected:
     Categoria* categoria;
     double rating;
     int popularidad;
+    ListaSimple<Director*> directores;
+    ListaSimple<Actor*> actores;
     ListaSimple<Resenia*> resenias;
 
 public:
@@ -21,6 +25,8 @@ public:
     }
 
     virtual ~Audiovisual() {
+        directores.recorrer([](Director* d) { delete d; });
+        actores.recorrer([](Actor* a) { delete a; });
         resenias.recorrer([](Resenia* r) { delete r; });
     }
 
@@ -31,12 +37,18 @@ public:
     double getRating() const { return rating; }
     int getPopularidad() const { return popularidad; }
 
+    const ListaSimple<Director*>& getDirectores() const { return directores; }
+    const ListaSimple<Actor*>& getActores() const { return actores; }
+
     void setRating(double r) { rating = r; }
     void setPopularidad(int p) { popularidad = p; }
 
+    void agregarDirector(Director* d) { directores.agregarInicio(d); }
+    void agregarActor(Actor* a) { actores.agregarInicio(a); }
+
     void agregarResenia(Resenia* r) {
         resenias.agregarInicio(r);
-        popularidad++; // Aumenta la interacción
+        popularidad++;
         recalcularRating();
     }
 
@@ -46,13 +58,14 @@ public:
         int contador = 0;
 
         resenias.recorrer([&suma, &contador](Resenia* r) {
-            suma += r->getEstrellas(); // Asegúrate de tener getEstrellas() en Resenia.h
+            suma += r->getEstrellas();
             contador++;
             });
 
         rating = suma / contador;
     }
 
-    virtual void mostrar() = 0;
-    virtual std::string getTipo() = 0;
+    // Métodos virtuales puros que DEBEN ser sobrescritos
+    virtual void mostrar() const = 0;
+    virtual std::string getTipo() const = 0;
 };
