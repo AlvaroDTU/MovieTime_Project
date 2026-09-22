@@ -2,10 +2,10 @@
 #include <string>
 #include <iostream>
 #include <vector>
+#include "Categoria.h"
+#include "Resenia.h"
 // #include "ListaSimple.h" // <-- Para reemplazar el vector más adelante
 
-class Categoria;
-class Resenia;
 class Actor;
 class Director;
 
