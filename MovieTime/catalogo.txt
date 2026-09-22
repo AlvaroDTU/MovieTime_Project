@@ -1,0 +1,10 @@
+PELICULA,101,Inception,2010,148,Ciencia Ficcion,Christopher Nolan,Leonardo DiCaprio,8.8,120
+PELICULA,102,Gladiador,2000,155,Accion,Ridley Scott,Russell Crowe,8.5,95
+SERIE,201,Breaking Bad,2008,5,62,0,Drama,Vince Gilligan,Bryan Cranston,9.5,200
+PELICULA,103,Interstellar,2014,169,Ciencia Ficcion,Christopher Nolan,Matthew McConaughey,8.7,150
+SERIE,202,Stranger Things,2016,4,34,1,Ciencia Ficcion,Matt Duffer,Millie Bobby Brown,8.7,180
+PELICULA,104,El Caballero de la Noche,2008,152,Accion,Christopher Nolan,Christian Bale,9.0,210
+SERIE,203,Game of Thrones,2011,8,73,0,Fantasia,David Benioff,Emilia Clarke,9.2,190
+PELICULA,105,Pulp Fiction,1994,154,Crimen,Quentin Tarantino,John Travolta,8.9,110
+SERIE,204,The Mandalorian,2019,3,24,1,Ciencia Ficcion,Jon Favreau,Pedro Pascal,8.7,130
+PELICULA,106,El Senor de los Anillos,2003,201,Fantasia,Peter Jackson,Elijah Wood,9.0,175
