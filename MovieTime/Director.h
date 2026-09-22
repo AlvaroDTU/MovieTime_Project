@@ -11,7 +11,9 @@ private:
 	std::vector<Audiovisual*> proyectosDirigidos;
 public:
 	Director(std::string nombres, std::string apellidos) :
-		Persona(nombres, apellidos) {}
+		Persona(nombres, apellidos) 
+	{
+	}
 	~Director() {}
 };
 
