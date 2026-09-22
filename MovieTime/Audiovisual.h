@@ -3,6 +3,8 @@
 #include <vector>
 #include "Categoria.h"
 #include "Resenia.h"
+#include "Actor.h"
+#include "Director.h"
 
 class Audiovisual
 {
@@ -14,6 +16,8 @@ protected:
 	int popularidad;
 	Categoria* categoria;
 	std::vector<Resenia*> resenias;
+	std::vector<Actor*> actores;
+	std::vector<Director*> directores;
 public:
 	Audiovisual(int id, std::string titulo, int anio, Categoria* categoria):
 		id(id), titulo(titulo), anio(anio), rating(0.0), popularidad(0), categoria(categoria) {}
