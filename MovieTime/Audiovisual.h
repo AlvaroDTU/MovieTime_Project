@@ -1,62 +1,58 @@
 #pragma once
 #include <string>
 #include <iostream>
+#include "ListaSimple.h"
 #include "Categoria.h"
 #include "Resenia.h"
-#include "ListaSimple.h"
-
-class Actor;
-class Director;
 
 class Audiovisual {
 protected:
     int id;
     std::string titulo;
     int anio;
+    Categoria* categoria;
     double rating;
     int popularidad;
-    Categoria* categoria;
-
-    // Cambiados de std::vector a ListaSimple
     ListaSimple<Resenia*> resenias;
-    ListaSimple<Actor*> actores;
-    ListaSimple<Director*> directores;
 
 public:
-    Audiovisual(int id, const std::string& titulo, int anio, Categoria* categoria)
-        : id(id), titulo(titulo), anio(anio), rating(0.0), popularidad(0), categoria(categoria) {
+    Audiovisual(int id, std::string t, int a, Categoria* c)
+        : id(id), titulo(t), anio(a), categoria(c), rating(0.0), popularidad(0) {
     }
 
-    virtual ~Audiovisual() {}
+    virtual ~Audiovisual() {
+        resenias.recorrer([](Resenia* r) { delete r; });
+    }
 
     int getId() const { return id; }
     std::string getTitulo() const { return titulo; }
     int getAnio() const { return anio; }
+    Categoria* getCategoria() const { return categoria; }
     double getRating() const { return rating; }
     int getPopularidad() const { return popularidad; }
-    Categoria* getCategoria() const { return categoria; }
 
-    void setId(int i) { id = i; }
-    void setTitulo(const std::string& t) { titulo = t; }
-    void setAnio(int a) { anio = a; }
     void setRating(double r) { rating = r; }
     void setPopularidad(int p) { popularidad = p; }
-    void setCategoria(Categoria* c) { categoria = c; }
 
-    void incrementarPopularidad() { ++popularidad; }
+    void agregarResenia(Resenia* r) {
+        resenias.agregarInicio(r);
+        popularidad++; // Aumenta la interacción
+        recalcularRating();
+    }
 
-    // Gestión de Listas Simples
-    void agregarActor(Actor* actor) { actores.agregarInicio(actor); }
-    void agregarDirector(Director* director) { directores.agregarInicio(director); }
-    void agregarResenia(Resenia* resenia) { resenias.agregarInicio(resenia); }
+    void recalcularRating() {
+        if (resenias.esVacia()) return;
+        double suma = 0.0;
+        int contador = 0;
 
-    ListaSimple<Actor*>& getActores() { return actores; }
-    ListaSimple<Director*>& getDirectores() { return directores; }
-    ListaSimple<Resenia*>& getResenias() { return resenias; }
+        resenias.recorrer([&suma, &contador](Resenia* r) {
+            suma += r->getEstrellas(); // Asegúrate de tener getEstrellas() en Resenia.h
+            contador++;
+            });
 
-    bool operator==(const Audiovisual& otra) const { return id == otra.id; }
-    bool operator>(const Audiovisual& otra) const { return rating > otra.rating; }
+        rating = suma / contador;
+    }
 
-    virtual std::string getTipo() const = 0;
-    virtual void mostrar() const = 0;
+    virtual void mostrar() = 0;
+    virtual std::string getTipo() = 0;
 };

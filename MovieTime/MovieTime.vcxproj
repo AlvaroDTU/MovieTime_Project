@@ -154,6 +154,7 @@
     <ClInclude Include="Resenia.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Serie.h" />
+    <ClInclude Include="Sistema.h" />
     <ClInclude Include="UsuarioAdministrador.h" />
     <ClInclude Include="UsuarioBase.h" />
     <ClInclude Include="UsuarioCliente.h" />

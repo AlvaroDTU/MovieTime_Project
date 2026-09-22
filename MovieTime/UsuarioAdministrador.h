@@ -3,7 +3,7 @@
 
 class UsuarioAdministrador : public UsuarioBase {
 private:
-    std::string nivelAcceso; // ej. "SuperAdmin", "Editor"
+    std::string nivelAcceso;
 
 public:
     UsuarioAdministrador(std::string id, std::string nom, std::string ape,
@@ -23,10 +23,10 @@ public:
 
     void mostrarMenu() override {
         std::cout << "\n=== MENÚ ADMINISTRADOR ===\n"
-            << "1. Agregar Contenido (Película / Serie)\n"
-            << "2. Eliminar Contenido\n"
-            << "3. Ver Catálogo Completo\n"
-            << "4. Ver Tendencias (Cola)\n"
+            << "1. Agregar Pelicula\n"
+            << "2. Ver Catálogo Completo\n"
+            << "3. Ver Tendencias (Cola)\n"
+            << "4. Guardar Cambios en Archivo\n"
             << "5. Salir / Cerrar Sesión\n";
     }
 };
