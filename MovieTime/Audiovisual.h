@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <iostream>
+#include <vector>
 #include "Categoria.h"
 #include "Resenia.h"
 // #include "ListaSimple.h" // <-- Para reemplazar el vector más adelante
@@ -18,6 +19,8 @@ protected:
 	std::vector<Resenia*> resenias;
 	std::vector<Actor*> actores;
 	std::vector<Director*> directores;
+
+    // cambiar a listaSimple
 public:
     Audiovisual(int id, std::string titulo, int anio, Categoria* categoria)
         : id(id), titulo(titulo), anio(anio), rating(0.0), popularidad(0), categoria(categoria) {
