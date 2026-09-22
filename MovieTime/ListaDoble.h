@@ -7,7 +7,7 @@ template <class T>
 class ListaDoble {
 private:
     NodoDoble<T>* cabeza;
-    NodoDoble<T>* cola; 
+    NodoDoble<T>* cola;
     int longitud;
 
 public:
@@ -22,8 +22,6 @@ public:
     NodoDoble<T>* getCabeza() const { return cabeza; }
     NodoDoble<T>* getCola() const { return cola; }
 
-    // --- MÉTODOS DE INSERCIÓN ---
-
     void agregarInicio(T valor) {
         NodoDoble<T>* nuevo = new NodoDoble<T>(valor);
         if (cabeza == nullptr) {
@@ -37,23 +35,21 @@ public:
         longitud++;
     }
 
-    //void agregarFinal(T valor) {
-    //    NodoDoble<T>* nuevo = new NodoDoble<T>(valor);
-    //    if (cabeza == nullptr) {
-    //        cabeza = cola = nuevo;
-    //    }
-    //    else {
-    //        cola->siguiente = nuevo;
-    //        nuevo->anterior = cola;
-    //        cola = nuevo;
-    //    }
-    //    longitud++;
-    //}
-    
+    void agregarFinal(T valor) {
+        NodoDoble<T>* nuevo = new NodoDoble<T>(valor);
+        if (cabeza == nullptr) {
+            cabeza = cola = nuevo;
+        }
+        else {
+            cola->siguiente = nuevo;
+            nuevo->anterior = cola;
+            cola = nuevo;
+        }
+        longitud++;
+    }
 
     void eliminarInicio() {
         if (cabeza == nullptr) return;
-
         NodoDoble<T>* aux = cabeza;
         if (cabeza == cola) {
             cabeza = cola = nullptr;
@@ -68,7 +64,6 @@ public:
 
     void eliminarFinal() {
         if (cola == nullptr) return;
-
         NodoDoble<T>* aux = cola;
         if (cabeza == cola) {
             cabeza = cola = nullptr;
@@ -87,9 +82,6 @@ public:
         }
     }
 
-    // --- MÉTODOS AVANZADOS (Soportan Lambdas) ---
-
-    // 1. Recorrer de Inicio a Fin (Para avanzar en el menú)
     void recorrer(std::function<void(T)> accion) const {
         NodoDoble<T>* aux = cabeza;
         while (aux != nullptr) {
@@ -98,16 +90,14 @@ public:
         }
     }
 
-    // 2. Recorrer de Fin a Inicio (Navegación Inversa / Exclusivo de Lista Doble)
     void recorrerInverso(std::function<void(T)> accion) const {
         NodoDoble<T>* aux = cola;
         while (aux != nullptr) {
             accion(aux->valor);
-            aux = aux->anterior; // Va hacia atrás mediante el puntero 'anterior'
+            aux = aux->anterior;
         }
     }
 
-    // 3. Buscar por Criterio / Condición
     T* buscarSi(std::function<bool(T)> criterio) {
         NodoDoble<T>* aux = cabeza;
         while (aux != nullptr) {
@@ -119,7 +109,6 @@ public:
         return nullptr;
     }
 
-    // 4. Filtrar Elementos (Retorna una nueva ListaDoble con el resultado)
     ListaDoble<T> filtrar(std::function<bool(T)> criterio) const {
         ListaDoble<T> resultado;
         NodoDoble<T>* aux = cabeza;

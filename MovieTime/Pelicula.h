@@ -7,7 +7,6 @@ private:
     int duracionMinutos;
 
 public:
-
     Pelicula(int id, const std::string& titulo, int anio, int duracionMinutos, Categoria* categoria)
         : Audiovisual(id, titulo, anio, categoria), duracionMinutos(duracionMinutos) {
     }
@@ -22,7 +21,7 @@ public:
     void mostrar() const override {
         std::cout << "[PELÍCULA] ID: " << id << " | " << titulo << " (" << anio << ")\n"
             << "  Duración: " << duracionMinutos << " min\n"
-            << "  Categoría: " << (categoria ? categoria->getNombre() : "Sin Categoria") << "\n"
+            << "  Categoría: " << (categoria ? categoria->getNombre() : "Sin Categoría") << "\n"
             << "  Rating: " << rating << " | Popularidad: " << popularidad << "\n";
     }
 };

@@ -1,33 +1,33 @@
 #pragma once
 #include <string>
+#include <iostream>
 
-using namespace std;
 
 class UsuarioBase
 {
 protected:
-	string id;
-	string nombres;
-	string apellidos;
-	string nacionalidad;
-	string contraseña;
-	string correo;
-	string fechaNacimiento;
+	std::string id;
+	std::string nombres;
+	std::string apellidos;
+	std::string nacionalidad;
+	std::string contraseña;
+	std::string correo;
+	std::string fechaNacimiento;
 
 public:
 	UsuarioBase();
-	UsuarioBase(string idd, string nom, string ape, string naci, string contr, string coreo, string fecha)
+	UsuarioBase(std::string idd, std::string nom, std::string ape, std::string naci, std::string contr, std::string coreo, std::string fecha)
 		: id(idd), nombres(nom), apellidos(ape), nacionalidad(naci), correo(coreo), contraseña(contr), fechaNacimiento(fecha)
 	{}
 
-	string getId() { return id; }
-	string getNombres() { return nombres; }
-	string getApellidos() { return apellidos; }
-	string getNacionalidad() { return nacionalidad; }
-	string getContraseña() { return contraseña; }
-	string getCorreo() { return correo; }
+	std::string getId() { return id; }
+	std::string getNombres() { return nombres; }
+	std::string getApellidos() { return apellidos; }
+	std::string getNacionalidad() { return nacionalidad; }
+	std::string getContraseña() { return contraseña; }
+	std::string getCorreo() { return correo; }
 	
-	bool autenticar(string coreo, string contra) {
+	bool autenticar(std::string coreo, std::string contra) {
 		if (coreo == correo && contra == contraseña) { return true; }
 		else {return false;}}
 

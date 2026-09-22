@@ -1,6 +1,7 @@
 #pragma once
 #include "Nodo.h"
 #include <iostream>
+#include <functional>
 
 template <class T>
 class ListaSimple {
@@ -9,6 +10,7 @@ private:
     int longitud;
 
 public:
+    ListaSimple() : cabeza(nullptr), longitud(0) {}
 
     ~ListaSimple() {
         while (cabeza != nullptr) {
@@ -16,7 +18,6 @@ public:
         }
     }
 
-    ListaSimple() : cabeza(nullptr), longitud(0) {}
     int getLongitud() const { return longitud; }
     bool esVacia() const { return cabeza == nullptr; }
     Nodo<T>* getCabeza() const { return cabeza; }
@@ -28,9 +29,23 @@ public:
         longitud++;
     }
 
+    void agregarFinal(T valor) {
+        Nodo<T>* nuevo = new Nodo<T>(valor);
+        if (cabeza == nullptr) {
+            cabeza = nuevo;
+        }
+        else {
+            Nodo<T>* aux = cabeza;
+            while (aux->siguiente != nullptr) {
+                aux = aux->siguiente;
+            }
+            aux->siguiente = nuevo;
+        }
+        longitud++;
+    }
+
     void eliminarInicio() {
         if (cabeza == nullptr) return;
-
         Nodo<T>* aux = cabeza;
         cabeza = cabeza->siguiente;
         delete aux;
@@ -39,7 +54,6 @@ public:
 
     void eliminarFinal() {
         if (cabeza == nullptr) return;
-
         if (cabeza->siguiente == nullptr) {
             delete cabeza;
             cabeza = nullptr;
@@ -52,50 +66,21 @@ public:
             aux = aux->siguiente;
         }
 
-        Nodo<T>* aux2 = aux->siguiente; // Nodo a eliminar
+        Nodo<T>* aux2 = aux->siguiente;
         aux->siguiente = nullptr;
         delete aux2;
         longitud--;
     }
 
-    void eliminarPos(int pos) {
-        if (pos == 0) {
-            eliminarInicio();
-        }
-        else if (pos == longitud - 1) {
-            eliminarFinal();
-        }
-        else if (pos >= longitud || pos < 0) {
-            cout << "Posicion invalida, longitud de la lista es de: " << longitud << " elementos" << endl;
-        }
-        else {
-            Nodo<T>* aux = cabeza;
-
-            for (int i = 0; i < pos - 1; i++) {
-                aux = aux->siguiente;
-            }
-
-            Nodo<T>* aux2 = aux->siguiente; // Nodo a eliminar
-            aux->siguiente = aux2->siguiente;
-            delete aux2;
-            longitud--;
-        }
-    }
-
-    void recorrer(function<void(T)> accion) const {
-        if (cabeza == nullptr) {
-            cout << "\nLista Vacia" << endl;
-            return;
-        }
+    void recorrer(std::function<void(T)> accion) const {
         Nodo<T>* aux = cabeza;
         while (aux != nullptr) {
-            accion(aux->valor); // Pasa cada elemento a la función lambda
+            accion(aux->valor);
             aux = aux->siguiente;
         }
     }
 
-    // 2. Buscar por Condición / Criterio (Retorna puntero o elemento encontrado)
-    T* buscarSi(function<bool(T)> criterio) {
+    T* buscarSi(std::function<bool(T)> criterio) {
         Nodo<T>* aux = cabeza;
         while (aux != nullptr) {
             if (criterio(aux->valor)) {
@@ -106,8 +91,7 @@ public:
         return nullptr;
     }
 
-    // 3. Filtrar Elementos (Retorna una nueva ListaSimple con los elementos filtrados)
-    ListaSimple<T> filtrar(function<bool(T)> criterio) const {
+    ListaSimple<T> filtrar(std::function<bool(T)> criterio) const {
         ListaSimple<T> resultado;
         Nodo<T>* aux = cabeza;
         while (aux != nullptr) {
@@ -119,16 +103,12 @@ public:
         return resultado;
     }
 
-    // --- MÉTODO RECURSIVO EXIGIDO EN LA RÚBRICA ---
-    // JEFFERSON
-    // Buscar la presencia de un elemento de forma recursiva
-    bool buscarRecursivo(Nodo<T>* nodoActual, function<bool(T)> criterio) {
-        if (nodoActual == nullptr) return false;                 // Caso Base 1: No encontrado
-        if (criterio(nodoActual->valor)) return true;             // Caso Base 2: Encontrado
-        return buscarRecursivo(nodoActual->siguiente, criterio); // Paso Recursivo
+    // Método recursivo exigido en la rúbrica
+    bool buscarRecursivo(Nodo<T>* nodoActual, std::function<bool(T)> criterio) {
+        if (nodoActual == nullptr) return false;
+        if (criterio(nodoActual->valor)) return true;
+        return buscarRecursivo(nodoActual->siguiente, criterio);
     }
-
-
 };
 
 //// 1. Uso de recorrer: Imprime todas las películas
