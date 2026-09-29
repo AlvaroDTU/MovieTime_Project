@@ -44,7 +44,11 @@ public:
     // Permite mostrar/inspeccionar las tendencias sin desencolarlas.
     void recorrer(std::function<void(T)> accion) const {
         Nodo<T>* aux = inicio;
-        while (aux != nullptr) { accion(aux->valor); aux = aux->siguiente; }
+        while (aux != nullptr) 
+        { 
+            accion(aux->valor); 
+            aux = aux->siguiente; 
+        }
     }
 
     // Evita duplicar el mismo elemento dos veces en tendencias.

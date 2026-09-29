@@ -29,31 +29,18 @@ private:
     ListaSimple<UsuarioBase*> usuarios;
     UsuarioBase* usuarioLogueado;
 
-    static const int UMBRAL_RATING_TENDENCIA = 8;   // rating >= 8/10
-    static const int UMBRAL_POPULARIDAD_TENDENCIA = 5;
+    static const int MIN_RATING_TENDENCIA = 8;   // rating >= 8/10
+    static const int MIN_POPULARIDAD_TENDENCIA = 5;
 
-    // ---------------- Utilidades de consola ----------------
     static void limpiarPantalla() {
-#ifdef _WIN32
         system("cls");
-#else
-        system("clear");
-#endif
     }
 
-    // Se asume que el buffer ya esta limpio (leerEntero/leerDouble/leerLinea
-    // siempre dejan el buffer sin '\n' pendiente), asi que basta una lectura
-    // de un solo caracter para esperar la pulsacion de ENTER real del usuario.
     static void pausar() {
         std::cout << "\nPresione ENTER para continuar...";
         std::cin.get();
     }
 
-    // NOTA sobre el buffer de entrada: tras cada lectura con "cin >>" queda un
-    // '\n' pendiente en el buffer. Estas funciones SIEMPRE lo limpian antes de
-    // retornar, de modo que "pausar()" pueda esperar de forma consistente una
-    // pulsacion de ENTER real, sin importar si la lectura previa fue con
-    // "cin >>" o con "getline".
     static int leerEntero(const std::string& mensaje) {
         int valor;
         std::cout << mensaje;
@@ -87,7 +74,7 @@ private:
         return valor;
     }
 
-    // ---------------- Carga / persistencia ----------------
+    // ---------------- Archivos ----------------
     void inicializarDatos() {
         GestorArchivos::cargarCatalogo("catalogo.txt", catalogo, categorias, actoresGlobal, directoresGlobal);
         GestorArchivos::cargarUsuarios("usuarios.txt", usuarios);
@@ -106,8 +93,8 @@ private:
     // o popularidad alta y que aun no este en la cola.
     void actualizarTendencias() {
         catalogo.recorrer([this](Audiovisual* item) {
-            bool califica = (item->getRating() >= UMBRAL_RATING_TENDENCIA) ||
-                (item->getPopularidad() > UMBRAL_POPULARIDAD_TENDENCIA);
+            bool califica = (item->getRating() >= MIN_RATING_TENDENCIA) ||
+                (item->getPopularidad() > MIN_POPULARIDAD_TENDENCIA);
             bool yaEsta = colaTendencias.contiene([item](Audiovisual* a) { return a->getId() == item->getId(); });
             if (califica && !yaEsta) colaTendencias.insertar(item);
             });
@@ -116,14 +103,12 @@ private:
     // ---------------- Sesion ----------------
     bool iniciarSesion() {
         limpiarPantalla();
+        std::string correo, contra;
         std::cout << "========================================\n";
         std::cout << "     SISTEMA DE STREAMING - MOVIE TIME    \n";
         std::cout << "========================================\n";
-        std::cout << "Correo: ";
-        std::string correo, contra;
-        std::cin >> correo;
-        std::cout << "Contrasena: ";
-        std::cin >> contra;
+        std::cout << "Correo: "; std::cin >> correo;
+        std::cout << "Contrasena: "; std::cin >> contra;
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
         UsuarioBase** encontrado = usuarios.buscarSi([&correo, &contra](UsuarioBase* u) {
@@ -141,7 +126,6 @@ private:
         return false;
     }
 
-    // ---------------- Catalogo en modo ficha (tarjeta por tarjeta) ----------------
     void mostrarCatalogoFicha() {
         if (catalogo.esVacia()) {
             limpiarPantalla();
@@ -150,8 +134,6 @@ private:
             return;
         }
 
-        // Se arma un vector temporal solo para navegar (la fuente de verdad sigue
-        // siendo la ListaDoble); no se imprime todo de golpe.
         std::vector<Audiovisual*> vista;
         catalogo.recorrer([&vista](Audiovisual* a) { vista.push_back(a); });
 
@@ -211,9 +193,9 @@ private:
     }
 
     void dejarResenia(Audiovisual* item) {
-        UsuarioCliente* cliente = dynamic_cast<UsuarioCliente*>(usuarioLogueado);
+        UsuarioCliente* cliente = static_cast<UsuarioCliente*>(usuarioLogueado);
         if (!cliente) {
-            std::cout << "\nSolo los clientes pueden dejar reseñas.\n";
+            std::cout << "\nSolo los usuarios pueden dejar reseñas.\n";
             pausar();
             return;
         }
@@ -239,11 +221,11 @@ private:
     // ---------------- Tendencias ----------------
     void mostrarTendencias() {
         limpiarPantalla();
-        std::cout << "=== TENDENCIAS DEL DIA (COLA) ===\n\n";
-        if (colaTendencias.empty()) {
+        std::cout << "=== TENDENCIAS DEL DIA ===\n\n";
+        if (colaTendencias.empty()) 
             std::cout << "No hay tendencias registradas todavia.\n";
-        }
-        else {
+        else 
+        {
             int puesto = 1;
             colaTendencias.recorrer([&puesto](Audiovisual* a) {
                 std::cout << puesto++ << ". " << a->getTitulo()
@@ -254,7 +236,7 @@ private:
         pausar();
     }
 
-    // ---------------- Busqueda (recursiva) ----------------
+    // ---------------- Busqueda ----------------
     void buscarContenido() {
         limpiarPantalla();
         std::cout << "=== BUSCAR CONTENIDO ===\n";
