@@ -3,51 +3,6 @@
 #include <vector>
 
 class Ordenamientos {
-public:
-    // --- INTERFAZ PÚBLICA (Lo que el resto del programa utiliza) ---
-
-    template <typename T>
-    static void heapSort(std::vector<T>& datos, std::function<bool(const T&, const T&)> comparador) {
-        int n = (int)datos.size();
-        for (int i = n / 2 - 1; i >= 0; i--) heapify(datos, n, i, comparador);
-        for (int i = n - 1; i > 0; i--) {
-            std::swap(datos[0], datos[i]);
-            heapify(datos, i, 0, comparador);
-        }
-    }
-
-    template <typename T>
-    static void quickSort(std::vector<T>& datos, std::function<bool(const T&, const T&)> comparador) {
-        if (datos.empty()) return;
-        quickSortRec(datos, 0, (int)datos.size() - 1, comparador);
-    }
-
-    template <typename T>
-    static void mergeSort(std::vector<T>& datos, std::function<bool(const T&, const T&)> comparador) {
-        if (datos.size() <= 1) return;
-        mergeSortRec(datos, 0, (int)datos.size() - 1, comparador);
-    }
-
-    template <typename T, typename K>
-    static int busquedaBinariaRecursiva(
-        const std::vector<T>& datos, int bajo, int alto,
-        const K& claveBuscada,
-        std::function<K(const T&)> extractorClave) {
-
-        if (bajo > alto) return -1;
-        int medio = bajo + (alto - bajo) / 2;
-        K claveMedio = extractorClave(datos[medio]);
-
-        if (claveMedio == claveBuscada) return medio;
-
-        if (claveBuscada < claveMedio) {
-            return busquedaBinariaRecursiva(datos, bajo, medio - 1, claveBuscada, extractorClave);
-        }
-        else {
-            return busquedaBinariaRecursiva(datos, medio + 1, alto, claveBuscada, extractorClave);
-        }
-    }
-
 private:
     // --- MÉTODOS PRIVADOS (Auxiliares internos para que los algoritmos funcionen) ---
 
@@ -110,5 +65,50 @@ private:
         }
         while (i < izquierda.size()) datos[k++] = izquierda[i++];
         while (j < derecha.size()) datos[k++] = derecha[j++];
+    }
+
+public:
+    // --- INTERFAZ PÚBLICA (Lo que el resto del programa utiliza) ---
+
+    template <typename T>
+    static void heapSort(std::vector<T>& datos, std::function<bool(const T&, const T&)> comparador) {
+        int n = (int)datos.size();
+        for (int i = n / 2 - 1; i >= 0; i--) heapify(datos, n, i, comparador);
+        for (int i = n - 1; i > 0; i--) {
+            std::swap(datos[0], datos[i]);
+            heapify(datos, i, 0, comparador);
+        }
+    }
+
+    template <typename T>
+    static void quickSort(std::vector<T>& datos, std::function<bool(const T&, const T&)> comparador) {
+        if (datos.empty()) return;
+        quickSortRec(datos, 0, (int)datos.size() - 1, comparador);
+    }
+
+    template <typename T>
+    static void mergeSort(std::vector<T>& datos, std::function<bool(const T&, const T&)> comparador) {
+        if (datos.size() <= 1) return;
+        mergeSortRec(datos, 0, (int)datos.size() - 1, comparador);
+    }
+
+    template <typename T, typename K>
+    static int busquedaBinariaRecursiva(
+        const std::vector<T>& datos, int bajo, int alto,
+        const K& claveBuscada,
+        std::function<K(const T&)> extractorClave) {
+
+        if (bajo > alto) return -1;
+        int medio = bajo + (alto - bajo) / 2;
+        K claveMedio = extractorClave(datos[medio]);
+
+        if (claveMedio == claveBuscada) return medio;
+
+        if (claveBuscada < claveMedio) {
+            return busquedaBinariaRecursiva(datos, bajo, medio - 1, claveBuscada, extractorClave);
+        }
+        else {
+            return busquedaBinariaRecursiva(datos, medio + 1, alto, claveBuscada, extractorClave);
+        }
     }
 };
