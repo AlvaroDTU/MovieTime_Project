@@ -153,7 +153,7 @@ private:
             std::cout << "\nResenas registradas: " << actual->getResenias().getLongitud() << "\n";
 
             std::cout << "\n----------------------------------------\n";
-            std::cout << "[D] Siguiente   [A] Anterior   [W] Dejar Resena   [S] Ver Resenas   [Q] Volver\n";
+            std::cout << "[D] Siguiente   [A] Anterior   [R] Dejar Resena   [V] Ver Resenas   [Q] Volver\n";
             std::cout << "Opcion: ";
             std::cin >> opcion;
             opcion = toupper(opcion);
@@ -165,10 +165,10 @@ private:
             case 'A':
                 indice = (indice == 0) ? vista.size() - 1 : indice - 1;
                 break;
-            case 'W':
+            case 'R':
                 dejarResenia(actual);
                 break;
-            case 'S':
+            case 'V':
                 verResenias(actual);
                 break;
             case 'Q':
