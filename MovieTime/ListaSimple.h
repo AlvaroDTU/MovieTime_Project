@@ -36,9 +36,7 @@ public:
         }
         else {
             Nodo<T>* aux = cabeza;
-            while (aux->siguiente != nullptr) {
-                aux = aux->siguiente;
-            }
+            while (aux->siguiente != nullptr) aux = aux->siguiente;
             aux->siguiente = nuevo;
         }
         longitud++;
@@ -60,18 +58,15 @@ public:
             longitud--;
             return;
         }
-
         Nodo<T>* aux = cabeza;
-        while (aux->siguiente->siguiente != nullptr) {
-            aux = aux->siguiente;
-        }
-
+        while (aux->siguiente->siguiente != nullptr) aux = aux->siguiente;
         Nodo<T>* aux2 = aux->siguiente;
         aux->siguiente = nullptr;
         delete aux2;
         longitud--;
     }
 
+    // --- Lambda: recorrido ---
     void recorrer(std::function<void(T)> accion) const {
         Nodo<T>* aux = cabeza;
         while (aux != nullptr) {
@@ -80,57 +75,55 @@ public:
         }
     }
 
+    // --- Lambda: busqueda puntual ---
     T* buscarSi(std::function<bool(T)> criterio) {
         Nodo<T>* aux = cabeza;
         while (aux != nullptr) {
-            if (criterio(aux->valor)) {
-                return &(aux->valor);
-            }
+            if (criterio(aux->valor)) return &(aux->valor);
             aux = aux->siguiente;
         }
         return nullptr;
     }
 
+    // --- Lambda: filtrado (nueva lista con los que cumplen el criterio) ---
     ListaSimple<T> filtrar(std::function<bool(T)> criterio) const {
         ListaSimple<T> resultado;
         Nodo<T>* aux = cabeza;
         while (aux != nullptr) {
-            if (criterio(aux->valor)) {
-                resultado.agregarFinal(aux->valor);
-            }
+            if (criterio(aux->valor)) resultado.agregarFinal(aux->valor);
             aux = aux->siguiente;
         }
         return resultado;
     }
 
-    // Método recursivo exigido en la rúbrica
+    // --- Lambda: actualizacion masiva aplicando una funcion de transformacion ---
+    void actualizarSi(std::function<bool(T)> criterio, std::function<void(T)> accionActualizar) {
+        Nodo<T>* aux = cabeza;
+        while (aux != nullptr) {
+            if (criterio(aux->valor)) accionActualizar(aux->valor);
+            aux = aux->siguiente;
+        }
+    }
+
+    // --- Recursivo (1/3 de la rubrica): busqueda booleana recursiva ---
     bool buscarRecursivo(Nodo<T>* nodoActual, std::function<bool(T)> criterio) {
         if (nodoActual == nullptr) return false;
         if (criterio(nodoActual->valor)) return true;
         return buscarRecursivo(nodoActual->siguiente, criterio);
     }
-};
 
-//// 1. Uso de recorrer: Imprime todas las películas
-//miLista.recorrer([](Pelicula p) {
-//    cout << "Película: " << p.getTitulo() << " - Rating: " << p.getRating() << endl;
-//    });
-//
-//// 2. Uso de buscarSi: Devuelve un puntero a "Inception"
-//Pelicula* buscada = miLista.buscarSi([](Pelicula p) {
-//    return p.getTitulo() == "Inception";
-//    });
-//
-//if (buscada != nullptr) {
-//    cout << "Encontrada! Director: " << buscada->getDirector() << endl;
-//}
-//
-//// 3. Uso de filtrar: Obtiene una nueva ListaSimple solo con películas > 8.0 de rating
-//ListaSimple<Pelicula> topPeliculas = miLista.filtrar([](Pelicula p) {
-//    return p.getRating() > 8.0;
-//    });
-//
-//// 4. Uso de buscarRecursivo: Retorna true si hay alguna película de 'Nolan'
-//bool tieneNolan = miLista.buscarRecursivo(miLista.getCabeza(), [](Pelicula p) {
-//    return p.getDirector() == "Christopher Nolan";
-//    });
+    bool buscarRecursivo(std::function<bool(T)> criterio) {
+        return buscarRecursivo(cabeza, criterio);
+    }
+
+    // --- Recursivo (2/3): conteo/acumulacion recursiva de una metrica numerica ---
+    // Ej: sumar minutos, sumar reseñas, etc. usando una lambda "extractor"
+    double acumularRecursivo(Nodo<T>* nodoActual, std::function<double(T)> extractor) const {
+        if (nodoActual == nullptr) return 0.0;
+        return extractor(nodoActual->valor) + acumularRecursivo(nodoActual->siguiente, extractor);
+    }
+
+    double acumularRecursivo(std::function<double(T)> extractor) const {
+        return acumularRecursivo(cabeza, extractor);
+    }
+};

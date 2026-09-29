@@ -9,9 +9,7 @@ private:
 
 public:
     Categoria(int id, const std::string& nombre)
-        : id(id), nombre(nombre) {
-    }
-
+        : id(id), nombre(nombre) {}
     ~Categoria() {}
 
     int getId() const { return id; }

@@ -6,43 +6,44 @@
 class UsuarioCliente : public UsuarioBase {
 private:
     ListaSimple<Resenia*> misResenas;
+    ListaSimple<int> historialMinutos; // minutos reproducidos por cada contenido visto
 
 public:
     UsuarioCliente(std::string id, std::string nom, std::string ape, std::string naci,
         std::string contr, std::string correo, std::string fecha)
-        : UsuarioBase(id, nom, ape, naci, contr, correo, fecha) {
+        : UsuarioBase(id, nom, ape, naci, contr, correo, fecha) {}
+
+    std::string getRol() const override { return "CLIENTE"; }
+
+    void agregarResenia(Resenia* r) { misResenas.agregarInicio(r); }
+    const ListaSimple<Resenia*>& getMisResenas() const { return misResenas; }
+
+    void registrarReproduccion(int minutos) { historialMinutos.agregarInicio(minutos); }
+
+    // Recursivo (metrica): total de minutos reproducidos por el cliente.
+    double getTotalMinutosReproducidos() const {
+        return historialMinutos.acumularRecursivo([](int m) { return (double)m; });
     }
 
-    void agregarResenia(Resenia* r) {
-        misResenas.agregarInicio(r);
-    }
-
-    void mostrarMisResenas() {
-        std::cout << "\n=== MIS RESEÑAS ESCRITAS ===\n";
-        if (misResenas.esVacia()) {
-            std::cout << "Aún no has dejado ninguna reseña.\n";
-            return;
-        }
-
-        misResenas.recorrer([](Resenia* r) {
-            std::cout << "Estrellas: " << r->getEstrellas() << "/5\n"
-                << "Comentario: " << r->getComentario() << "\n"
-                << "----------------------------------------\n";
-            });
+    // Recursivo (metrica): total de reseñas escritas.
+    double getTotalResenias() const {
+        return misResenas.acumularRecursivo([](Resenia*) { return 1.0; });
     }
 
     void mostrarPerfil() override {
         std::cout << "--- PERFIL CLIENTE ---\n"
             << "Nombre: " << nombres << " " << apellidos << "\n"
             << "Correo: " << correo << "\n"
-            << "Reseñas escritas: " << misResenas.getLongitud() << "\n";
+            << "Reseñas escritas: " << (int)getTotalResenias() << "\n"
+            << "Minutos reproducidos (historial): " << (int)getTotalMinutosReproducidos() << "\n";
     }
 
     void mostrarMenu() override {
-        std::cout << "1. Ver Catálogo\n"
-            << "2. Ver Tendencias\n"
-            << "3. Dejar Reseña\n"
-            << "4. Ver Mis Reseñas\n"
-            << "5. Salir\n";
+        std::cout << "1. Ver Catalogo (modo ficha)\n"
+            << "2. Ver Tendencias del Dia\n"
+            << "3. Buscar por ID / Titulo\n"
+            << "4. Ordenar Catalogo\n"
+            << "5. Mi Perfil y Mis Reseñas\n"
+            << "6. Cerrar Sesion\n";
     }
 };

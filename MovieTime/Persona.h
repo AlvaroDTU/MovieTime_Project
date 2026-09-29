@@ -8,8 +8,7 @@ protected:
 
 public:
     Persona(const std::string& nombres, const std::string& apellidos)
-        : nombres(nombres), apellidos(apellidos) {
-    }
+        : nombres(nombres), apellidos(apellidos) {}
     virtual ~Persona() {}
 
     std::string getNombres() const { return nombres; }

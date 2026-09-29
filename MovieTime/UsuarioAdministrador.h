@@ -9,9 +9,9 @@ public:
     UsuarioAdministrador(std::string id, std::string nom, std::string ape,
         std::string naci, std::string contr, std::string correo,
         std::string fecha, std::string nivel = "Admin")
-        : UsuarioBase(id, nom, ape, naci, contr, correo, fecha), nivelAcceso(nivel) {
-    }
+        : UsuarioBase(id, nom, ape, naci, contr, correo, fecha), nivelAcceso(nivel) {}
 
+    std::string getRol() const override { return "ADMIN"; }
     std::string getNivelAcceso() const { return nivelAcceso; }
 
     void mostrarPerfil() override {
@@ -22,11 +22,11 @@ public:
     }
 
     void mostrarMenu() override {
-        std::cout << "\n=== MENÚ ADMINISTRADOR ===\n"
-            << "1. Agregar Pelicula\n"
-            << "2. Ver Catálogo Completo\n"
+        std::cout << "1. Agregar Pelicula/Serie\n"
+            << "2. Ver Catalogo (modo ficha)\n"
             << "3. Ver Tendencias (Cola)\n"
-            << "4. Guardar Cambios en Archivo\n"
-            << "5. Salir / Cerrar Sesión\n";
+            << "4. Ordenar Catalogo (HeapSort/QuickSort/MergeSort)\n"
+            << "5. Guardar Cambios en Archivos\n"
+            << "6. Cerrar Sesion\n";
     }
 };

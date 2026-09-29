@@ -2,37 +2,39 @@
 #include <string>
 #include <iostream>
 
-
 class UsuarioBase
 {
 protected:
-	std::string id;
-	std::string nombres;
-	std::string apellidos;
-	std::string nacionalidad;
-	std::string contraseña;
-	std::string correo;
-	std::string fechaNacimiento;
+    std::string id;
+    std::string nombres;
+    std::string apellidos;
+    std::string nacionalidad;
+    std::string contrasenia;
+    std::string correo;
+    std::string fechaNacimiento;
 
 public:
-	UsuarioBase();
-	UsuarioBase(std::string idd, std::string nom, std::string ape, std::string naci, std::string contr, std::string coreo, std::string fecha)
-		: id(idd), nombres(nom), apellidos(ape), nacionalidad(naci), correo(coreo), contraseña(contr), fechaNacimiento(fecha)
-	{}
+    UsuarioBase(std::string idd, std::string nom, std::string ape, std::string naci,
+        std::string contr, std::string coreo, std::string fecha)
+        : id(idd), nombres(nom), apellidos(ape), nacionalidad(naci),
+        contrasenia(contr), correo(coreo), fechaNacimiento(fecha)
+    {}
 
-	std::string getId() { return id; }
-	std::string getNombres() { return nombres; }
-	std::string getApellidos() { return apellidos; }
-	std::string getNacionalidad() { return nacionalidad; }
-	std::string getContraseña() { return contraseña; }
-	std::string getCorreo() { return correo; }
-	
-	bool autenticar(std::string coreo, std::string contra) {
-		if (coreo == correo && contra == contraseña) { return true; }
-		else {return false;}}
+    virtual ~UsuarioBase() {}
 
-	virtual void mostrarPerfil() = 0;
-	virtual void mostrarMenu() = 0;
+    std::string getId() const { return id; }
+    std::string getNombres() const { return nombres; }
+    std::string getApellidos() const { return apellidos; }
+    std::string getNacionalidad() const { return nacionalidad; }
+    std::string getContrasenia() const { return contrasenia; }
+    std::string getCorreo() const { return correo; }
+    std::string getFechaNacimiento() const { return fechaNacimiento; }
 
+    bool autenticar(const std::string& coreo, const std::string& contra) const {
+        return (coreo == correo && contra == contrasenia);
+    }
+
+    virtual void mostrarPerfil() = 0;
+    virtual void mostrarMenu() = 0;
+    virtual std::string getRol() const = 0; // "CLIENTE" | "ADMIN" -> usado en persistencia
 };
-

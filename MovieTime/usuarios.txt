@@ -1,0 +1,2 @@
+ADMIN,2,Admin,General,Peru,admin123,admin@mail.com,1995-05-05
+CLIENTE,1,Juan,Perez,Peru,1234,cliente@mail.com,2000-01-01
