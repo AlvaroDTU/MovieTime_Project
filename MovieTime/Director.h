@@ -24,7 +24,6 @@ public:
         proyectosDirigidos.agregarInicio(proyecto);
     }
 
-    ListaSimple<Audiovisual*>& getProyectosDirigidos() { return proyectosDirigidos; }
 
     ListaSimple<Audiovisual*> construirRedDeContenidos() const {
         ListaSimple<Audiovisual*> resultado;

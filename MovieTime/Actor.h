@@ -27,7 +27,6 @@ public:
         proyectos.agregarInicio(proyecto);
     }
 
-    ListaSimple<Audiovisual*>& getProyectos() { return proyectos; }
 
     // Punto de entrada publico del algoritmo recursivo de la red de contenidos.
     ListaSimple<Audiovisual*> construirRedDeContenidos() const {
