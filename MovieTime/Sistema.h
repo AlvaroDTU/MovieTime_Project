@@ -302,28 +302,30 @@ private:
         std::cout << "4. MergeSort  -> por Titulo (alfabetico)\n";
         int op = leerEntero("Opcion: ");
 
+        // 1. Creamos el vector auxiliar con los punteros
         std::vector<Audiovisual*> arreglo;
         catalogo.recorrer([&arreglo](Audiovisual* a) { arreglo.push_back(a); });
 
+        // 2. Ordenamos únicamente el vector auxiliar
         switch (op) {
         case 1:
             Ordenamientos::heapSort<Audiovisual*>(arreglo, [](Audiovisual* a, Audiovisual* b) {
-                return a->getPopularidad() > b->getPopularidad(); // mayor primero
+                return a->getPopularidad() > b->getPopularidad();
                 });
             break;
         case 2:
             Ordenamientos::quickSort<Audiovisual*>(arreglo, [](Audiovisual* a, Audiovisual* b) {
-                return a->getRating() > b->getRating(); // mayor primero
+                return a->getRating() > b->getRating();
                 });
             break;
         case 3:
             Ordenamientos::mergeSort<Audiovisual*>(arreglo, [](Audiovisual* a, Audiovisual* b) {
-                return a->getAnio() < b->getAnio(); // ascendente
+                return a->getAnio() < b->getAnio();
                 });
             break;
         case 4:
             Ordenamientos::mergeSort<Audiovisual*>(arreglo, [](Audiovisual* a, Audiovisual* b) {
-                return a->getTitulo() < b->getTitulo(); // alfabetico
+                return a->getTitulo() < b->getTitulo();
                 });
             break;
         default:
@@ -332,10 +334,7 @@ private:
             return;
         }
 
-        // Se reconstruye el orden de la ListaDoble a partir del arreglo ya ordenado
-        catalogo.limpiar();
-        for (Audiovisual* a : arreglo) catalogo.agregarFinal(a);
-
+        // 3. Mostramos el resultado ordenado desde el vector
         limpiarPantalla();
         std::cout << "=== CATALOGO ORDENADO ===\n\n";
         int i = 1;
@@ -345,6 +344,7 @@ private:
         }
         pausar();
     }
+
 
     // ---------------- Metricas recursivas ----------------
     void mostrarMetricasCategoria() {

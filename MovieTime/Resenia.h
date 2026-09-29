@@ -19,7 +19,7 @@ public:
     std::string getComentario() const { return comentario; }
 
     void mostrar() const {
-        std::cout << "  [Usuario " << idUsuario << " | Contenido #" << idContenido << "] "
+        std::cout << "  [Usuario " << idUsuario << " | ID #" << idContenido << "] "
             << "Calificacion: " << calificacion << "/10\n"
             << "  \"" << comentario << "\"\n";
     }
