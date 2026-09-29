@@ -150,25 +150,25 @@ private:
             actual->getDirectores().recorrer([](Director* d) { std::cout << d->getNombreCompleto() << "  "; });
             std::cout << "\nActor(es): ";
             actual->getActores().recorrer([](Actor* a) { std::cout << a->getNombreCompleto() << "  "; });
-            std::cout << "\nReseñas registradas: " << actual->getResenias().getLongitud() << "\n";
+            std::cout << "\nResenas registradas: " << actual->getResenias().getLongitud() << "\n";
 
             std::cout << "\n----------------------------------------\n";
-            std::cout << "[N] Siguiente   [P] Anterior   [R] Dejar Reseña   [V] Ver Reseñas   [Q] Volver\n";
+            std::cout << "[D] Siguiente   [A] Anterior   [W] Dejar Resena   [S] Ver Resenas   [Q] Volver\n";
             std::cout << "Opcion: ";
             std::cin >> opcion;
             opcion = toupper(opcion);
 
             switch (opcion) {
-            case 'N':
+            case 'D':
                 indice = (indice + 1) % vista.size();
                 break;
-            case 'P':
+            case 'A':
                 indice = (indice == 0) ? vista.size() - 1 : indice - 1;
                 break;
-            case 'R':
+            case 'W':
                 dejarResenia(actual);
                 break;
-            case 'V':
+            case 'S':
                 verResenias(actual);
                 break;
             case 'Q':
@@ -182,26 +182,30 @@ private:
 
     void verResenias(Audiovisual* item) {
         limpiarPantalla();
-        std::cout << "=== RESEÑAS DE \"" << item->getTitulo() << "\" ===\n\n";
+        std::cout << "=== RESEnAS DE \"" << item->getTitulo() << "\" ===\n\n";
         if (item->getResenias().esVacia()) {
-            std::cout << "Aun no hay reseñas para este contenido.\n";
+            std::cout << "Aun no hay resenas para este contenido.\n";
+
         }
         else {
-            item->getResenias().recorrer([](Resenia* r) { r->mostrar(); });
+            item->getResenias().recorrer([](Resenia* r) { r->mostrar();
+                });
         }
         pausar();
+        pausar();
+
     }
 
     void dejarResenia(Audiovisual* item) {
         UsuarioCliente* cliente = static_cast<UsuarioCliente*>(usuarioLogueado);
         if (!cliente) {
-            std::cout << "\nSolo los usuarios pueden dejar reseñas.\n";
+            std::cout << "\nSolo los usuarios pueden dejar resenas.\n";
             pausar();
             return;
         }
 
         limpiarPantalla();
-        std::cout << "=== DEJAR RESEÑA: \"" << item->getTitulo() << "\" ===\n\n";
+        std::cout << "=== DEJAR RESEnA: \"" << item->getTitulo() << "\" ===\n\n";
         double calif = leerDouble("Calificacion (0 al 10): ");
         std::string comentario = leerLinea("Comentario: ");
 
@@ -214,7 +218,7 @@ private:
         GestorArchivos::guardarCatalogo("catalogo.txt", catalogo);
         GestorArchivos::guardarResenias("resenias.txt", catalogo);
 
-        std::cout << "\n[OK] Reseña agregada. Nuevo rating: " << item->getRating() << "/10\n";
+        std::cout << "\n[OK] Resena agregada. Nuevo rating: " << item->getRating() << "/10\n";
         pausar();
     }
 
@@ -340,12 +344,12 @@ private:
                 if (a->getCategoria() && a->getCategoria()->getId() == cat->getId()) deCategoria.agregarFinal(a);
                 });
 
-            // Recursivo: total de minutos y total de reseñas de la categoria
+            // Recursivo: total de minutos y total de resenas de la categoria
             double totalMinutos = deCategoria.acumularRecursivo([](Audiovisual* a) { return (double)a->getMinutosTotales(); });
             double totalResenias = deCategoria.acumularRecursivo([](Audiovisual* a) { return (double)a->getResenias().getLongitud(); });
 
             std::cout << "- " << cat->getNombre() << ": " << deCategoria.getLongitud() << " titulos | "
-                << "Minutos totales: " << (int)totalMinutos << " | Reseñas totales: " << (int)totalResenias << "\n";
+                << "Minutos totales: " << (int)totalMinutos << " | Resenas totales: " << (int)totalResenias << "\n";
             });
         pausar();
     }
@@ -420,8 +424,8 @@ private:
                 usuarioLogueado->mostrarPerfil();
                 UsuarioCliente* c = dynamic_cast<UsuarioCliente*>(usuarioLogueado);
                 if (c) {
-                    std::cout << "\n--- MIS RESEÑAS ---\n";
-                    if (c->getMisResenas().esVacia()) std::cout << "Aun no has dejado reseñas.\n";
+                    std::cout << "\n--- MIS RESEnAS ---\n";
+                    if (c->getMisResenas().esVacia()) std::cout << "Aun no has dejado resenas.\n";
                     else c->getMisResenas().recorrer([](Resenia* r) { r->mostrar(); });
                 }
                 pausar();

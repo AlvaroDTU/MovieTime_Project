@@ -14,7 +14,7 @@ protected:
     int anio;
     Categoria* categoria;
     double rating;       // Promedio sobre 10 estrellas
-    int popularidad;     // Numero de interacciones / reseñas
+    int popularidad;     // Numero de interacciones / resenas
     ListaSimple<Director*> directores;
     ListaSimple<Actor*> actores;
     ListaSimple<Resenia*> resenias;

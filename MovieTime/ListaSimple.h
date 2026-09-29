@@ -117,7 +117,7 @@ public:
     }
 
     // --- Recursivo (2/3): conteo/acumulacion recursiva de una metrica numerica ---
-    // Ej: sumar minutos, sumar reseñas, etc. usando una lambda "extractor"
+    // Ej: sumar minutos, sumar resenas, etc. usando una lambda "extractor"
     double acumularRecursivo(Nodo<T>* nodoActual, std::function<double(T)> extractor) const {
         if (nodoActual == nullptr) return 0.0;
         return extractor(nodoActual->valor) + acumularRecursivo(nodoActual->siguiente, extractor);

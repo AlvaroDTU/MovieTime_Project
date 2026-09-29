@@ -191,7 +191,7 @@ public:
         std::cout << "[OK] Reparto guardado en " << nombreArchivo << "\n";
     }
 
-    // ================= RESEÑAS (resenias.txt) =================
+    // ================= RESEnAS (resenias.txt) =================
     static void guardarResenias(const std::string& nombreArchivo, const ListaDoble<Audiovisual*>& catalogo) {
         std::ofstream archivo(nombreArchivo);
         if (!archivo.is_open()) { std::cout << "[!] Error al guardar " << nombreArchivo << "\n"; return; }

@@ -25,7 +25,7 @@ public:
         return historialMinutos.acumularRecursivo([](int m) { return (double)m; });
     }
 
-    // Recursivo (metrica): total de reseñas escritas.
+    // Recursivo (metrica): total de resenas escritas.
     double getTotalResenias() const {
         return misResenas.acumularRecursivo([](Resenia*) { return 1.0; });
     }
@@ -34,7 +34,7 @@ public:
         std::cout << "--- PERFIL CLIENTE ---\n"
             << "Nombre: " << nombres << " " << apellidos << "\n"
             << "Correo: " << correo << "\n"
-            << "Reseñas escritas: " << (int)getTotalResenias() << "\n"
+            << "Resenas escritas: " << (int)getTotalResenias() << "\n"
             << "Minutos reproducidos (historial): " << (int)getTotalMinutosReproducidos() << "\n";
     }
 
@@ -43,7 +43,7 @@ public:
             << "2. Ver Tendencias del Dia\n"
             << "3. Buscar por ID / Titulo\n"
             << "4. Ordenar Catalogo\n"
-            << "5. Mi Perfil y Mis Reseñas\n"
+            << "5. Mi Perfil y Mis Resenas\n"
             << "6. Cerrar Sesion\n";
     }
 };
