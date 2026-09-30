@@ -1,12 +1,4 @@
 #pragma once
-// ============================================================================
-//  RegistroUsuario.h
-//  Modulo independiente para registrar nuevos usuarios (rol CLIENTE) en
-//  Movie Time. No modifica ninguna clase existente: reutiliza UsuarioCliente,
-//  ListaSimple y GestorArchivos::cargarUsuarios / guardarUsuarios.
-//
-//  Como es header-only (igual que el resto del proyecto) no necesita pch.h.
-// ============================================================================
 #include <iostream>
 #include <string>
 #include <functional>
@@ -42,7 +34,6 @@ private:
         return false;
     }
     // ---------------- Validaciones (devuelven "" si es valido) ----------------
-    // La coma esta prohibida porque usuarios.txt es un CSV simple.
     static std::string errorTextoPersona(const std::string& s, const std::string& campo) {
         if (s.empty()) return campo + " no puede estar vacio.";
         if (s.size() < 2) return campo + " debe tener al menos 2 caracteres.";
