@@ -165,7 +165,7 @@ public:
             if (confirmacion == contrasenia) break;
             std::cout << "[!] Las contrasenas no coinciden. Intente de nuevo.\n";
         }
-        // Resumen y confirmacion final
+        // Resumen y confirmacion final hola soy homero chino
         std::cout << "\n--- RESUMEN ---\n"
             << "Nombre: " << nombres << " " << apellidos << "\n"
             << "Nacionalidad: " << nacionalidad << "\n"
