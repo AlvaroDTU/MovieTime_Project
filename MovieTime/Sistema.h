@@ -98,16 +98,88 @@ private:
             });
     }
 
+    // ---------------- Registro de Usuarios ----------------
+    void registrarUsuario() {
+        limpiarPantalla();
+        std::cout << "========================================\n";
+        std::cout << "       REGISTRO DE NUEVO USUARIO        \n";
+        std::cout << "========================================\n";
+
+        std::string correo = leerLinea("Ingrese correo electronico: ");
+
+        // Validar que el correo no este registrado previamente
+        UsuarioBase** existe = usuarios.buscarSi([&correo](UsuarioBase* u) {
+            return u->getCorreo() == correo;
+            });
+
+        if (existe != nullptr) {
+            std::cout << "\n[!] El correo ya se encuentra registrado en el sistema.\n";
+            pausar();
+            return;
+        }
+
+        std::string contra = leerLinea("Ingrese contrasena: ");
+        std::string nombres = leerLinea("Ingrese nombres: ");
+        std::string apellidos = leerLinea("Ingrese apellidos: ");
+        std::string nacionalidad = leerLinea("Ingrese nacionalidad: ");
+
+        // Generar el ID como std::string
+        std::string nuevoId = std::to_string(usuarios.getLongitud() + 1);
+
+        // Fecha por defecto de registro
+        std::string fechaRegistro = "2026-10-02";
+
+        // Instanciacion con los 7 parametros que exige el constructor:
+        // (id, nom, ape, naci, contr, correo, fecha)
+        UsuarioCliente* nuevoCliente = new UsuarioCliente(
+            nuevoId,
+            nombres,
+            apellidos,
+            nacionalidad,
+            contra,
+            correo,
+            fechaRegistro
+        );
+
+        usuarios.agregarFinal(nuevoCliente);
+        GestorArchivos::guardarUsuarios("usuarios.txt", usuarios);
+
+        std::cout << "\n[OK] Registro exitoso! Ya puede iniciar sesion con sus credenciales.\n";
+        pausar();
+    }
+
     // ---------------- Sesion ----------------
     bool iniciarSesion() {
         limpiarPantalla();
-        std::string correo, contra;
         std::cout << "========================================\n";
         std::cout << "     SISTEMA DE STREAMING - MOVIE TIME    \n";
         std::cout << "========================================\n";
-        std::cout << "Correo: "; std::cin >> correo;
-        std::cout << "Contrasena: "; std::cin >> contra;
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cout << "1. Iniciar Sesion\n";
+        std::cout << "2. Registrarse\n";
+        std::cout << "3. Salir\n";
+        std::cout << "========================================\n";
+
+        int opcion = leerEntero("Seleccione una opcion: ");
+
+        if (opcion == 2) {
+            registrarUsuario();
+            return false;
+        }
+        else if (opcion == 3) {
+            std::exit(0);
+        }
+        else if (opcion != 1) {
+            std::cout << "\n[!] Opcion no valida.\n";
+            pausar();
+            return false;
+        }
+
+        limpiarPantalla();
+        std::cout << "========================================\n";
+        std::cout << "            INICIO DE SESION            \n";
+        std::cout << "========================================\n";
+        std::string correo = leerLinea("Correo: ");
+        std::string contra = leerLinea("Contrasena: ");
 
         UsuarioBase** encontrado = usuarios.buscarSi([&correo, &contra](UsuarioBase* u) {
             return u->autenticar(correo, contra);
@@ -183,21 +255,17 @@ private:
         std::cout << "=== RESEnAS DE \"" << item->getTitulo() << "\" ===\n\n";
         if (item->getResenias().esVacia()) {
             std::cout << "Aun no hay resenas para este contenido.\n";
-
         }
         else {
-            item->getResenias().recorrer([](Resenia* r) { r->mostrar();
-                });
+            item->getResenias().recorrer([](Resenia* r) { r->mostrar(); });
         }
         pausar();
-        pausar();
-
     }
 
     void dejarResenia(Audiovisual* item) {
         UsuarioCliente* cliente = static_cast<UsuarioCliente*>(usuarioLogueado);
         if (!cliente) {
-            std::cout << "\nSolo los usuarios pueden dejar resenas.\n";
+            std::cout << "\nSolo los usuarios clientes pueden dejar resenas.\n";
             pausar();
             return;
         }
@@ -224,9 +292,9 @@ private:
     void mostrarTendencias() {
         limpiarPantalla();
         std::cout << "=== TENDENCIAS DEL DIA ===\n\n";
-        if (colaTendencias.empty()) 
+        if (colaTendencias.empty())
             std::cout << "No hay tendencias registradas todavia.\n";
-        else 
+        else
         {
             int puesto = 1;
             colaTendencias.recorrer([&puesto](Audiovisual* a) {
@@ -326,7 +394,6 @@ private:
         pausar();
     }
 
-
     // ---------------- Metricas recursivas ----------------
     void mostrarMetricasCategoria() {
         limpiarPantalla();
@@ -339,7 +406,6 @@ private:
                 if (a->getCategoria() && a->getCategoria()->getId() == cat->getId()) deCategoria.agregarFinal(a);
                 });
 
-            // total de minutos y total de resenas de la categoria
             double totalMinutos = deCategoria.acumularRecursivo([](Audiovisual* a) { return (double)a->getMinutosTotales(); });
             double totalResenias = deCategoria.acumularRecursivo([](Audiovisual* a) { return (double)a->getResenias().getLongitud(); });
 
@@ -482,18 +548,14 @@ public:
 
         while (true) {
             if (!iniciarSesion()) {
-                limpiarPantalla();
-                std::cout << "1. Reintentar inicio de sesion\n2. Salir del sistema\n";
-                int op = leerEntero("Opcion: ");
-                if (op == 2) break;
-                else continue;
+                continue;
             }
 
             UsuarioAdministrador* admin = dynamic_cast<UsuarioAdministrador*>(usuarioLogueado);
             if (admin) menuAdmin();
             else menuCliente();
 
-            usuarioLogueado = nullptr;  
+            usuarioLogueado = nullptr;
         }
 
         limpiarPantalla();
