@@ -18,12 +18,8 @@ public:
     void agregarResenia(Resenia* r) { misResenas.agregarInicio(r); }
     const ListaSimple<Resenia*>& getMisResenas() const { return misResenas; }
 
-    void registrarReproduccion(int minutos) { historialMinutos.agregarInicio(minutos); }
 
-    // Recursivo (metrica): total de minutos reproducidos por el cliente.
-    double getTotalMinutosReproducidos() const {
-        return historialMinutos.acumularRecursivo([](int m) { return (double)m; });
-    }
+    
 
     // Recursivo (metrica): total de resenas escritas.
     double getTotalResenias() const {
@@ -34,8 +30,7 @@ public:
         std::cout << "--- PERFIL CLIENTE ---\n"
             << "Nombre: " << nombres << " " << apellidos << "\n"
             << "Correo: " << correo << "\n"
-            << "Resenas escritas: " << (int)getTotalResenias() << "\n"
-            << "Minutos reproducidos (historial): " << (int)getTotalMinutosReproducidos() << "\n";
+            << "Resenas escritas: " << (int)getTotalResenias() << "\n";
     }
 
     void mostrarMenu() override {

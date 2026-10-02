@@ -83,9 +83,6 @@
     <ClInclude Include="Ordenamientos.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RegistroUsuario.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MovieTime.cpp">
