@@ -96,7 +96,6 @@ public:
         return resultado;
     }
 
-    // --- Lambda: actualizacion masiva aplicando una funcion de transformacion ---
     void actualizarSi(std::function<bool(T)> criterio, std::function<void(T)> accionActualizar) {
         Nodo<T>* aux = cabeza;
         while (aux != nullptr) {
@@ -105,7 +104,6 @@ public:
         }
     }
 
-    // --- Recursivo (1/3 de la rubrica): busqueda booleana recursiva ---
     bool buscarRecursivo(Nodo<T>* nodoActual, std::function<bool(T)> criterio) {
         if (nodoActual == nullptr) return false;
         if (criterio(nodoActual->valor)) return true;
@@ -116,8 +114,6 @@ public:
         return buscarRecursivo(cabeza, criterio);
     }
 
-    // --- Recursivo (2/3): conteo/acumulacion recursiva de una metrica numerica ---
-    // Ej: sumar minutos, sumar resenas, etc. usando una lambda "extractor"
     double acumularRecursivo(Nodo<T>* nodoActual, std::function<double(T)> extractor) const {
         if (nodoActual == nullptr) return 0.0;
         return extractor(nodoActual->valor) + acumularRecursivo(nodoActual->siguiente, extractor);
