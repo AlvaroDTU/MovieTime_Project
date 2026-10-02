@@ -45,7 +45,7 @@ private:
         int valor;
         std::cout << mensaje;
         while (!(std::cin >> valor)) {
-            if (std::cin.eof()) { std::exit(0); } // fin de flujo: cierre limpio, evita bucle infinito
+            if (std::cin.eof()) { std::exit(0); }
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             std::cout << "Entrada invalida. " << mensaje;
@@ -89,8 +89,6 @@ private:
         GestorArchivos::guardarUsuarios("usuarios.txt", usuarios);
     }
 
-    // Reconstruye la cola de tendencias: entra todo lo que tenga rating >= 8
-    // o popularidad alta y que aun no este en la cola.
     void actualizarTendencias() {
         catalogo.recorrer([this](Audiovisual* item) {
             bool califica = (item->getRating() >= MIN_RATING_TENDENCIA) ||
@@ -272,7 +270,7 @@ private:
         pausar();
     }
 
-    // ---------------- Ordenamiento (3 algoritmos avanzados) ----------------
+    // ---------------- Ordenamientos --------------
     void ordenarCatalogoMenu() {
         if (catalogo.esVacia()) {
             std::cout << "\nEl catalogo esta vacio.\n";
@@ -288,11 +286,9 @@ private:
         std::cout << "4. MergeSort  -> por Titulo (alfabetico)\n";
         int op = leerEntero("Opcion: ");
 
-        // 1. Creamos el vector auxiliar con los punteros
         std::vector<Audiovisual*> arreglo;
         catalogo.recorrer([&arreglo](Audiovisual* a) { arreglo.push_back(a); });
 
-        // 2. Ordenamos únicamente el vector auxiliar
         switch (op) {
         case 1:
             Ordenamientos::heapSort<Audiovisual*>(arreglo, [](Audiovisual* a, Audiovisual* b) {
@@ -320,7 +316,6 @@ private:
             return;
         }
 
-        // 3. Mostramos el resultado ordenado desde el vector
         limpiarPantalla();
         std::cout << "=== CATALOGO ORDENADO ===\n\n";
         int i = 1;
@@ -344,7 +339,7 @@ private:
                 if (a->getCategoria() && a->getCategoria()->getId() == cat->getId()) deCategoria.agregarFinal(a);
                 });
 
-            // Recursivo: total de minutos y total de resenas de la categoria
+            // total de minutos y total de resenas de la categoria
             double totalMinutos = deCategoria.acumularRecursivo([](Audiovisual* a) { return (double)a->getMinutosTotales(); });
             double totalResenias = deCategoria.acumularRecursivo([](Audiovisual* a) { return (double)a->getResenias().getLongitud(); });
 
@@ -354,7 +349,7 @@ private:
         pausar();
     }
 
-    // ---------------- Admin: agregar contenido ----------------
+    // ---------------- Administrador ----------------
     void agregarContenido() {
         limpiarPantalla();
         std::cout << "=== AGREGAR CONTENIDO ===\n";
@@ -404,7 +399,7 @@ private:
         pausar();
     }
 
-    // ---------------- Menus por rol ----------------
+    // ---------------- Menus ----------------
     void menuCliente() {
         char salir = ' ';
         do {
@@ -482,8 +477,6 @@ public:
         usuarios.recorrer([](UsuarioBase* usr) { delete usr; });
     }
 
-    // Bucle principal ininterrumpido: tras cerrar sesion se vuelve al login,
-    // nunca se cierra el programa de forma inesperada.
     void iniciar() {
         inicializarDatos();
 
@@ -500,7 +493,7 @@ public:
             if (admin) menuAdmin();
             else menuCliente();
 
-            usuarioLogueado = nullptr; // cierre de sesion: vuelve al login sin cerrar el programa
+            usuarioLogueado = nullptr;  
         }
 
         limpiarPantalla();
