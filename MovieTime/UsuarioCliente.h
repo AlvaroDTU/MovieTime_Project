@@ -6,7 +6,6 @@
 class UsuarioCliente : public UsuarioBase {
 private:
     ListaSimple<Resenia*> misResenas;
-    ListaSimple<int> historialMinutos; // minutos reproducidos por cada contenido visto
 
 public:
     UsuarioCliente(std::string id, std::string nom, std::string ape, std::string naci,
