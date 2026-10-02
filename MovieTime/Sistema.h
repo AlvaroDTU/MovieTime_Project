@@ -278,7 +278,6 @@ private:
         Resenia* nueva = new Resenia(item->getId(), cliente->getId(), calif, comentario);
         item->agregarResenia(nueva);
         cliente->agregarResenia(nueva);
-        cliente->registrarReproduccion(item->getMinutosTotales());
 
         actualizarTendencias();
         GestorArchivos::guardarCatalogo("catalogo.txt", catalogo);
