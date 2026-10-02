@@ -105,6 +105,9 @@ private:
         std::cout << "========================================\n";
         std::cout << "     SISTEMA DE STREAMING - MOVIE TIME    \n";
         std::cout << "========================================\n";
+        std::cout << "1. Registrar cuenta\n";
+        std::cout << "2. Iniciar sesión\n";
+        std::cout << "3. Salir\n";
         std::cout << "Correo: "; std::cin >> correo;
         std::cout << "Contrasena: "; std::cin >> contra;
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -419,7 +422,7 @@ private:
                 usuarioLogueado->mostrarPerfil();
                 UsuarioCliente* c = dynamic_cast<UsuarioCliente*>(usuarioLogueado);
                 if (c) {
-                    std::cout << "\n--- MIS RESEnAS ---\n";
+                    std::cout << "\n--- MIS RESENAS ---\n";
                     if (c->getMisResenas().esVacia()) std::cout << "Aun no has dejado resenas.\n";
                     else c->getMisResenas().recorrer([](Resenia* r) { r->mostrar(); });
                 }
