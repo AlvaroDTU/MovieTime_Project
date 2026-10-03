@@ -1,4 +1,8 @@
 #pragma once
+#ifndef NOMINMAX
+#define NOMINMAX
+#endif
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -18,6 +22,7 @@
 #include "UsuarioAdministrador.h"
 #include "GestorArchivos.h"
 #include "Ordenamientos.h"
+#include "Fondo.h"
 
 class Sistema {
 private:
@@ -29,11 +34,16 @@ private:
     ListaSimple<UsuarioBase*> usuarios;
     UsuarioBase* usuarioLogueado;
 
+    Fondo objFondo;
+
     static const int MIN_RATING_TENDENCIA = 8;   // rating >= 8/10
     static const int MIN_POPULARIDAD_TENDENCIA = 5;
 
-    static void limpiarPantalla() {
+    // Método centralizado para limpiar pantalla e imprimir el fondo
+    void refrescarPantallaConFondo() {
         system("cls");
+        objFondo.imprime_movietime_cartelera(0, 0);
+        objFondo.gotoxy(1, 12); // Posiciona el cursor debajo del arte del fondo
     }
 
     static void pausar() {
@@ -47,10 +57,10 @@ private:
         while (!(std::cin >> valor)) {
             if (std::cin.eof()) { std::exit(0); }
             std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cin.ignore((std::numeric_limits<std::streamsize>::max)(), '\n');
             std::cout << "Entrada invalida. " << mensaje;
         }
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cin.ignore((std::numeric_limits<std::streamsize>::max)(), '\n');
         return valor;
     }
 
@@ -60,10 +70,10 @@ private:
         while (!(std::cin >> valor)) {
             if (std::cin.eof()) { std::exit(0); }
             std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cin.ignore((std::numeric_limits<std::streamsize>::max)(), '\n');
             std::cout << "Entrada invalida. " << mensaje;
         }
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cin.ignore((std::numeric_limits<std::streamsize>::max)(), '\n');
         return valor;
     }
 
@@ -100,20 +110,19 @@ private:
 
     // ---------------- Registro de Usuarios ----------------
     void registrarUsuario() {
-        limpiarPantalla();
+        refrescarPantallaConFondo();
         std::cout << "========================================\n";
-        std::cout << "       REGISTRO DE NUEVO USUARIO        \n";
+        std::cout << "        REGISTRO DE NUEVO USUARIO        \n";
         std::cout << "========================================\n";
 
         std::string correo = leerLinea("Ingrese correo electronico: ");
 
-        // Validar que el correo no este registrado previamente
         UsuarioBase** existe = usuarios.buscarSi([&correo](UsuarioBase* u) {
             return u->getCorreo() == correo;
             });
 
         if (existe != nullptr) {
-            std::cout << "\n[!] El correo ya se encuentra registrado en el sistema.\n";
+            std::cout << "\n[!] El correo ya se encuentra registrado \nen el sistema.\n";
             pausar();
             return;
         }
@@ -123,14 +132,9 @@ private:
         std::string apellidos = leerLinea("Ingrese apellidos: ");
         std::string nacionalidad = leerLinea("Ingrese nacionalidad: ");
 
-        // Generar el ID como std::string
         std::string nuevoId = std::to_string(usuarios.getLongitud() + 1);
-
-        // Fecha por defecto de registro
         std::string fechaRegistro = "2026-10-02";
 
-        // Instanciacion con los 7 parametros que exige el constructor:
-        // (id, nom, ape, naci, contr, correo, fecha)
         UsuarioCliente* nuevoCliente = new UsuarioCliente(
             nuevoId,
             nombres,
@@ -144,15 +148,16 @@ private:
         usuarios.agregarFinal(nuevoCliente);
         GestorArchivos::guardarUsuarios("usuarios.txt", usuarios);
 
-        std::cout << "\n[OK] Registro exitoso! Ya puede iniciar sesion con sus credenciales.\n";
+        std::cout << "\n[OK] Registro exitoso! Ya puede iniciar sesion \ncon sus credenciales.\n";
         pausar();
     }
 
     // ---------------- Sesion ----------------
     bool iniciarSesion() {
-        limpiarPantalla();
+        refrescarPantallaConFondo();
+
         std::cout << "========================================\n";
-        std::cout << "     SISTEMA DE STREAMING - MOVIE TIME    \n";
+        std::cout << "      SISTEMA DE STREAMING - MOVIE TIME    \n";
         std::cout << "========================================\n";
         std::cout << "1. Iniciar Sesion\n";
         std::cout << "2. Registrarse\n";
@@ -174,9 +179,9 @@ private:
             return false;
         }
 
-        limpiarPantalla();
+        refrescarPantallaConFondo();
         std::cout << "========================================\n";
-        std::cout << "            INICIO DE SESION            \n";
+        std::cout << "             INICIO DE SESION            \n";
         std::cout << "========================================\n";
         std::string correo = leerLinea("Correo: ");
         std::string contra = leerLinea("Contrasena: ");
@@ -198,7 +203,7 @@ private:
 
     void mostrarCatalogoFicha() {
         if (catalogo.esVacia()) {
-            limpiarPantalla();
+            refrescarPantallaConFondo();
             std::cout << "El catalogo esta vacio.\n";
             pausar();
             return;
@@ -211,7 +216,7 @@ private:
         char opcion = ' ';
 
         do {
-            limpiarPantalla();
+            refrescarPantallaConFondo();
             Audiovisual* actual = vista[indice];
 
             std::cout << "==================== FICHA " << (indice + 1) << "/" << vista.size() << " ====================\n\n";
@@ -223,7 +228,7 @@ private:
             std::cout << "\nResenas registradas: " << actual->getResenias().getLongitud() << "\n";
 
             std::cout << "\n----------------------------------------\n";
-            std::cout << "[D] Siguiente   [A] Anterior   [R] Dejar Resena   [V] Ver Resenas   [Q] Volver\n";
+            std::cout << "[D] Siguiente   [A] Anterior   [R] Dejar Resena  \n [V] Ver Resenas   [Q] Volver\n";
             std::cout << "Opcion: ";
             std::cin >> opcion;
             opcion = toupper(opcion);
@@ -251,7 +256,7 @@ private:
     }
 
     void verResenias(Audiovisual* item) {
-        limpiarPantalla();
+        refrescarPantallaConFondo();
         std::cout << "=== RESEnAS DE \"" << item->getTitulo() << "\" ===\n\n";
         if (item->getResenias().esVacia()) {
             std::cout << "Aun no hay resenas para este contenido.\n";
@@ -270,7 +275,7 @@ private:
             return;
         }
 
-        limpiarPantalla();
+        refrescarPantallaConFondo();
         std::cout << "=== DEJAR RESEnA: \"" << item->getTitulo() << "\" ===\n\n";
         double calif = leerDouble("Calificacion (0 al 10): ");
         std::string comentario = leerLinea("Comentario: ");
@@ -289,7 +294,7 @@ private:
 
     // ---------------- Tendencias ----------------
     void mostrarTendencias() {
-        limpiarPantalla();
+        refrescarPantallaConFondo();
         std::cout << "=== TENDENCIAS DEL DIA ===\n\n";
         if (colaTendencias.empty())
             std::cout << "No hay tendencias registradas todavia.\n";
@@ -307,7 +312,7 @@ private:
 
     // ---------------- Busqueda ----------------
     void buscarContenido() {
-        limpiarPantalla();
+        refrescarPantallaConFondo();
         std::cout << "=== BUSCAR CONTENIDO ===\n";
         std::cout << "1. Por ID (busqueda recursiva en lista enlazada)\n";
         std::cout << "2. Por Titulo (busqueda recursiva en lista enlazada)\n";
@@ -326,7 +331,7 @@ private:
             if (res) encontrado = *res;
         }
 
-        limpiarPantalla();
+        refrescarPantallaConFondo();
         if (encontrado) {
             std::cout << "=== RESULTADO ===\n\n";
             encontrado->mostrar();
@@ -345,7 +350,7 @@ private:
             return;
         }
 
-        limpiarPantalla();
+        refrescarPantallaConFondo();
         std::cout << "=== ORDENAR CATALOGO ===\n";
         std::cout << "1. HeapSort   -> por Popularidad (descendente)\n";
         std::cout << "2. QuickSort  -> por Rating/Calificacion (descendente)\n";
@@ -383,7 +388,7 @@ private:
             return;
         }
 
-        limpiarPantalla();
+        refrescarPantallaConFondo();
         std::cout << "=== CATALOGO ORDENADO ===\n\n";
         int i = 1;
         for (Audiovisual* a : arreglo) {
@@ -395,7 +400,7 @@ private:
 
     // ---------------- Metricas recursivas ----------------
     void mostrarMetricasCategoria() {
-        limpiarPantalla();
+        refrescarPantallaConFondo();
         std::cout << "=== METRICAS POR CATEGORIA ===\n\n";
         if (categorias.esVacia()) { std::cout << "No hay categorias registradas.\n"; pausar(); return; }
 
@@ -416,7 +421,7 @@ private:
 
     // ---------------- Administrador ----------------
     void agregarContenido() {
-        limpiarPantalla();
+        refrescarPantallaConFondo();
         std::cout << "=== AGREGAR CONTENIDO ===\n";
         std::cout << "1. Pelicula\n2. Serie\n";
         int tipo = leerEntero("Tipo: ");
@@ -468,7 +473,7 @@ private:
     void menuCliente() {
         char salir = ' ';
         do {
-            limpiarPantalla();
+            refrescarPantallaConFondo();
             std::cout << "========================================\n";
             usuarioLogueado->mostrarMenu();
             std::cout << "========================================\n";
@@ -480,7 +485,7 @@ private:
             case 3: buscarContenido(); break;
             case 4: ordenarCatalogoMenu(); break;
             case 5: {
-                limpiarPantalla();
+                refrescarPantallaConFondo();
                 usuarioLogueado->mostrarPerfil();
                 UsuarioCliente* c = dynamic_cast<UsuarioCliente*>(usuarioLogueado);
                 if (c) {
@@ -504,7 +509,7 @@ private:
     void menuAdmin() {
         char salir = ' ';
         do {
-            limpiarPantalla();
+            refrescarPantallaConFondo();
             std::cout << "========================================\n";
             usuarioLogueado->mostrarMenu();
             std::cout << "========================================\n";
@@ -557,7 +562,7 @@ public:
             usuarioLogueado = nullptr;
         }
 
-        limpiarPantalla();
-        std::cout << "Gracias por usar Movie Time. Todos los cambios fueron guardados.\n";
+        refrescarPantallaConFondo();
+        std::cout << "Gracias por usar Movie Time. \nTodos los cambios fueron guardados.\n";
     }
 };
