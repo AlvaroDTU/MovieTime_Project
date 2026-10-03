@@ -20,7 +20,9 @@ public:
 
     int getLongitud() const { return longitud; }
     bool esVacia() const { return cabeza == nullptr; }
-    Nodo<T>* getCabeza() const { return cabeza; }
+
+    Nodo<T>* getCabeza() { return cabeza; }
+    const Nodo<T>* getCabeza() const { return cabeza; }
 
     void agregarInicio(T valor) {
         Nodo<T>* nuevo = new Nodo<T>(valor);
@@ -68,7 +70,7 @@ public:
 
     // --- Lambda: recorrido ---
     void recorrer(std::function<void(T)> accion) const {
-        Nodo<T>* aux = cabeza;
+        const Nodo<T>* aux = cabeza;
         while (aux != nullptr) {
             accion(aux->valor);
             aux = aux->siguiente;
@@ -85,10 +87,19 @@ public:
         return nullptr;
     }
 
-    // --- Lambda: filtrado (nueva lista con los que cumplen el criterio) ---
+    const T* buscarSi(std::function<bool(T)> criterio) const {
+        const Nodo<T>* aux = cabeza;
+        while (aux != nullptr) {
+            if (criterio(aux->valor)) return &(aux->valor);
+            aux = aux->siguiente;
+        }
+        return nullptr;
+    }
+
+    // --- Lambda: filtrado ---
     ListaSimple<T> filtrar(std::function<bool(T)> criterio) const {
         ListaSimple<T> resultado;
-        Nodo<T>* aux = cabeza;
+        const Nodo<T>* aux = cabeza;
         while (aux != nullptr) {
             if (criterio(aux->valor)) resultado.agregarFinal(aux->valor);
             aux = aux->siguiente;
@@ -96,7 +107,7 @@ public:
         return resultado;
     }
 
-    void actualizarSi(std::function<bool(T)> criterio, std::function<void(T)> accionActualizar) {
+    void actualizarSi(std::function<bool(T)> criterio, std::function<void(T&)> accionActualizar) {
         Nodo<T>* aux = cabeza;
         while (aux != nullptr) {
             if (criterio(aux->valor)) accionActualizar(aux->valor);
@@ -114,7 +125,7 @@ public:
         return buscarRecursivo(cabeza, criterio);
     }
 
-    double acumularRecursivo(Nodo<T>* nodoActual, std::function<double(T)> extractor) const {
+    double acumularRecursivo(const Nodo<T>* nodoActual, std::function<double(T)> extractor) const {
         if (nodoActual == nullptr) return 0.0;
         return extractor(nodoActual->valor) + acumularRecursivo(nodoActual->siguiente, extractor);
     }

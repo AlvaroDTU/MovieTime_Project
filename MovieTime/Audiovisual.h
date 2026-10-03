@@ -65,24 +65,30 @@ public:
     virtual std::string getTipo() const = 0;
 
 
-    bool tieneActor(const std::string& nombreBuscado) const {
-        auto& listaActores = const_cast<ListaSimple<Actor*>&>(actores);
-        Actor** encontrado = listaActores.buscarSi([&nombreBuscado](Actor* a) {
-            if (a == nullptr) return false;
+bool tieneActor(const std::string& nombreBuscado) const {
+    bool hallado = false;
+    actores.recorrer([&nombreBuscado, &hallado](Actor* a) {
+        if (a != nullptr && !hallado) {
             std::string nombreCompleto = a->getNombres() + " " + a->getApellidos();
-            return nombreCompleto.find(nombreBuscado) != std::string::npos;
-            });
-        return encontrado != nullptr;
-    }
+            if (nombreCompleto.find(nombreBuscado) != std::string::npos) {
+                hallado = true;
+            }
+        }
+    });
+    return hallado;
+}
 
-    bool tieneDirector(const std::string& nombreBuscado) const {
-        auto& listaDirectores = const_cast<ListaSimple<Director*>&>(directores);
-        Director** encontrado = listaDirectores.buscarSi([&nombreBuscado](Director* d) {
-            if (d == nullptr) return false;
+bool tieneDirector(const std::string& nombreBuscado) const {
+    bool hallado = false;
+    directores.recorrer([&nombreBuscado, &hallado](Director* d) {
+        if (d != nullptr && !hallado) {
             std::string nombreCompleto = d->getNombres() + " " + d->getApellidos();
-            return nombreCompleto.find(nombreBuscado) != std::string::npos;
-            });
-        return encontrado != nullptr;
-    }
+            if (nombreCompleto.find(nombreBuscado) != std::string::npos) {
+                hallado = true;
+            }
+        }
+    });
+    return hallado;
+}
 
 };

@@ -17,8 +17,12 @@ public:
 
     int getLongitud() const { return longitud; }
     bool esVacia() const { return cabeza == nullptr; }
-    NodoDoble<T>* getCabeza() const { return cabeza; }
-    NodoDoble<T>* getCola() const { return cola; }
+
+    NodoDoble<T>* getCabeza() { return cabeza; }
+    const NodoDoble<T>* getCabeza() const { return cabeza; }
+
+    NodoDoble<T>* getCola() { return cola; }
+    const NodoDoble<T>* getCola() const { return cola; }
 
     void agregarInicio(T valor) {
         NodoDoble<T>* nuevo = new NodoDoble<T>(valor);
@@ -66,12 +70,12 @@ public:
 
     // --- Lambda: recorridos en ambos sentidos ---
     void recorrer(std::function<void(T)> accion) const {
-        NodoDoble<T>* aux = cabeza;
+        const NodoDoble<T>* aux = cabeza;
         while (aux != nullptr) { accion(aux->valor); aux = aux->siguiente; }
     }
 
     void recorrerInverso(std::function<void(T)> accion) const {
-        NodoDoble<T>* aux = cola;
+        const NodoDoble<T>* aux = cola;
         while (aux != nullptr) { accion(aux->valor); aux = aux->anterior; }
     }
 
@@ -85,10 +89,19 @@ public:
         return nullptr;
     }
 
+    const T* buscarSi(std::function<bool(T)> criterio) const {
+        const NodoDoble<T>* aux = cabeza;
+        while (aux != nullptr) {
+            if (criterio(aux->valor)) return &(aux->valor);
+            aux = aux->siguiente;
+        }
+        return nullptr;
+    }
+
     // --- Lambda: filtrado ---
     ListaDoble<T> filtrar(std::function<bool(T)> criterio) const {
         ListaDoble<T> resultado;
-        NodoDoble<T>* aux = cabeza;
+        const NodoDoble<T>* aux = cabeza;
         while (aux != nullptr) {
             if (criterio(aux->valor)) resultado.agregarFinal(aux->valor);
             aux = aux->siguiente;
@@ -96,8 +109,8 @@ public:
         return resultado;
     }
 
-    // --- Lambda: actualizacion masiva ---
-    void actualizarSi(std::function<bool(T)> criterio, std::function<void(T)> accionActualizar) {
+    // --- Lambda ---
+    void actualizarSi(std::function<bool(T)> criterio, std::function<void(T&)> accionActualizar) {
         NodoDoble<T>* aux = cabeza;
         while (aux != nullptr) {
             if (criterio(aux->valor)) accionActualizar(aux->valor);
@@ -105,30 +118,25 @@ public:
         }
     }
 
-
     T* buscarRecursivo(NodoDoble<T>* nodoActual, std::function<bool(T)> criterio) {
-        if (nodoActual == nullptr) return nullptr;               // Caso base
+        if (nodoActual == nullptr) return nullptr;
         if (criterio(nodoActual->valor)) return &(nodoActual->valor);
-        return buscarRecursivo(nodoActual->siguiente, criterio); // Caso recursivo
+        return buscarRecursivo(nodoActual->siguiente, criterio);
     }
 
     T* buscarRecursivo(std::function<bool(T)> criterio) {
         return buscarRecursivo(cabeza, criterio);
     }
 
-    // Convierte la lista a un arreglo dinamico (para pasarla a los algoritmos
-    // de ordenamiento avanzados sin duplicar logica de enlazado).
     T* aArreglo() const {
         if (esVacia()) return nullptr;
         T* arreglo = new T[longitud];
-        NodoDoble<T>* aux = cabeza;
+        const NodoDoble<T>* aux = cabeza;
         int i = 0;
         while (aux != nullptr) { arreglo[i++] = aux->valor; aux = aux->siguiente; }
         return arreglo;
     }
 
-    // Reordena los nodos de la lista segun el orden de un arreglo ya ordenado
-    // (se usa despues de aplicar HeapSort/QuickSort/MergeSort sobre aArreglo()).
     void reordenarDesde(T* arregloOrdenado) {
         NodoDoble<T>* aux = cabeza;
         int i = 0;

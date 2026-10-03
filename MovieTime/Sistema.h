@@ -595,10 +595,11 @@ public:
 
     void iniciar() {
         inicializarDatos();
+        bool ejecutando = true;
 
-        while (true) {
+        while (ejecutando) {
             if (!iniciarSesion()) {
-                continue;
+                break;
             }
 
             UsuarioAdministrador* admin = dynamic_cast<UsuarioAdministrador*>(usuarioLogueado);
@@ -609,6 +610,6 @@ public:
         }
 
         refrescarPantallaConFondo();
-        std::cout << "Gracias por usar Movie Time. \nTodos los cambios fueron guardados.\n";
+        std::cout << "Gracias por usar Movie Time.\n";
     }
 };
