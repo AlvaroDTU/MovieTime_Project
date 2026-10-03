@@ -60,27 +60,6 @@ public:
         longitud--;
     }
 
-    // Elimina el primer nodo que cumpla el criterio (lambda). O(n) pero
-    // aprovecha el doble enlace para reconectar en O(1) una vez ubicado.
-    bool eliminarSi(std::function<bool(T)> criterio) {
-        NodoDoble<T>* aux = cabeza;
-        while (aux != nullptr) {
-            if (criterio(aux->valor)) {
-                if (aux->anterior) aux->anterior->siguiente = aux->siguiente;
-                else cabeza = aux->siguiente;
-
-                if (aux->siguiente) aux->siguiente->anterior = aux->anterior;
-                else cola = aux->anterior;
-
-                delete aux;
-                longitud--;
-                return true;
-            }
-            aux = aux->siguiente;
-        }
-        return false;
-    }
-
     void limpiar() {
         while (!esVacia()) eliminarInicio();
     }
