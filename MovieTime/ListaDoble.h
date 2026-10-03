@@ -105,9 +105,7 @@ public:
         }
     }
 
-    // --- Recursivo: busqueda de un elemento (por ID/titulo, via lambda) ---
-    // Recorre la lista doblemente enlazada de forma recursiva y retorna un
-    // puntero al valor encontrado, o nullptr si no existe.
+
     T* buscarRecursivo(NodoDoble<T>* nodoActual, std::function<bool(T)> criterio) {
         if (nodoActual == nullptr) return nullptr;               // Caso base
         if (criterio(nodoActual->valor)) return &(nodoActual->valor);
