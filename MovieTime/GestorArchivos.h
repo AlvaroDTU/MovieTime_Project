@@ -264,7 +264,7 @@ public:
         if (!archivo.is_open()) {
             std::cout << "[!] No se encontro " << nombreArchivo << ". Se crearan usuarios por defecto.\n";
             usuarios.agregarInicio(new UsuarioCliente("1", "Juan", "Perez", "Peru", "1234", "cliente@mail.com", "2000-01-01"));
-            usuarios.agregarInicio(new UsuarioAdministrador("2", "Admin", "General", "Peru", "admin123", "admin@mail.com", "1995-05-05", "SuperAdmin"));
+            usuarios.agregarInicio(new UsuarioAdministrador("2", "Admin", "General", "Peru", "admin123", "admin@mail.com", "1995-05-05"));
             return;
         }
 
