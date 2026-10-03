@@ -30,14 +30,13 @@ private:
         return nuevaCat;
     }
 
-    // Reemplaza comas por punto y coma para no romper el formato CSV simple.
     static std::string sanear(std::string texto) {
         for (auto& c : texto) if (c == ',') c = ';';
         return texto;
     }
 
 public:
-    // ================= CATALOGO (peliculas.txt / catalogo.txt) =================
+    // ================= CATALOGO (catalogo.txt) =================
     static void cargarCatalogo(const std::string& nombreArchivo, ListaDoble<Audiovisual*>& catalogo,
         ListaDoble<Categoria*>& listaCategorias, ListaDoble<Actor*>& listaActores,
         ListaDoble<Director*>& listaDirectores) {
@@ -185,7 +184,7 @@ public:
         std::cout << "[OK] Reparto guardado en " << nombreArchivo << "\n";
     }
 
-    // ================= RESEnAS (resenias.txt) =================
+    // ================= RESENIAS (resenias.txt) =================
     static void guardarResenias(const std::string& nombreArchivo, const ListaDoble<Audiovisual*>& catalogo) {
         std::ofstream archivo(nombreArchivo);
         if (!archivo.is_open()) { std::cout << "[!] Error al guardar " << nombreArchivo << "\n"; return; }
