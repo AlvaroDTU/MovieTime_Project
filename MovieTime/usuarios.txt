@@ -3,3 +3,4 @@ ADMIN,2,Admin,General,Peru,admin123,admin@mail.com,1995-05-05
 CLIENTE,3,Maria,Lopez,Mexico,maria123,maria@mail.com,1998-05-12
 CLIENTE,4,Carlos,Ruiz,Argentina,carlos123,carlos@mail.com,1992-11-23
 CLIENTE,5,Jefferson,Cobe¤as,Peruana,cobenas123,cobenas@mail.com,2026-10-02
+CLIENTE,6,Alvaro De Tomas,Sanchez,Peruana,alvaro123,alvaro@mail.com,2026-10-02

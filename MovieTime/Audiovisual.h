@@ -59,10 +59,30 @@ public:
         rating = suma / resenias.getLongitud();
     }
 
-    // Metodo virtual polimorfico: minutos totales reproducidos/estimados,
-    // usado por la metrica recursiva de "Conteo/Recorrido Recursivo".
     virtual int getMinutosTotales() const = 0;
 
     virtual void mostrar() const = 0;
     virtual std::string getTipo() const = 0;
+
+
+    bool tieneActor(const std::string& nombreBuscado) const {
+        auto& listaActores = const_cast<ListaSimple<Actor*>&>(actores);
+        Actor** encontrado = listaActores.buscarSi([&nombreBuscado](Actor* a) {
+            if (a == nullptr) return false;
+            std::string nombreCompleto = a->getNombres() + " " + a->getApellidos();
+            return nombreCompleto.find(nombreBuscado) != std::string::npos;
+            });
+        return encontrado != nullptr;
+    }
+
+    bool tieneDirector(const std::string& nombreBuscado) const {
+        auto& listaDirectores = const_cast<ListaSimple<Director*>&>(directores);
+        Director** encontrado = listaDirectores.buscarSi([&nombreBuscado](Director* d) {
+            if (d == nullptr) return false;
+            std::string nombreCompleto = d->getNombres() + " " + d->getApellidos();
+            return nombreCompleto.find(nombreBuscado) != std::string::npos;
+            });
+        return encontrado != nullptr;
+    }
+
 };
