@@ -265,6 +265,7 @@ private:
             item->getResenias().recorrer([](Resenia* r) { r->mostrar(); });
         }
         pausar();
+        pausar();
     }
 
     void dejarResenia(Audiovisual* item) {
