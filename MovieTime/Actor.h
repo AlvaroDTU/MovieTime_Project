@@ -5,28 +5,10 @@
 
 class Audiovisual; 
 
-class Actor : public Persona {
-private:
-    ListaSimple<Audiovisual*> proyectos;
-
-    void construirRedRecursivo(Nodo<Audiovisual*>* nodoActual, ListaSimple<Audiovisual*>& resultado) const {
-        if (nodoActual == nullptr) return; 
-        resultado.agregarFinal(nodoActual->valor);
-        construirRedRecursivo(nodoActual->siguiente, resultado);
-    }
-
+class Actor : public Persona 
+{
 public:
     Actor(const std::string& nombres, const std::string& apellidos)
         : Persona(nombres, apellidos) {}
     ~Actor() {}
-
-    void agregarProyecto(Audiovisual* proyecto) {
-        proyectos.agregarInicio(proyecto);
-    }
-
-    ListaSimple<Audiovisual*> construirRedDeContenidos() const {
-        ListaSimple<Audiovisual*> resultado;
-        construirRedRecursivo(proyectos.getCabeza(), resultado);
-        return resultado;
-    }
 };
