@@ -39,11 +39,11 @@ private:
     static const int MIN_RATING_TENDENCIA = 8;   // rating >= 8/10
     static const int MIN_POPULARIDAD_TENDENCIA = 5;
 
-    // Método centralizado para limpiar pantalla e imprimir el fondo
+  
     void refrescarPantallaConFondo() {
         system("cls");
         objFondo.imprime_movietime_cartelera(0, 0);
-        objFondo.gotoxy(1, 12); // Posiciona el cursor debajo del arte del fondo
+        objFondo.gotoxy(1, 12); 
     }
 
     static void pausar() {
