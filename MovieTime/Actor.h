@@ -3,8 +3,6 @@
 #include "Persona.h"
 #include "ListaSimple.h"
 
-class Audiovisual; 
-
 class Actor : public Persona 
 {
 public:
