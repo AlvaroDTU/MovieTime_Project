@@ -459,8 +459,6 @@ private:
 
         nuevo->agregarDirector(dir);
         nuevo->agregarActor(act);
-        dir->agregarProyecto(nuevo);
-        act->agregarProyecto(nuevo);
 
         catalogo.agregarFinal(nuevo);
         guardarTodo();

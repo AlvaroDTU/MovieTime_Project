@@ -93,9 +93,6 @@ public:
                 p->setRating(std::stod(sRating));
                 p->setPopularidad(std::stoi(sPop));
 
-                dir->agregarProyecto(p);
-                act->agregarProyecto(p);
-
                 catalogo.agregarFinal(p);
                 cargados++;
             }
@@ -123,9 +120,6 @@ public:
                 s->agregarActor(act);
                 s->setRating(std::stod(sRating));
                 s->setPopularidad(std::stoi(sPop));
-
-                dir->agregarProyecto(s);
-                act->agregarProyecto(s);
 
                 catalogo.agregarFinal(s);
                 cargados++;
