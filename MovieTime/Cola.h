@@ -41,19 +41,17 @@ public:
     bool empty() const { return longitud == 0; }
     int getLongitud() const { return longitud; }
 
-    // Permite mostrar/inspeccionar las tendencias sin desencolarlas.
-    void recorrer(std::function<void(T)> accion) const {
-        Nodo<T>* aux = inicio;
-        while (aux != nullptr) 
-        { 
-            accion(aux->valor); 
-            aux = aux->siguiente; 
+    void recorrer(std::function<void(const T&)> accion) const {
+        const Nodo<T>* aux = inicio;
+        while (aux != nullptr) {
+            accion(aux->valor);
+            aux = aux->siguiente;
         }
     }
 
-    // Evita duplicar el mismo elemento dos veces en tendencias.
-    bool contiene(std::function<bool(T)> criterio) const {
-        Nodo<T>* aux = inicio;
+    // Verificar si un elemento cumple un criterio dentro de la cola
+    bool contiene(std::function<bool(const T&)> criterio) const {
+        const Nodo<T>* aux = inicio;
         while (aux != nullptr) {
             if (criterio(aux->valor)) return true;
             aux = aux->siguiente;

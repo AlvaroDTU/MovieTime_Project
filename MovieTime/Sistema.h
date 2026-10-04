@@ -311,36 +311,83 @@ private:
         pausar();
     }
 
+
+    void buscarPorActor() {
+        refrescarPantallaConFondo();
+        std::cout << "=== BUSCAR CONTENIDO POR ACTOR ===\n";
+        std::string nombreActor = leerLinea("Nombre del actor a buscar: ");
+
+        // Búsqueda recursiva en la ListaDoble evaluando el predicado lambda
+        Audiovisual** res = catalogo.buscarRecursivo([&nombreActor](Audiovisual* a) {
+            return a != nullptr && a->tieneActor(nombreActor);
+            });
+
+        refrescarPantallaConFondo();
+        if (res && *res) {
+            std::cout << "=== RESULTADO ENCONTRADO ===\n\n";
+            (*res)->mostrar();
+        }
+        else {
+            std::cout << "No se encontro ningun contenido con el actor: " << nombreActor << "\n";
+        }
+        pausar();
+    }
+
+    void buscarPorDirector() {
+        refrescarPantallaConFondo();
+        std::cout << "=== BUSCAR CONTENIDO POR DIRECTOR ===\n";
+        std::string nombreDirector = leerLinea("Nombre del director a buscar: ");
+
+        // Búsqueda recursiva en la ListaDoble evaluando el predicado lambda
+        Audiovisual** res = catalogo.buscarRecursivo([&nombreDirector](Audiovisual* a) {
+            return a != nullptr && a->tieneDirector(nombreDirector);
+            });
+
+        refrescarPantallaConFondo();
+        if (res && *res) {
+            std::cout << "=== RESULTADO ENCONTRADO ===\n\n";
+            (*res)->mostrar();
+        }
+        else {
+            std::cout << "No se encontro ningun contenido dirigido por: " << nombreDirector << "\n";
+        }
+        pausar();
+    }
+
+
+
     // ---------------- Busqueda ----------------
     void buscarContenido() {
         refrescarPantallaConFondo();
         std::cout << "=== BUSCAR CONTENIDO ===\n";
-        std::cout << "1. Por ID (busqueda recursiva en lista enlazada)\n";
-        std::cout << "2. Por Titulo (busqueda recursiva en lista enlazada)\n";
+        std::cout << "1. Por ID \n";
+        std::cout << "2. Por Titulo \n";
+        std::cout << "3. Por Actor \n";
+        std::cout << "4. Por Director \n";
         int op = leerEntero("Opcion: ");
-
-        Audiovisual* encontrado = nullptr;
 
         if (op == 1) {
             int id = leerEntero("ID a buscar: ");
             Audiovisual** res = catalogo.buscarRecursivo([id](Audiovisual* a) { return a->getId() == id; });
-            if (res) encontrado = *res;
+            refrescarPantallaConFondo();
+            if (res && *res) (*res)->mostrar();
+            else std::cout << "No se encontro el ID.\n";
+            pausar();
         }
-        else {
+        else if (op == 2) {
             std::string titulo = leerLinea("Titulo a buscar: ");
             Audiovisual** res = catalogo.buscarRecursivo([&titulo](Audiovisual* a) { return a->getTitulo() == titulo; });
-            if (res) encontrado = *res;
+            refrescarPantallaConFondo();
+            if (res && *res) (*res)->mostrar();
+            else std::cout << "No se encontro el titulo.\n";
+            pausar();
         }
-
-        refrescarPantallaConFondo();
-        if (encontrado) {
-            std::cout << "=== RESULTADO ===\n\n";
-            encontrado->mostrar();
+        else if (op == 3) {
+            buscarPorActor();
         }
-        else {
-            std::cout << "No se encontro ningun contenido con ese criterio.\n";
+        else if (op == 4) {
+            buscarPorDirector();
         }
-        pausar();
     }
 
     // ---------------- Ordenamientos --------------
@@ -551,17 +598,21 @@ public:
 
         while (true) {
             if (!iniciarSesion()) {
-                continue;
+                continue; 
             }
 
             UsuarioAdministrador* admin = dynamic_cast<UsuarioAdministrador*>(usuarioLogueado);
-            if (admin) menuAdmin();
-            else menuCliente();
+            if (admin) {
+                menuAdmin();
+            }
+            else {
+                menuCliente();
+            }
 
             usuarioLogueado = nullptr;
         }
 
         refrescarPantallaConFondo();
-        std::cout << "Gracias por usar Movie Time. \nTodos los cambios fueron guardados.\n";
+        std::cout << "Gracias por usar Movie Time.\n";
     }
 };
