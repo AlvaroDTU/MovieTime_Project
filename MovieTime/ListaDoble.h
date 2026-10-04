@@ -98,25 +98,9 @@ public:
         return nullptr;
     }
 
-    // --- Lambda: filtrado ---
-    ListaDoble<T> filtrar(std::function<bool(T)> criterio) const {
-        ListaDoble<T> resultado;
-        const NodoDoble<T>* aux = cabeza;
-        while (aux != nullptr) {
-            if (criterio(aux->valor)) resultado.agregarFinal(aux->valor);
-            aux = aux->siguiente;
-        }
-        return resultado;
-    }
+
 
     // --- Lambda ---
-    void actualizarSi(std::function<bool(T)> criterio, std::function<void(T&)> accionActualizar) {
-        NodoDoble<T>* aux = cabeza;
-        while (aux != nullptr) {
-            if (criterio(aux->valor)) accionActualizar(aux->valor);
-            aux = aux->siguiente;
-        }
-    }
 
     T* buscarRecursivo(NodoDoble<T>* nodoActual, std::function<bool(T)> criterio) {
         if (nodoActual == nullptr) return nullptr;
@@ -128,18 +112,5 @@ public:
         return buscarRecursivo(cabeza, criterio);
     }
 
-    T* aArreglo() const {
-        if (esVacia()) return nullptr;
-        T* arreglo = new T[longitud];
-        const NodoDoble<T>* aux = cabeza;
-        int i = 0;
-        while (aux != nullptr) { arreglo[i++] = aux->valor; aux = aux->siguiente; }
-        return arreglo;
-    }
-
-    void reordenarDesde(T* arregloOrdenado) {
-        NodoDoble<T>* aux = cabeza;
-        int i = 0;
-        while (aux != nullptr) { aux->valor = arregloOrdenado[i++]; aux = aux->siguiente; }
-    }
+    
 };

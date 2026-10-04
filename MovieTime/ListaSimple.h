@@ -96,24 +96,6 @@ public:
         return nullptr;
     }
 
-    // --- Lambda: filtrado ---
-    ListaSimple<T> filtrar(std::function<bool(T)> criterio) const {
-        ListaSimple<T> resultado;
-        const Nodo<T>* aux = cabeza;
-        while (aux != nullptr) {
-            if (criterio(aux->valor)) resultado.agregarFinal(aux->valor);
-            aux = aux->siguiente;
-        }
-        return resultado;
-    }
-
-    void actualizarSi(std::function<bool(T)> criterio, std::function<void(T&)> accionActualizar) {
-        Nodo<T>* aux = cabeza;
-        while (aux != nullptr) {
-            if (criterio(aux->valor)) accionActualizar(aux->valor);
-            aux = aux->siguiente;
-        }
-    }
 
     bool buscarRecursivo(Nodo<T>* nodoActual, std::function<bool(T)> criterio) {
         if (nodoActual == nullptr) return false;
