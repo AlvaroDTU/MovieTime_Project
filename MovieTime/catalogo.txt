@@ -1,11 +1,11 @@
 PELICULA,6,Pulp Fiction,1994,154,Drama,Quentin,John,8.9,12
-PELICULA,7,The Matrix,1999,136,Ciencia Ficcion,Lana,Keanu,9,24
-SERIE,8,The Office,2005,9,201,0,Comedia,Greg,Steve,8,21
-SERIE,5,Breaking Bad,2008,5,62,0,Drama,Vince,Bryan,8.33333,37
-PELICULA,2,The Dark Knight,2008,152,Accion,Christopher,Christian,9.5,24
-PELICULA,1,Inception,2010,148,Ciencia Ficcion,Christopher,Leonardo,8.5,19
+PELICULA,7,The Matrix,1999,136,Ciencia Ficcion,Lana,Keanu,9,26
+SERIE,8,The Office,2005,9,201,0,Comedia,Greg,Steve,8,23
+SERIE,5,Breaking Bad,2008,5,62,0,Drama,Vince,Bryan,8.33333,43
+PELICULA,2,The Dark Knight,2008,152,Accion,Christopher,Christian,9.5,28
+PELICULA,1,Inception,2010,148,Ciencia Ficcion,Christopher,Leonardo,8.5,23
 SERIE,10,Game of Thrones,2011,8,73,0,Drama,David,Emilia,9.3,28
 PELICULA,3,Interstellar,2014,169,Ciencia Ficcion,Christopher,Matthew,8.6,18
-SERIE,4,Stranger Things,2016,4,34,1,Drama,Duffer,Millie,8.5,29
+SERIE,4,Stranger Things,2016,4,34,1,Drama,Duffer,Millie,8.5,33
 PELICULA,9,Parasite,2019,132,Drama,Bong,Song,8.5,14
 SERIE,11,Squirt Games,2022,2,22,0,Drama,Jefferson Cobenias,Alvaro De Tomas ,0,0

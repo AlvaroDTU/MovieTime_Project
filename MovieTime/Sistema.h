@@ -595,16 +595,19 @@ public:
 
     void iniciar() {
         inicializarDatos();
-        bool ejecutando = true;
 
-        while (ejecutando) {
+        while (true) {
             if (!iniciarSesion()) {
-                break;
+                continue; 
             }
 
             UsuarioAdministrador* admin = dynamic_cast<UsuarioAdministrador*>(usuarioLogueado);
-            if (admin) menuAdmin();
-            else menuCliente();
+            if (admin) {
+                menuAdmin();
+            }
+            else {
+                menuCliente();
+            }
 
             usuarioLogueado = nullptr;
         }
