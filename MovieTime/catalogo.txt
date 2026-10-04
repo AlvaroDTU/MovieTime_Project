@@ -1,11 +1,50 @@
-PELICULA,6,Pulp Fiction,1994,154,Drama,Quentin,John,8.9,12
-PELICULA,7,The Matrix,1999,136,Ciencia Ficcion,Lana,Keanu,9,24
-SERIE,8,The Office,2005,9,201,0,Comedia,Greg,Steve,8,21
-SERIE,5,Breaking Bad,2008,5,62,0,Drama,Vince,Bryan,8.33333,37
-PELICULA,2,The Dark Knight,2008,152,Accion,Christopher,Christian,9.5,24
-PELICULA,1,Inception,2010,148,Ciencia Ficcion,Christopher,Leonardo,8.5,19
-SERIE,10,Game of Thrones,2011,8,73,0,Drama,David,Emilia,9.3,28
-PELICULA,3,Interstellar,2014,169,Ciencia Ficcion,Christopher,Matthew,8.6,18
-SERIE,4,Stranger Things,2016,4,34,1,Drama,Duffer,Millie,8.5,29
-PELICULA,9,Parasite,2019,132,Drama,Bong,Song,8.5,14
-SERIE,11,Squirt Games,2022,2,22,0,Drama,Jefferson Cobenias,Alvaro De Tomas ,0,0
+PELICULA,1,The Shawshank Redemption,1994,142,Drama,Frank,Darabont,Tim,Robbins,9.3,45
+PELICULA,2,The Godfather,1972,175,Drama,Francis Ford,Coppola,Marlon,Brando,9.2,42
+PELICULA,3,The Dark Knight,2008,152,Accion,Christopher,Nolan,Christian,Bale,9.1,48
+PELICULA,4,12 Angry Men,1957,96,Drama,Sidney,Lumet,Henry,Fonda,9.0,18
+PELICULA,5,Schindler's List,1993,195,Drama,Steven,Spielberg,Liam,Neeson,9.0,39
+PELICULA,6,Pulp Fiction,1994,154,Drama,Quentin,Tarantino,John,Travolta,8.9,46
+PELICULA,7,Fight Club,1999,139,Drama,David,Fincher,Brad,Pitt,8.8,41
+PELICULA,8,Forrest Gump,1994,142,Drama,Robert,Zemeckis,Tom,Hanks,8.8,43
+PELICULA,9,Inception,2010,148,Ciencia Ficcion,Christopher,Nolan,Leonardo,DiCaprio,8.8,49
+PELICULA,10,The Matrix,1999,136,Ciencia Ficcion,Lana,Wachowski,Keanu,Reeves,8.7,47
+PELICULA,11,Goodfellas,1990,146,Crimen,Martin,Scorsese,Robert,De Niro,8.7,34
+PELICULA,12,Interstellar,2014,169,Ciencia Ficcion,Christopher,Nolan,Matthew,McConaughey,8.7,50
+PELICULA,13,Gladiator,2000,155,Accion,Ridley,Scott,Russell,Crowe,8.5,45
+PELICULA,14,The Prestige,2006,130,Misterio,Christopher,Nolan,Christian,Bale,8.5,29
+PELICULA,15,Parasite,2019,132,Drama,Bong,Joon-ho,Song,Kang-ho,8.5,32
+PELICULA,16,Whiplash,2014,106,Drama,Damien,Chazelle,Miles,Teller,8.5,30
+PELICULA,17,The Usual Suspects,1995,106,Crimen,Bryan,Singer,Kevin,Spacey,8.5,26
+PELICULA,18,Leon The Professional,1994,110,Accion,Luc,Besson,Jean,Reno,8.5,23
+PELICULA,19,Back to the Future,1985,116,Ciencia Ficcion,Robert,Zemeckis,Michael J,Fox,8.5,28
+PELICULA,20,Alien,1979,117,Terror,Ridley,Scott,Sigourney,Weaver,8.5,27
+PELICULA,21,Django Unchained,2012,165,Western,Quentin,Tarantino,Jamie,Foxx,8.5,39
+PELICULA,22,Joker,2019,122,Drama,Todd,Phillips,Joaquin,Phoenix,8.3,46
+PELICULA,23,Oppenheimer,2023,180,Drama,Christopher,Nolan,Cillian,Murphy,8.6,49
+PELICULA,24,Mad Max Fury Road,2015,120,Accion,George,Miller,Tom,Hardy,8.1,37
+PELICULA,25,Coco,2017,105,Animacion,Lee,Unkrich,Anthony,Gonzalez,8.4,40
+SERIE,26,Breaking Bad,2008,5,62,1,Drama,Vince,Gilligan,Bryan,Cranston,9.5,50
+SERIE,27,The Office,2005,9,201,0,Comedia,Greg,Daniels,Steve,Carell,8.9,44
+SERIE,28,Game of Thrones,2011,8,73,0,Fantasia,David,Benioff,Emilia,Clarke,9.2,48
+SERIE,29,Stranger Things,2016,4,34,1,Ciencia Ficcion,Duffer,Brothers,Millie Bobby,Brown,8.6,47
+SERIE,30,Better Call Saul,2015,6,63,0,Drama,Vince,Gilligan,Bob,Odenkirk,9.0,38
+SERIE,31,The Last of Us,2023,2,16,1,Drama,Craig,Mazin,Pedro,Pascal,8.7,45
+SERIE,32,Dark,2017,3,26,0,Misterio,Baran bo,Odar,Louis,Hofmann,8.7,35
+SERIE,33,The Crown,2016,6,60,0,Drama,Peter,Morgan,Claire,Foy,8.6,31
+SERIE,34,Black Mirror,2011,7,33,1,Ciencia Ficcion,Charlie,Brooker,Daniel,Lapaine,8.7,42
+SERIE,35,Peaky Blinders,2013,6,36,0,Crimen,Steven,Knight,Cillian,Murphy,8.8,46
+SERIE,36,The Mandalorian,2019,3,24,1,Ciencia Ficcion,Jon,Favreau,Pedro,Pascal,8.6,40
+SERIE,37,Succession,2018,4,39,0,Drama,Jesse,Armstrong,Brian,Cox,8.9,36
+SERIE,38,The Boys,2019,4,32,1,Accion,Eric,Kripke,Karl,Urban,8.6,43
+SERIE,39,Sherlock,2010,4,13,0,Misterio,Mark,Gatiss,Benedict,Cumberbatch,9.1,39
+SERIE,40,The Sopranos,1999,6,86,0,Crimen,David,Chase,James,Gandolfini,9.2,34
+SERIE,41,Friends,1994,10,236,0,Comedia,David,Crane,Jennifer,Aniston,8.9,50
+SERIE,42,Lost,2004,6,121,0,Misterio,J. J.,Abrams,Matthew,Fox,8.3,37
+SERIE,43,The Walking Dead,2010,11,177,0,Terror,Frank,Darabont,Andrew,Lincoln,8.1,41
+SERIE,44,Wednesday,2022,2,16,1,Comedia,Alfred,Gough,Jenna,Ortega,8.1,49
+SERIE,45,The Bear,2022,3,28,1,Comedia,Christopher,Storer,Jeremy Allen,White,8.5,33
+SERIE,46,House of the Dragon,2022,2,18,1,Fantasia,Ryan,Condal,Emma,D'Arcy,8.3,38
+SERIE,47,Narcos,2015,3,30,0,Crimen,Chris,Brancato,Wagner,Moura,8.7,36
+SERIE,48,The Witcher,2019,3,24,1,Fantasia,Lauren,Schmidt,Henry,Cavill,8.0,44
+SERIE,49,Arcane,2021,2,18,0,Animacion,Christian,Linke,Hailee,Steinfeld,9.0,47
+SERIE,50,Chernobyl,2019,1,5,0,Drama,Craig,Mazin,Jared,Harris,9.3,29

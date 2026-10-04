@@ -1,11 +1,50 @@
-7,2,9,Revoluciono el cine con sus efectos
-8,4,8,Muy divertida y comica
-5,3,5,Meg ustan las drogas
-5,3,10,Obra maestra de la television
-5,1,10,Serie perfecta de principio a fin
-2,4,9,Heath Ledger hace una actuacion espectacular
-2,1,10,La mejor pelicula de Batman jamas hecha
-1,3,8,Buena pero un poco confusa en la primera mitad
-1,1,9,Excelente pelicula muy compleja y visualmente impactante
-4,4,8,Buenos personajes y ambientacion ochentera
-4,3,9,Muy entretenida con buenos efectos
+1,3,9,Excelente pelicula muy bien construida y emocional
+2,1,10,Una pelicula clasica con actuaciones memorables
+3,4,10,La mejor pelicula de Batman y una actuacion increible
+4,5,9,Un drama intenso con dialogos excelentes
+5,7,10,Una historia impactante y muy bien dirigida
+6,8,9,Gran pelicula con una narrativa entretenida
+7,9,9,Muy buena historia con personajes memorables
+8,10,10,Dialogos excelentes y escenas inolvidables
+9,1,9,Muy entretenida y visualmente espectacular
+10,3,9,Una historia oscura con excelentes personajes
+11,4,9,Gran pelicula de crimen y actuaciones destacadas
+12,5,10,Una experiencia visual y cientifica impresionante
+13,7,9,Accion y drama muy bien equilibrados
+14,8,9,Muy interesante y con un final excelente
+15,9,10,Una pelicula sorprendente y muy bien ejecutada
+16,10,9,Excelente actuacion y gran desarrollo de personajes
+17,1,8,Buen misterio con un reparto muy solido
+18,3,9,Muy buena pelicula de accion con gran protagonista
+19,4,10,Una aventura clasica que sigue siendo divertida
+20,5,9,Gran pelicula de ciencia ficcion y terror
+21,7,9,Excelente mezcla de accion humor y drama
+22,8,9,Una interpretacion muy potente del personaje principal
+23,9,10,Una pelicula intensa y muy bien dirigida
+24,10,9,Accion espectacular y excelente fotografia
+25,1,9,Una historia original con una gran atmosfera
+26,3,10,Serie excelente de principio a fin
+27,4,9,Muy divertida y con personajes inolvidables
+28,5,10,Gran serie con una historia epica
+29,7,9,Muy entretenida y con excelente ambientacion
+30,8,10,Una de las mejores series de drama criminal
+31,9,9,Muy buena adaptacion con personajes bien desarrollados
+32,10,10,Serie compleja y muy interesante
+33,1,8,Buena serie con una ambientacion excelente
+34,3,9,Capitulos muy originales y sorprendentes
+35,4,9,Excelente serie de crimen con gran protagonista
+36,5,9,Muy buena produccion y excelentes efectos
+37,7,10,Gran drama con personajes muy bien escritos
+38,8,9,Accion entretenida y personajes interesantes
+39,9,10,Una adaptacion excelente con grandes actuaciones
+40,10,10,Una de las mejores series de crimen
+41,1,9,Muy divertida y perfecta para ver en familia
+42,3,8,Buen misterio aunque algunas partes son lentas
+43,4,8,Muy entretenida con buenos momentos de suspenso
+44,5,8,Buena serie con una protagonista carismatica
+45,7,10,Excelente serie con actuaciones sobresalientes
+46,8,8,Buena historia y gran ambientacion
+47,9,9,Muy buena serie con una historia criminal interesante
+48,10,8,Entretenida y con una buena produccion
+49,1,10,Una animacion espectacular con una historia excelente
+50,3,10,Una miniserie impresionante y muy bien realizada

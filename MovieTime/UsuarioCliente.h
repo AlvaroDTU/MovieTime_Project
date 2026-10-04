@@ -17,9 +17,6 @@ public:
     void agregarResenia(Resenia* r) { misResenas.agregarInicio(r); }
     const ListaSimple<Resenia*>& getMisResenas() const { return misResenas; }
 
-
-    
-
     // Recursivo (metrica): total de resenas escritas.
     double getTotalResenias() const {
         return misResenas.acumularRecursivo([](Resenia*) { return 1.0; });
