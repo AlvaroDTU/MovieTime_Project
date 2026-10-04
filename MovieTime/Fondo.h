@@ -22,8 +22,6 @@ public:
     }
 
     void imprime_movietime_cartelera(int x, int y) {
-        
-        
         int movie[40][150] = { 0 };
 
         // --- 1. TEXTO "MOVIE" (Columnas 2 a 48, Filas 3 a 9) ---
@@ -55,73 +53,73 @@ public:
         for (int c = 111; c <= 144; c += 4) { movie[2][c] = 3; movie[8][c] = 3; }
         for (int f = 4; f <= 6; f++) for (int c = 111; c <= 144; c++) movie[f][c] = 5;
 
-        // --- 4. RECUADRO NEGRO PARA MENÚ/SISTEMA (Filas 11 a 38, Cols 2 a 50) ---
+        // --- 4. RECUADRO NEGRO AMPLIADO (Filas 11 a 38, Cols 0 a 63) ---
         for (int f = 11; f <= 38; f++) {
-            for (int c = 0; c <= 53; c++) {
-                movie[f][c] = 12; // Nuevo ID para el contenedor del menú
+            for (int c = 0; c <= 63; c++) {
+                movie[f][c] = 12; // Panel de Fondo
             }
         }
 
-        // --- 5. PARRILLA CONTINUA DE 12 CARTELERAS ---
+        // --- 5. PARRILLA DE 12 CARTELERAS REDIMENSIONADAS ---
 
-        // --- COLUMNA 1 (55 a 74) ---
-        dibujar_marco_poster(movie, 55, 12, 74, 19, 3);
-        for (int f = 14; f <= 17; f++) for (int c = 61; c <= 68; c++) movie[f][c] = 4;
-        movie[15][63] = 3; movie[15][66] = 3; movie[17][64] = 3; movie[17][65] = 3;
+        // --- COLUMNA 1 (67 a 82) ---
+        dibujar_marco_poster(movie, 67, 12, 82, 19, 3);
+        for (int f = 14; f <= 17; f++) for (int c = 71; c <= 78; c++) movie[f][c] = 4;
+        movie[15][73] = 3; movie[15][76] = 3; movie[17][74] = 3; movie[17][75] = 3;
 
-        dibujar_marco_poster(movie, 55, 21, 74, 28, 6);
-        for (int f = 23; f <= 26; f++) for (int c = 61; c <= 68; c++) movie[f][c] = 8;
-        movie[24][63] = 3; movie[24][64] = 3; movie[25][63] = 3; movie[25][66] = 3;
+        dibujar_marco_poster(movie, 67, 21, 82, 28, 6);
+        for (int f = 23; f <= 26; f++) for (int c = 71; c <= 78; c++) movie[f][c] = 8;
+        movie[24][73] = 3; movie[24][74] = 3; movie[25][73] = 3; movie[25][76] = 3;
 
-        dibujar_marco_poster(movie, 55, 30, 74, 37, 9);
-        for (int f = 33; f <= 35; f++) for (int c = 62; c <= 67; c++) movie[f][c] = 8;
-        movie[32][64] = 8; movie[32][65] = 8; movie[35][60] = 8; movie[35][69] = 8;
+        dibujar_marco_poster(movie, 67, 30, 82, 37, 9);
+        for (int f = 33; f <= 35; f++) for (int c = 72; c <= 77; c++) movie[f][c] = 8;
+        movie[32][74] = 8; movie[32][75] = 8; movie[35][70] = 8; movie[35][79] = 8;
 
-        // --- COLUMNA 2 (78 a 97) ---
-        dibujar_marco_poster(movie, 78, 12, 97, 19, 6);
-        for (int f = 14; f <= 17; f++) for (int c = 84; c <= 91; c++) movie[f][c] = 8;
-        movie[15][86] = 9; movie[15][89] = 9; movie[16][87] = 3; movie[16][88] = 3;
+        // --- COLUMNA 2 (88 a 103) ---
+        dibujar_marco_poster(movie, 88, 12, 103, 19, 6);
+        for (int f = 14; f <= 17; f++) for (int c = 92; c <= 99; c++) movie[f][c] = 8;
+        movie[15][94] = 9; movie[15][97] = 9; movie[16][95] = 3; movie[16][96] = 3;
 
-        dibujar_marco_poster(movie, 78, 21, 97, 28, 9);
-        for (int f = 23; f <= 26; f++) for (int c = 84; c <= 91; c++) movie[f][c] = 11;
-        movie[24][85] = 4; movie[25][88] = 4;
+        dibujar_marco_poster(movie, 88, 21, 103, 28, 9);
+        for (int f = 23; f <= 26; f++) for (int c = 92; c <= 99; c++) movie[f][c] = 11;
+        movie[24][93] = 4; movie[25][96] = 4;
 
-        dibujar_marco_poster(movie, 78, 30, 97, 37, 11);
-        for (int f = 34; f <= 36; f++) for (int c = 85; c <= 90; c++) movie[f][c] = 3;
-        movie[33][87] = 3; movie[33][88] = 3;
+        dibujar_marco_poster(movie, 88, 30, 103, 37, 11);
+        for (int f = 34; f <= 36; f++) for (int c = 93; c <= 98; c++) movie[f][c] = 3;
+        movie[33][95] = 3; movie[33][96] = 3;
 
-        // --- COLUMNA 3 (102 a 121) ---
-        dibujar_marco_poster(movie, 102, 12, 121, 19, 6);
+        // --- COLUMNA 3 (109 a 124) ---
+        dibujar_marco_poster(movie, 109, 12, 124, 19, 6);
         for (int f = 14; f <= 17; f++) {
-            movie[f][106] = 7; movie[f][107] = 7;
-            movie[f][116] = 7; movie[f][117] = 7;
+            movie[f][112] = 7; movie[f][113] = 7;
+            movie[f][120] = 7; movie[f][121] = 7;
         }
 
-        dibujar_marco_poster(movie, 102, 21, 121, 28, 9);
-        for (int f = 23; f <= 26; f++) for (int c = 108; c <= 115; c++) movie[f][c] = 6;
-        movie[24][109] = 8; movie[24][110] = 8; movie[25][113] = 8; movie[25][114] = 8;
+        dibujar_marco_poster(movie, 109, 21, 124, 28, 9);
+        for (int f = 23; f <= 26; f++) for (int c = 113; c <= 120; c++) movie[f][c] = 6;
+        movie[24][114] = 8; movie[24][115] = 8; movie[25][118] = 8; movie[25][119] = 8;
 
-        dibujar_marco_poster(movie, 102, 30, 121, 37, 3);
-        for (int c = 105; c <= 118; c += 2) {
+        dibujar_marco_poster(movie, 109, 30, 124, 37, 3);
+        for (int c = 111; c <= 122; c += 2) {
             movie[32][c] = 10; movie[34][c] = 10; movie[35][c] = 10;
         }
 
-        // --- COLUMNA 4 (125 a 144) ---
-        dibujar_marco_poster(movie, 125, 12, 144, 19, 8);
-        movie[14][131] = 3; movie[14][138] = 3;
-        movie[15][132] = 3; movie[15][137] = 3;
-        movie[16][130] = 6; movie[16][139] = 6;
+        // --- COLUMNA 4 (130 a 145) ---
+        dibujar_marco_poster(movie, 130, 12, 145, 19, 8);
+        movie[14][135] = 3; movie[14][140] = 3;
+        movie[15][136] = 3; movie[15][139] = 3;
+        movie[16][134] = 6; movie[16][141] = 6;
 
-        dibujar_marco_poster(movie, 125, 21, 144, 28, 3);
+        dibujar_marco_poster(movie, 130, 21, 145, 28, 3);
         for (int i = 0; i < 5; i++) {
-            movie[26 - i][130 + i] = 9;
-            movie[26 - i][138 - i] = 10;
+            movie[26 - i][134 + i] = 9;
+            movie[26 - i][141 - i] = 10;
         }
 
-        dibujar_marco_poster(movie, 125, 30, 144, 37, 9);
-        for (int f = 32; f <= 35; f++) for (int c = 130; c <= 139; c++) movie[f][c] = 6;
-        for (int f = 33; f <= 34; f++) for (int c = 132; c <= 137; c++) movie[f][c] = 4;
-        movie[33][134] = 9; movie[34][135] = 9;
+        dibujar_marco_poster(movie, 130, 30, 145, 37, 9);
+        for (int f = 32; f <= 35; f++) for (int c = 134; c <= 141; c++) movie[f][c] = 6;
+        for (int f = 33; f <= 34; f++) for (int c = 135; c <= 140; c++) movie[f][c] = 4;
+        movie[33][137] = 9; movie[34][138] = 9;
 
         // --- 6. RENDERIZADO 100% NATIVO ---
         for (int f = 0; f < 40; f++) {
