@@ -36,5 +36,5 @@ public:
 
     virtual void mostrarPerfil() = 0;
     virtual void mostrarMenu() = 0;
-    virtual std::string getRol() const = 0; // "CLIENTE" | "ADMIN" -> usado en persistencia
+    virtual std::string getRol() const = 0; 
 };

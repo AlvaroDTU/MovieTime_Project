@@ -14,7 +14,7 @@ protected:
     int anio;
     Categoria* categoria;
     double rating;       // Promedio sobre 10 estrellas
-    int popularidad;     // Numero de interacciones / resenas
+    int popularidad;     // Numero de resenas
     ListaSimple<Director*> directores;
     ListaSimple<Actor*> actores;
     ListaSimple<Resenia*> resenias;
@@ -25,8 +25,6 @@ public:
 
     virtual ~Audiovisual() {
         resenias.recorrer([](Resenia* r) { delete r; });
-        // Actores/Directores no se destruyen aqui: son compartidos entre varios
-        // Audiovisual y su ciclo de vida lo administra el catalogo/GestorArchivos.
     }
 
     int getId() const { return id; }
@@ -52,7 +50,6 @@ public:
         recalcularRating();
     }
 
-    // Recalcula el promedio usando una lambda "extractor" sobre la calificacion (0-10)
     void recalcularRating() {
         if (resenias.esVacia()) { rating = 0.0; return; }
         double suma = resenias.acumularRecursivo([](Resenia* r) { return r->getCalificacion(); });

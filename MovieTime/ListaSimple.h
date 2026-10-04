@@ -68,7 +68,6 @@ public:
         longitud--;
     }
 
-    // --- Lambda: recorrido ---
     void recorrer(std::function<void(T)> accion) const {
         const Nodo<T>* aux = cabeza;
         while (aux != nullptr) {
@@ -77,7 +76,6 @@ public:
         }
     }
 
-    // --- Lambda: busqueda puntual ---
     T* buscarSi(std::function<bool(T)> criterio) {
         Nodo<T>* aux = cabeza;
         while (aux != nullptr) {

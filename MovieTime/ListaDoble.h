@@ -68,7 +68,6 @@ public:
         while (!esVacia()) eliminarInicio();
     }
 
-    // --- Lambda: recorridos en ambos sentidos ---
     void recorrer(std::function<void(T)> accion) const {
         const NodoDoble<T>* aux = cabeza;
         while (aux != nullptr) { accion(aux->valor); aux = aux->siguiente; }
@@ -79,7 +78,6 @@ public:
         while (aux != nullptr) { accion(aux->valor); aux = aux->anterior; }
     }
 
-    // --- Lambda: busqueda puntual ---
     T* buscarSi(std::function<bool(T)> criterio) {
         NodoDoble<T>* aux = cabeza;
         while (aux != nullptr) {

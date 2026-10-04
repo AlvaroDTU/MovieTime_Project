@@ -4,9 +4,6 @@
 
 class Ordenamientos {
 private:
-    // --- MÉTODOS PRIVADOS (Auxiliares internos para que los algoritmos funcionen) ---
-
-    // Auxiliar HeapSort
     template <typename T>
     static void heapify(std::vector<T>& datos, int n, int i, std::function<bool(const T&, const T&)>& comparador) {
         int mayor = i, izq = 2 * i + 1, der = 2 * i + 2;
@@ -17,8 +14,6 @@ private:
             heapify(datos, n, mayor, comparador);
         }
     }
-
-    // Auxiliares QuickSort
     template <typename T>
     static void quickSortRec(std::vector<T>& datos, int bajo, int alto, std::function<bool(const T&, const T&)>& comparador) {
         if (bajo < alto) {
@@ -27,7 +22,6 @@ private:
             quickSortRec(datos, p + 1, alto, comparador);
         }
     }
-
     template <typename T>
     static int particionar(std::vector<T>& datos, int bajo, int alto, std::function<bool(const T&, const T&)>& comparador) {
         T pivote = datos[alto];
@@ -41,8 +35,6 @@ private:
         std::swap(datos[i + 1], datos[alto]);
         return i + 1;
     }
-
-    // Auxiliares MergeSort
     template <typename T>
     static void mergeSortRec(std::vector<T>& datos, int izq, int der, std::function<bool(const T&, const T&)>& comparador) {
         if (izq >= der) return;
@@ -68,7 +60,6 @@ private:
     }
 
 public:
-    // --- INTERFAZ PÚBLICA (Lo que el resto del programa utiliza) ---
 
     template <typename T>
     static void heapSort(std::vector<T>& datos, std::function<bool(const T&, const T&)> comparador) {
