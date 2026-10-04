@@ -1,11 +1,40 @@
-7,2,9,Revoluciono el cine con sus efectos
-8,4,8,Muy divertida y comica
-5,3,5,Meg ustan las drogas
-5,3,10,Obra maestra de la television
-5,1,10,Serie perfecta de principio a fin
-2,4,9,Heath Ledger hace una actuacion espectacular
-2,1,10,La mejor pelicula de Batman jamas hecha
-1,3,8,Buena pero un poco confusa en la primera mitad
-1,1,9,Excelente pelicula muy compleja y visualmente impactante
-4,4,8,Buenos personajes y ambientacion ochentera
-4,3,9,Muy entretenida con buenos efectos
+1,3,9,Excelente pelicula muy bien construida y emocional
+1,7,10,Una historia increible con personajes muy memorables
+2,1,10,Una de las mejores series de drama que he visto
+2,4,9,Excelente desarrollo de personajes y una gran historia
+3,5,10,La mejor pelicula de Batman y una actuacion increible
+3,8,9,Accion y drama perfectamente equilibrados
+4,9,9,Muy divertida y con personajes inolvidables
+4,10,10,Una serie excelente para ver y disfrutar
+5,7,10,Una historia impactante y muy bien dirigida
+5,3,9,Excelente actuacion y una historia muy emotiva
+6,8,10,Una serie epica con una gran historia
+6,1,9,Excelente produccion y personajes memorables
+7,9,9,Dialogos excelentes y escenas inolvidables
+7,5,10,Una pelicula muy entretenida con grandes actuaciones
+8,3,9,Muy entretenida y con excelente ambientacion
+8,10,8,Una serie interesante con buenos personajes
+9,1,9,Muy entretenida y visualmente espectacular
+9,7,10,Una historia compleja con excelentes efectos visuales
+10,3,10,Una de las mejores series de drama criminal
+10,8,9,Excelente desarrollo del protagonista y gran historia
+11,4,9,Una historia oscura con excelentes personajes
+11,9,10,Una de las mejores peliculas de ciencia ficcion
+12,5,9,Serie compleja y muy interesante
+12,10,10,Una historia muy original y bien construida
+13,7,9,Accion y drama muy bien equilibrados
+13,3,10,Una pelicula epica con una gran actuacion
+14,8,9,Excelente serie de crimen con gran protagonista
+14,1,10,Una ambientacion increible y personajes muy buenos
+15,9,10,Una pelicula sorprendente y muy bien ejecutada
+15,5,9,Excelente mezcla de drama y suspenso
+16,10,9,Una adaptacion excelente con grandes actuaciones
+16,4,10,Misterio muy bien construido y personajes memorables
+17,1,8,Excelente actuacion y gran desarrollo de personajes
+17,7,10,Una pelicula intensa y muy bien dirigida
+18,3,9,Accion entretenida y personajes interesantes
+18,8,8,Una serie divertida con mucha accion
+19,9,9,Gran pelicula de ciencia ficcion y terror
+19,5,8,Muy buena atmosfera y excelentes efectos
+20,10,10,Una miniserie impresionante y muy bien realizada
+20,3,9,Excelente historia con una produccion sobresaliente

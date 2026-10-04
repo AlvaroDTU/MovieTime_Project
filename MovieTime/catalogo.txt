@@ -1,11 +1,20 @@
-PELICULA,6,Pulp Fiction,1994,154,Drama,Quentin,John,8.9,12
-PELICULA,7,The Matrix,1999,136,Ciencia Ficcion,Lana,Keanu,9,26
-SERIE,8,The Office,2005,9,201,0,Comedia,Greg,Steve,8,23
-SERIE,5,Breaking Bad,2008,5,62,0,Drama,Vince,Bryan,8.33333,43
-PELICULA,2,The Dark Knight,2008,152,Accion,Christopher,Christian,9.5,28
-PELICULA,1,Inception,2010,148,Ciencia Ficcion,Christopher,Leonardo,8.5,23
-SERIE,10,Game of Thrones,2011,8,73,0,Drama,David,Emilia,9.3,28
-PELICULA,3,Interstellar,2014,169,Ciencia Ficcion,Christopher,Matthew,8.6,18
-SERIE,4,Stranger Things,2016,4,34,1,Drama,Duffer,Millie,8.5,33
-PELICULA,9,Parasite,2019,132,Drama,Bong,Song,8.5,14
-SERIE,11,Squirt Games,2022,2,22,0,Drama,Jefferson Cobenias,Alvaro De Tomas ,0,0
+PELICULA,1,The Shawshank Redemption,1994,142,Drama,Frank,Darabont,Tim,Robbins,9.3,45
+SERIE,2,Breaking Bad,2008,5,62,1,Drama,Vince,Gilligan,Bryan,Cranston,9.5,50
+PELICULA,3,The Dark Knight,2008,152,Accion,Christopher,Nolan,Christian,Bale,9.1,48
+SERIE,4,The Office,2005,9,201,0,Comedia,Greg,Daniels,Steve,Carell,8.9,44
+PELICULA,5,Schindler's List,1993,195,Drama,Steven,Spielberg,Liam,Neeson,9.0,39
+SERIE,6,Game of Thrones,2011,8,73,0,Fantasia,David,Benioff,Emilia,Clarke,9.2,48
+PELICULA,7,Pulp Fiction,1994,154,Drama,Quentin,Tarantino,John,Travolta,8.9,46
+SERIE,8,Stranger Things,2016,4,34,1,Ciencia Ficcion,Duffer,Brothers,Millie Bobby,Brown,8.6,47
+PELICULA,9,Inception,2010,148,Ciencia Ficcion,Christopher,Nolan,Leonardo,DiCaprio,8.8,49
+SERIE,10,Better Call Saul,2015,6,63,0,Drama,Vince,Gilligan,Bob,Odenkirk,9.0,38
+PELICULA,11,The Matrix,1999,136,Ciencia Ficcion,Lana,Wachowski,Keanu,Reeves,8.7,47
+SERIE,12,Dark,2017,3,26,0,Misterio,Baran bo,Odar,Louis,Hofmann,8.7,35
+PELICULA,13,Gladiator,2000,155,Accion,Ridley,Scott,Russell,Crowe,8.5,45
+SERIE,14,Peaky Blinders,2013,6,36,0,Crimen,Steven,Knight,Cillian,Murphy,8.8,46
+PELICULA,15,Parasite,2019,132,Drama,Bong,Joon-ho,Song,Kang-ho,8.5,32
+SERIE,16,Sherlock,2010,4,13,0,Misterio,Mark,Gatiss,Benedict,Cumberbatch,9.1,39
+PELICULA,17,Whiplash,2014,106,Drama,Damien,Chazelle,Miles,Teller,8.5,30
+SERIE,18,The Boys,2019,4,32,1,Accion,Eric,Kripke,Karl,Urban,8.6,43
+PELICULA,19,Alien,1979,117,Terror,Ridley,Scott,Sigourney,Weaver,8.5,27
+SERIE,20,Chernobyl,2019,1,5,0,Drama,Craig,Mazin,Jared,Harris,9.3,29
