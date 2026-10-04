@@ -22,7 +22,9 @@ public:
     }
 
     void imprime_movietime_cartelera(int x, int y) {
-        static int movie[40][150] = { 0 };
+        
+        
+        int movie[40][150] = { 0 };
 
         // --- 1. TEXTO "MOVIE" (Columnas 2 a 48, Filas 3 a 9) ---
         for (int f = 3; f <= 9; f++) { movie[f][2] = 1; movie[f][3] = 1; movie[f][10] = 1; movie[f][11] = 1; }
