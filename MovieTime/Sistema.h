@@ -461,7 +461,7 @@ private:
             double totalMinutos = deCategoria.acumularRecursivo([](Audiovisual* a) { return (double)a->getMinutosTotales(); });
             double totalResenias = deCategoria.acumularRecursivo([](Audiovisual* a) { return (double)a->getResenias().getLongitud(); });
 
-            std::cout << "- " << cat->getNombre() << ": " << deCategoria.getLongitud() << " titulos | "
+            std::cout << "- " << cat->getNombre() << ":\n" << deCategoria.getLongitud() << " titulos | "
                 << "Minutos totales: " << (int)totalMinutos << " | Resenas totales: " << (int)totalResenias << "\n";
             });
         pausar();
@@ -530,7 +530,8 @@ private:
             case 2: mostrarTendencias(); break;
             case 3: buscarContenido(); break;
             case 4: ordenarCatalogoMenu(); break;
-            case 5: {
+            case 5: mostrarMetricasCategoria(); break;
+            case 6: {
                 refrescarPantallaConFondo();
                 usuarioLogueado->mostrarPerfil();
                 UsuarioCliente* c = dynamic_cast<UsuarioCliente*>(usuarioLogueado);
@@ -542,7 +543,7 @@ private:
                 pausar();
                 break;
             }
-            case 6:
+            case 7:
                 salir = 'S';
                 break;
             default:
