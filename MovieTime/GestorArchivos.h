@@ -80,7 +80,7 @@ public:
 				};
 
 			if (tipo == "PELICULA") {
-				std::string sId, titulo, sAnio, sDuracion, nomCat, nomDirector, apeDirector, nomActor, apeActor, sRating, sPop;
+				std::string sId, titulo, sAnio, sDuracion, nomCat, nomDirector, apeDirector, nomActor, apeActor;
 				std::getline(ss, sId, ',');
 				std::getline(ss, titulo, ',');
 				std::getline(ss, sAnio, ',');
@@ -90,8 +90,6 @@ public:
 				std::getline(ss, apeDirector, ',');
 				std::getline(ss, nomActor, ',');
 				std::getline(ss, apeActor, ',');
-				std::getline(ss, sRating, ',');
-				std::getline(ss, sPop, ',');
 
 				Categoria* cat = obtenerOCrearCategoria(nomCat, listaCategorias);
 				Director* dir = obtenerDirector(nomDirector, apeDirector);
@@ -100,14 +98,12 @@ public:
 				Pelicula* p = new Pelicula(std::stoi(sId), titulo, std::stoi(sAnio), std::stoi(sDuracion), cat);
 				p->agregarDirector(dir);
 				p->agregarActor(act);
-				p->setRating(std::stod(sRating));
-				p->setPopularidad(std::stoi(sPop));
 
 				catalogo.agregarFinal(p);
 				cargados++;
 			}
 			else if (tipo == "SERIE") {
-				std::string sId, titulo, sAnio, sTemp, sEpis, sEmision, nomCat, nomDirector, apeDirector, nomActor, apeActor, sRating, sPop;
+				std::string sId, titulo, sAnio, sTemp, sEpis, sEmision, nomCat, nomDirector, apeDirector, nomActor, apeActor;
 				std::getline(ss, sId, ',');
 				std::getline(ss, titulo, ',');
 				std::getline(ss, sAnio, ',');
@@ -119,8 +115,6 @@ public:
 				std::getline(ss, apeDirector, ',');
 				std::getline(ss, nomActor, ',');
 				std::getline(ss, apeActor, ',');
-				std::getline(ss, sRating, ',');
-				std::getline(ss, sPop, ',');
 
 				Categoria* cat = obtenerOCrearCategoria(nomCat, listaCategorias);
 				Director* dir = obtenerDirector(nomDirector, apeDirector);
@@ -130,8 +124,7 @@ public:
 					std::stoi(sEpis), (sEmision == "1"), cat);
 				s->agregarDirector(dir);
 				s->agregarActor(act);
-				s->setRating(std::stod(sRating));
-				s->setPopularidad(std::stoi(sPop));
+
 
 				catalogo.agregarFinal(s);
 				cargados++;
@@ -194,9 +187,7 @@ public:
 						<< sanear(nomDirector) << ","
 						<< sanear(apeDirector) << ","
 						<< sanear(nomActor) << ","
-						<< sanear(apeActor) << ","
-						<< p->getRating() << ","
-						<< p->getPopularidad()
+						<< sanear(apeActor)
 						<< "\n";
 				}
 			}
@@ -217,9 +208,7 @@ public:
 						<< sanear(nomDirector) << ","
 						<< sanear(apeDirector) << ","
 						<< sanear(nomActor) << ","
-						<< sanear(apeActor) << ","
-						<< s->getRating() << ","
-						<< s->getPopularidad()
+						<< sanear(apeActor)
 						<< "\n";
 				}
 			}

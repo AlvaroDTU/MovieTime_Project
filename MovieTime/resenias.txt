@@ -1,40 +1,1000 @@
-1,3,9,Excelente pelicula muy bien construida y emocional
-1,7,10,Una historia increible con personajes muy memorables
-2,1,10,Una de las mejores series de drama que he visto
-2,4,9,Excelente desarrollo de personajes y una gran historia
-3,5,10,La mejor pelicula de Batman y una actuacion increible
-3,8,9,Accion y drama perfectamente equilibrados
-4,9,9,Muy divertida y con personajes inolvidables
-4,10,10,Una serie excelente para ver y disfrutar
-5,7,10,Una historia impactante y muy bien dirigida
-5,3,9,Excelente actuacion y una historia muy emotiva
-6,8,10,Una serie epica con una gran historia
-6,1,9,Excelente produccion y personajes memorables
-7,9,9,Dialogos excelentes y escenas inolvidables
-7,5,10,Una pelicula muy entretenida con grandes actuaciones
-8,3,9,Muy entretenida y con excelente ambientacion
-8,10,8,Una serie interesante con buenos personajes
-9,1,9,Muy entretenida y visualmente espectacular
-9,7,10,Una historia compleja con excelentes efectos visuales
-10,3,10,Una de las mejores series de drama criminal
-10,8,9,Excelente desarrollo del protagonista y gran historia
-11,4,9,Una historia oscura con excelentes personajes
-11,9,10,Una de las mejores peliculas de ciencia ficcion
-12,5,9,Serie compleja y muy interesante
-12,10,10,Una historia muy original y bien construida
-13,7,9,Accion y drama muy bien equilibrados
-13,3,10,Una pelicula epica con una gran actuacion
-14,8,9,Excelente serie de crimen con gran protagonista
-14,1,10,Una ambientacion increible y personajes muy buenos
-15,9,10,Una pelicula sorprendente y muy bien ejecutada
-15,5,9,Excelente mezcla de drama y suspenso
-16,10,9,Una adaptacion excelente con grandes actuaciones
-16,4,10,Misterio muy bien construido y personajes memorables
-17,1,8,Excelente actuacion y gran desarrollo de personajes
-17,7,10,Una pelicula intensa y muy bien dirigida
-18,3,9,Accion entretenida y personajes interesantes
-18,8,8,Una serie divertida con mucha accion
-19,9,9,Gran pelicula de ciencia ficcion y terror
-19,5,8,Muy buena atmosfera y excelentes efectos
-20,10,10,Una miniserie impresionante y muy bien realizada
-20,3,9,Excelente historia con una produccion sobresaliente
+1,71,7,El ritmo es irregular y algunas partes son lentas
+1,26,7,La historia es aceptable aunque esperaba mucho mas
+1,72,8,Buena idea aunque la ejecucion pudo ser mejor
+1,44,6,La actuacion es correcta pero no destaca demasiado
+2,18,9,Una historia memorable que vale la pena volver a ver
+2,15,9,Una produccion sobresaliente y muy entretenida
+2,92,10,Excelente direccion y fotografia
+2,91,10,Una historia memorable que vale la pena volver a ver
+2,33,10,Excelente narrativa y grandes actuaciones
+2,51,10,Una historia original y muy interesante
+2,84,10,Una obra muy bien realizada de principio a fin
+2,27,9,Excelente narrativa y grandes actuaciones
+2,42,10,Una experiencia muy entretenida y recomendable
+2,35,10,Una historia original y muy interesante
+2,90,10,Una historia memorable que vale la pena volver a ver
+2,74,8,Una historia memorable que vale la pena volver a ver
+2,70,10,Los personajes estan muy bien desarrollados
+2,52,9,Grandes actuaciones y excelente desarrollo
+2,32,8,Una obra muy bien realizada de principio a fin
+2,37,10,Una experiencia muy entretenida y recomendable
+2,9,8,Excelente direccion y fotografia
+2,97,10,Excelente historia y muy bien construida
+2,79,9,Una experiencia muy entretenida y recomendable
+2,16,8,Excelente narrativa y grandes actuaciones
+3,5,7,Algunas partes son entretenidas y otras bastante flojas
+3,49,6,La historia es interesante pero tiene varios problemas
+3,10,8,El ritmo es irregular y algunas partes son lentas
+3,34,7,El desarrollo de personajes pudo ser mejor
+4,11,10,Excelente direccion y fotografia
+4,84,10,Muy buena fotografia y excelente montaje
+4,4,9,Grandes actuaciones y excelente desarrollo
+4,36,10,Una produccion sobresaliente y muy entretenida
+4,31,9,Una historia memorable que vale la pena volver a ver
+4,41,9,Excelente narrativa y grandes actuaciones
+4,9,9,Grandes actuaciones y excelente desarrollo
+4,71,10,Una historia memorable que vale la pena volver a ver
+4,52,10,Una produccion que mantiene el interes
+4,14,9,Muy buena fotografia y excelente montaje
+4,4,9,Una produccion sobresaliente y muy entretenida
+4,72,10,Los personajes estan muy bien desarrollados
+4,58,10,Una obra muy bien realizada de principio a fin
+4,71,10,Excelente narrativa y grandes actuaciones
+4,3,10,Los personajes estan muy bien desarrollados
+4,47,10,Una obra muy bien realizada de principio a fin
+4,57,8,Gran guion y una produccion de alta calidad
+4,12,10,Grandes actuaciones y excelente desarrollo
+4,95,8,Muy buena fotografia y excelente montaje
+4,93,9,Excelente narrativa y grandes actuaciones
+4,85,10,Excelente direccion y fotografia
+4,76,9,Una produccion que mantiene el interes
+4,28,9,Una obra muy bien realizada de principio a fin
+4,37,8,Grandes actuaciones y excelente desarrollo
+4,31,9,Una produccion que mantiene el interes
+4,40,10,Grandes actuaciones y excelente desarrollo
+4,20,9,Una historia memorable que vale la pena volver a ver
+4,98,8,Una produccion que mantiene el interes
+4,76,9,Grandes actuaciones y excelente desarrollo
+4,27,10,Excelente narrativa y grandes actuaciones
+5,7,4,El ritmo es irregular y algunas partes son lentas
+5,14,5,Buena idea aunque la ejecucion pudo ser mejor
+5,39,7,El desarrollo de personajes pudo ser mejor
+5,41,8,Tiene buenas escenas pero varios puntos debiles
+6,71,8,El desarrollo de personajes es excelente
+6,52,7,Algunas partes son entretenidas y otras bastante flojas
+6,71,7,El desarrollo de personajes es excelente
+6,43,6,El desarrollo de personajes es excelente
+6,7,10,La pelicula tiene potencial pero no termina de convencer
+6,70,10,La historia es aceptable aunque esperaba mucho mas
+6,45,9,La ambientacion esta muy bien lograda
+6,30,10,El desarrollo de personajes pudo ser mejor
+6,12,8,Gran guion y una produccion de alta calidad
+6,16,6,La historia es interesante pero tiene varios problemas
+6,41,7,Una obra muy bien realizada de principio a fin
+6,7,8,Una historia memorable que vale la pena volver a ver
+6,16,10,Tiene buenas escenas pero varios puntos debiles
+6,24,10,El resultado final es interesante pero mejorable
+6,17,6,Algunas partes funcionan muy bien y otras no
+6,65,9,La idea es buena aunque la ejecucion es irregular
+6,27,10,El desarrollo de personajes es excelente
+6,101,5,Algunos momentos son excelentes y otros no tanto
+6,51,7,Muy buena fotografia y excelente montaje
+6,99,8,La idea es buena aunque la ejecucion es irregular
+6,69,8,Tiene momentos memorables y otros bastante flojos
+6,3,6,La historia es interesante pero tiene varios problemas
+6,87,4,La actuacion es correcta pero no destaca demasiado
+6,62,5,Una produccion sobresaliente y muy entretenida
+6,59,10,La pelicula tiene potencial pero no termina de convencer
+6,83,5,La produccion es buena aunque la historia pierde ritmo
+6,85,6,Los personajes estan muy bien desarrollados
+6,88,7,Es entretenida pero tiene varios altibajos
+6,17,10,La pelicula tiene potencial pero no termina de convencer
+6,61,6,La historia es interesante pero tiene varios problemas
+6,82,8,El ritmo es irregular y algunas partes son lentas
+6,26,4,Excelente narrativa y grandes actuaciones
+6,20,7,Es entretenida pero tiene varios altibajos
+6,37,9,La produccion es correcta pero poco memorable
+6,63,7,El desarrollo de personajes pudo ser mejor
+6,60,8,La historia es interesante pero tiene varios problemas
+6,8,10,Algunas partes funcionan muy bien y otras no
+6,77,7,Una produccion sobresaliente y muy entretenida
+6,76,8,Excelente narrativa y grandes actuaciones
+6,98,8,Una produccion sobresaliente y muy entretenida
+6,101,8,El desarrollo de personajes es excelente
+6,87,9,La produccion es buena aunque la historia pierde ritmo
+6,82,9,La ambientacion esta muy bien lograda
+6,40,7,Algunas partes funcionan muy bien y otras no
+6,97,6,La pelicula tiene potencial pero no termina de convencer
+6,102,4,La produccion es buena aunque la historia pierde ritmo
+6,25,8,Algunos momentos son excelentes y otros no tanto
+6,92,7,La idea es buena aunque la ejecucion es irregular
+6,58,9,Tiene momentos memorables y otros bastante flojos
+6,77,5,La produccion es correcta pero poco memorable
+6,44,5,El desarrollo de personajes es excelente
+6,86,7,El desarrollo de personajes pudo ser mejor
+6,48,8,Es entretenida pero tiene varios altibajos
+6,47,7,Excelente narrativa y grandes actuaciones
+6,22,9,La actuacion es correcta pero no destaca demasiado
+6,36,9,La actuacion es correcta pero no destaca demasiado
+6,81,9,La historia es aceptable aunque esperaba mucho mas
+6,94,9,Hay buenas actuaciones pero el guion tiene problemas
+6,34,6,La historia es aceptable aunque esperaba mucho mas
+6,50,10,Algunas partes son entretenidas y otras bastante flojas
+6,72,9,Hay buenas actuaciones pero el guion tiene problemas
+6,95,7,La idea es buena aunque la ejecucion es irregular
+6,96,8,La produccion es buena aunque la historia pierde ritmo
+6,91,10,La produccion es buena aunque la historia pierde ritmo
+6,96,10,Es entretenida pero tiene varios altibajos
+6,62,4,Muy buena fotografia y excelente montaje
+6,23,7,Tiene momentos memorables y otros bastante flojos
+6,85,6,Hay buenas actuaciones pero el guion tiene problemas
+6,41,8,El desarrollo de personajes es excelente
+6,64,8,Una produccion sobresaliente y muy entretenida
+6,51,4,Excelente narrativa y grandes actuaciones
+6,14,9,Algunas partes funcionan muy bien y otras no
+6,26,7,La ambientacion esta muy bien lograda
+6,21,8,Una produccion que mantiene el interes
+6,32,9,El desarrollo de personajes pudo ser mejor
+6,86,7,Gran guion y una produccion de alta calidad
+6,14,10,Algunas partes son entretenidas y otras bastante flojas
+6,65,7,La historia es aceptable aunque esperaba mucho mas
+6,31,10,Algunos momentos son excelentes y otros no tanto
+6,35,6,Tiene momentos memorables y otros bastante flojos
+6,24,10,La produccion es correcta pero poco memorable
+6,55,7,La ambientacion esta muy bien lograda
+6,30,7,El ritmo es irregular y algunas partes son lentas
+6,68,8,Hay buenas actuaciones pero el guion tiene problemas
+6,80,8,La historia es aceptable aunque esperaba mucho mas
+6,95,9,Tiene buenas escenas pero varios puntos debiles
+6,89,10,El desarrollo de personajes es excelente
+6,3,5,Excelente narrativa y grandes actuaciones
+6,23,6,Algunas partes funcionan muy bien y otras no
+6,8,6,La historia es aceptable aunque esperaba mucho mas
+6,93,10,Una produccion que mantiene el interes
+6,54,6,Excelente historia y muy bien construida
+6,56,10,Una obra muy bien realizada de principio a fin
+6,53,8,La actuacion es correcta pero no destaca demasiado
+6,78,8,Gran guion y una produccion de alta calidad
+6,40,8,Excelente narrativa y grandes actuaciones
+6,9,7,Una experiencia muy entretenida y recomendable
+6,48,10,Es entretenida pero tiene varios altibajos
+6,10,6,La actuacion es correcta pero no destaca demasiado
+6,29,8,El desarrollo de personajes es excelente
+6,89,9,Algunas partes son entretenidas y otras bastante flojas
+6,57,8,La ambientacion esta muy bien lograda
+6,49,9,Algunas partes son entretenidas y otras bastante flojas
+6,9,5,Es entretenida pero tiene varios altibajos
+6,5,7,Hay buenas actuaciones pero el guion tiene problemas
+6,100,4,El ritmo es irregular y algunas partes son lentas
+6,19,4,Es entretenida pero tiene varios altibajos
+6,100,10,Una produccion sobresaliente y muy entretenida
+6,5,9,El desarrollo de personajes pudo ser mejor
+6,28,8,Buena idea aunque la ejecucion pudo ser mejor
+7,73,8,La pelicula tiene potencial pero no termina de convencer
+7,98,7,Tiene buenas escenas pero varios puntos debiles
+7,98,7,El desarrollo de personajes pudo ser mejor
+7,49,8,Algunas partes son entretenidas y otras bastante flojas
+8,17,10,Excelente direccion y fotografia
+8,87,8,Grandes actuaciones y excelente desarrollo
+8,53,10,Excelente narrativa y grandes actuaciones
+8,29,9,Muy buena fotografia y excelente montaje
+8,89,9,Una produccion sobresaliente y muy entretenida
+8,49,8,La ambientacion esta muy bien lograda
+8,100,9,Una obra muy bien realizada de principio a fin
+8,94,9,Una obra muy bien realizada de principio a fin
+8,80,10,Una experiencia muy entretenida y recomendable
+8,63,10,Muy buena fotografia y excelente montaje
+8,21,10,Una historia original y muy interesante
+8,23,9,Gran guion y una produccion de alta calidad
+9,85,4,Excelente direccion y fotografia
+9,54,10,Una experiencia muy entretenida y recomendable
+9,88,7,La historia es aceptable aunque esperaba mucho mas
+9,72,9,Es entretenida pero tiene varios altibajos
+9,22,10,El desarrollo de personajes pudo ser mejor
+9,73,10,Buena idea aunque la ejecucion pudo ser mejor
+9,5,9,La historia es aceptable aunque esperaba mucho mas
+9,34,9,Grandes actuaciones y excelente desarrollo
+9,76,9,Muy buena fotografia y excelente montaje
+9,24,6,La pelicula tiene potencial pero no termina de convencer
+9,100,10,Buena idea aunque la ejecucion pudo ser mejor
+9,46,7,Gran guion y una produccion de alta calidad
+9,60,5,El resultado final es interesante pero mejorable
+9,65,8,Algunas partes son entretenidas y otras bastante flojas
+9,52,10,Tiene momentos memorables y otros bastante flojos
+9,43,4,Una historia original y muy interesante
+9,78,7,La ambientacion esta muy bien lograda
+9,90,9,El resultado final es interesante pero mejorable
+9,10,8,Los personajes estan muy bien desarrollados
+9,23,4,El desarrollo de personajes pudo ser mejor
+9,59,9,Algunos momentos son excelentes y otros no tanto
+9,64,10,La idea es buena aunque la ejecucion es irregular
+9,32,9,Excelente direccion y fotografia
+9,76,6,Buena idea aunque la ejecucion pudo ser mejor
+9,9,9,Muy buena fotografia y excelente montaje
+9,63,9,Los personajes estan muy bien desarrollados
+9,45,10,Tiene buenas escenas pero varios puntos debiles
+9,9,10,El ritmo es irregular y algunas partes son lentas
+9,36,8,Muy buena fotografia y excelente montaje
+9,37,6,Buena idea aunque la ejecucion pudo ser mejor
+9,93,8,El desarrollo de personajes es excelente
+9,97,8,Algunas partes son entretenidas y otras bastante flojas
+9,64,6,Una experiencia muy entretenida y recomendable
+9,41,7,Una experiencia muy entretenida y recomendable
+9,53,9,Excelente narrativa y grandes actuaciones
+9,84,8,La historia es interesante pero tiene varios problemas
+9,69,8,Una historia original y muy interesante
+9,80,9,Una obra muy bien realizada de principio a fin
+9,42,7,La actuacion es correcta pero no destaca demasiado
+9,34,7,Excelente narrativa y grandes actuaciones
+9,102,10,El resultado final es interesante pero mejorable
+9,32,8,Una produccion sobresaliente y muy entretenida
+9,53,6,Excelente historia y muy bien construida
+9,29,7,Muy buena fotografia y excelente montaje
+9,75,9,Una historia memorable que vale la pena volver a ver
+9,4,6,La actuacion es correcta pero no destaca demasiado
+9,66,8,Una experiencia muy entretenida y recomendable
+9,93,9,La idea es buena aunque la ejecucion es irregular
+9,71,10,El resultado final es interesante pero mejorable
+9,89,8,Grandes actuaciones y excelente desarrollo
+9,35,10,La historia es aceptable aunque esperaba mucho mas
+9,66,10,Los personajes estan muy bien desarrollados
+9,92,8,Muy buena fotografia y excelente montaje
+9,33,4,El desarrollo de personajes es excelente
+9,101,5,La idea es buena aunque la ejecucion es irregular
+9,26,9,Una obra muy bien realizada de principio a fin
+9,58,10,La ambientacion esta muy bien lograda
+9,15,7,Una produccion sobresaliente y muy entretenida
+9,18,9,La historia es aceptable aunque esperaba mucho mas
+9,63,9,Es entretenida pero tiene varios altibajos
+9,79,7,Excelente narrativa y grandes actuaciones
+9,40,8,La actuacion es correcta pero no destaca demasiado
+9,94,8,Grandes actuaciones y excelente desarrollo
+9,12,7,Tiene buenas escenas pero varios puntos debiles
+9,38,8,El desarrollo de personajes pudo ser mejor
+9,100,9,Una produccion sobresaliente y muy entretenida
+9,88,9,Tiene buenas escenas pero varios puntos debiles
+9,28,6,El ritmo es irregular y algunas partes son lentas
+9,50,10,El ritmo es irregular y algunas partes son lentas
+9,25,9,Tiene buenas escenas pero varios puntos debiles
+9,80,9,Tiene buenas escenas pero varios puntos debiles
+9,39,5,La idea es buena aunque la ejecucion es irregular
+9,10,8,Una produccion sobresaliente y muy entretenida
+9,46,6,Grandes actuaciones y excelente desarrollo
+9,44,7,Grandes actuaciones y excelente desarrollo
+9,83,10,La pelicula tiene potencial pero no termina de convencer
+9,36,9,El resultado final es interesante pero mejorable
+9,20,10,La pelicula tiene potencial pero no termina de convencer
+9,14,9,Muy buena fotografia y excelente montaje
+9,99,6,Una historia memorable que vale la pena volver a ver
+9,70,8,El desarrollo de personajes pudo ser mejor
+9,96,8,Tiene momentos memorables y otros bastante flojos
+9,8,8,El ritmo es irregular y algunas partes son lentas
+9,13,6,Grandes actuaciones y excelente desarrollo
+9,68,8,El ritmo es irregular y algunas partes son lentas
+9,102,7,Excelente direccion y fotografia
+9,8,7,Una historia original y muy interesante
+9,61,9,Excelente historia y muy bien construida
+9,50,4,Hay buenas actuaciones pero el guion tiene problemas
+9,89,5,Grandes actuaciones y excelente desarrollo
+9,29,10,Tiene buenas escenas pero varios puntos debiles
+9,73,8,La pelicula tiene potencial pero no termina de convencer
+9,74,7,Excelente direccion y fotografia
+9,75,5,La historia es aceptable aunque esperaba mucho mas
+9,57,4,La pelicula tiene potencial pero no termina de convencer
+9,90,8,Tiene momentos memorables y otros bastante flojos
+9,13,7,Algunos momentos son excelentes y otros no tanto
+9,82,8,Algunos momentos son excelentes y otros no tanto
+9,84,7,Algunas partes son entretenidas y otras bastante flojas
+9,39,7,Una produccion que mantiene el interes
+9,67,5,La pelicula tiene potencial pero no termina de convencer
+9,69,9,La historia es aceptable aunque esperaba mucho mas
+9,19,7,Tiene buenas escenas pero varios puntos debiles
+9,24,10,Gran guion y una produccion de alta calidad
+9,98,4,Muy buena fotografia y excelente montaje
+10,30,10,Muy buena fotografia y excelente montaje
+10,82,10,Muy buena fotografia y excelente montaje
+10,52,9,Muy buena fotografia y excelente montaje
+10,84,10,Una historia original y muy interesante
+10,45,9,Excelente narrativa y grandes actuaciones
+10,33,10,Una obra muy bien realizada de principio a fin
+10,51,8,Los personajes estan muy bien desarrollados
+10,102,10,La ambientacion esta muy bien lograda
+10,10,10,Una historia memorable que vale la pena volver a ver
+10,41,9,Gran guion y una produccion de alta calidad
+10,87,8,Excelente historia y muy bien construida
+10,7,10,Una obra muy bien realizada de principio a fin
+10,48,8,El desarrollo de personajes es excelente
+10,40,10,Una produccion sobresaliente y muy entretenida
+10,42,8,Una produccion que mantiene el interes
+10,24,8,Una produccion sobresaliente y muy entretenida
+10,79,10,El desarrollo de personajes es excelente
+10,78,10,Una produccion sobresaliente y muy entretenida
+10,30,8,Una historia original y muy interesante
+10,54,10,Una historia memorable que vale la pena volver a ver
+10,44,10,Excelente direccion y fotografia
+10,11,9,Excelente narrativa y grandes actuaciones
+10,77,9,Una obra muy bien realizada de principio a fin
+10,45,10,Una produccion sobresaliente y muy entretenida
+10,43,10,Una produccion sobresaliente y muy entretenida
+10,3,10,Una experiencia muy entretenida y recomendable
+10,25,8,El desarrollo de personajes es excelente
+10,15,10,Una obra muy bien realizada de principio a fin
+10,34,10,Una historia memorable que vale la pena volver a ver
+10,79,10,La ambientacion esta muy bien lograda
+10,86,10,Grandes actuaciones y excelente desarrollo
+10,26,10,Excelente historia y muy bien construida
+10,50,10,Una historia memorable que vale la pena volver a ver
+10,20,8,Una historia original y muy interesante
+10,69,8,Muy buena fotografia y excelente montaje
+11,86,9,Excelente historia y muy bien construida
+11,71,5,Una historia original y muy interesante
+11,96,9,Una obra muy bien realizada de principio a fin
+11,100,10,Una historia original y muy interesante
+11,97,9,El ritmo es irregular y algunas partes son lentas
+11,26,9,Es entretenida pero tiene varios altibajos
+11,15,8,La historia es interesante pero tiene varios problemas
+11,40,9,Es entretenida pero tiene varios altibajos
+11,25,7,La produccion es buena aunque la historia pierde ritmo
+11,77,6,Algunas partes funcionan muy bien y otras no
+11,73,9,Tiene buenas escenas pero varios puntos debiles
+11,46,6,La produccion es correcta pero poco memorable
+11,53,9,Tiene momentos memorables y otros bastante flojos
+11,57,5,Muy buena fotografia y excelente montaje
+11,48,8,La actuacion es correcta pero no destaca demasiado
+11,23,8,Tiene momentos memorables y otros bastante flojos
+11,21,10,El ritmo es irregular y algunas partes son lentas
+11,36,8,Una produccion que mantiene el interes
+11,7,9,Una historia memorable que vale la pena volver a ver
+11,19,9,El ritmo es irregular y algunas partes son lentas
+11,58,6,Gran guion y una produccion de alta calidad
+11,28,10,Buena idea aunque la ejecucion pudo ser mejor
+11,75,5,El desarrollo de personajes es excelente
+11,67,9,Muy buena fotografia y excelente montaje
+11,8,9,Algunas partes son entretenidas y otras bastante flojas
+11,20,9,El desarrollo de personajes pudo ser mejor
+11,4,4,La historia es aceptable aunque esperaba mucho mas
+11,83,8,La historia es aceptable aunque esperaba mucho mas
+11,22,7,Una produccion que mantiene el interes
+11,62,7,El desarrollo de personajes pudo ser mejor
+11,61,7,El desarrollo de personajes pudo ser mejor
+11,13,9,Excelente direccion y fotografia
+11,45,10,Excelente direccion y fotografia
+11,38,4,La pelicula tiene potencial pero no termina de convencer
+11,71,9,La pelicula tiene potencial pero no termina de convencer
+11,98,10,Una produccion sobresaliente y muy entretenida
+11,44,6,La ambientacion esta muy bien lograda
+11,17,8,La actuacion es correcta pero no destaca demasiado
+11,59,10,Grandes actuaciones y excelente desarrollo
+11,87,5,La actuacion es correcta pero no destaca demasiado
+11,1,6,Una historia memorable que vale la pena volver a ver
+11,47,6,El resultado final es interesante pero mejorable
+11,79,8,Los personajes estan muy bien desarrollados
+11,64,7,Una historia original y muy interesante
+11,5,4,La pelicula tiene potencial pero no termina de convencer
+11,13,8,Una produccion sobresaliente y muy entretenida
+11,91,9,Muy buena fotografia y excelente montaje
+11,76,10,La produccion es buena aunque la historia pierde ritmo
+11,102,10,Gran guion y una produccion de alta calidad
+11,4,10,Una produccion que mantiene el interes
+11,66,10,El resultado final es interesante pero mejorable
+11,74,8,Algunas partes funcionan muy bien y otras no
+11,32,4,La produccion es buena aunque la historia pierde ritmo
+11,46,8,La actuacion es correcta pero no destaca demasiado
+11,78,7,El resultado final es interesante pero mejorable
+11,47,6,El ritmo es irregular y algunas partes son lentas
+11,18,10,Hay buenas actuaciones pero el guion tiene problemas
+11,73,10,Una produccion que mantiene el interes
+11,42,8,La actuacion es correcta pero no destaca demasiado
+11,32,10,Grandes actuaciones y excelente desarrollo
+11,44,8,La historia es aceptable aunque esperaba mucho mas
+11,65,9,Una historia original y muy interesante
+11,68,10,Una produccion que mantiene el interes
+11,43,8,Excelente narrativa y grandes actuaciones
+11,1,7,Algunos momentos son excelentes y otros no tanto
+11,80,9,La produccion es correcta pero poco memorable
+11,81,5,Una historia memorable que vale la pena volver a ver
+11,67,9,Una experiencia muy entretenida y recomendable
+11,33,8,La produccion es correcta pero poco memorable
+11,31,9,El ritmo es irregular y algunas partes son lentas
+11,14,8,La produccion es buena aunque la historia pierde ritmo
+11,26,6,La produccion es buena aunque la historia pierde ritmo
+11,37,9,Tiene buenas escenas pero varios puntos debiles
+11,83,9,Hay buenas actuaciones pero el guion tiene problemas
+11,15,8,La produccion es buena aunque la historia pierde ritmo
+11,52,10,La ambientacion esta muy bien lograda
+11,39,8,Hay buenas actuaciones pero el guion tiene problemas
+11,84,9,Grandes actuaciones y excelente desarrollo
+11,77,8,Algunos momentos son excelentes y otros no tanto
+11,65,4,Hay buenas actuaciones pero el guion tiene problemas
+11,99,9,Una produccion que mantiene el interes
+11,79,10,Una produccion que mantiene el interes
+11,101,6,Grandes actuaciones y excelente desarrollo
+11,5,4,Una historia original y muy interesante
+11,56,4,Una produccion sobresaliente y muy entretenida
+11,95,6,Tiene momentos memorables y otros bastante flojos
+11,85,10,La produccion es correcta pero poco memorable
+11,34,8,Buena idea aunque la ejecucion pudo ser mejor
+11,41,10,Tiene momentos memorables y otros bastante flojos
+11,24,9,Algunas partes funcionan muy bien y otras no
+11,18,9,La historia es aceptable aunque esperaba mucho mas
+11,75,5,Excelente historia y muy bien construida
+11,54,10,Algunos momentos son excelentes y otros no tanto
+11,31,10,Excelente direccion y fotografia
+11,45,4,La pelicula tiene potencial pero no termina de convencer
+11,92,7,Una historia memorable que vale la pena volver a ver
+11,62,9,Una historia original y muy interesante
+11,35,9,Tiene momentos memorables y otros bastante flojos
+11,78,9,Una historia memorable que vale la pena volver a ver
+11,66,10,Hay buenas actuaciones pero el guion tiene problemas
+11,42,7,Excelente direccion y fotografia
+11,72,7,Buena idea aunque la ejecucion pudo ser mejor
+11,74,7,La idea es buena aunque la ejecucion es irregular
+11,38,9,Tiene momentos memorables y otros bastante flojos
+11,87,10,La produccion es buena aunque la historia pierde ritmo
+11,8,8,Tiene buenas escenas pero varios puntos debiles
+11,94,6,Una historia original y muy interesante
+11,51,8,Tiene buenas escenas pero varios puntos debiles
+11,17,9,La pelicula tiene potencial pero no termina de convencer
+11,16,5,El resultado final es interesante pero mejorable
+12,35,7,El desarrollo de personajes es excelente
+12,84,7,La produccion es buena aunque la historia pierde ritmo
+12,10,10,La produccion es correcta pero poco memorable
+12,55,7,El desarrollo de personajes pudo ser mejor
+12,79,9,Excelente direccion y fotografia
+12,97,9,La produccion es buena aunque la historia pierde ritmo
+12,34,6,Algunas partes funcionan muy bien y otras no
+12,33,10,La idea es buena aunque la ejecucion es irregular
+12,27,9,Grandes actuaciones y excelente desarrollo
+12,48,9,Una obra muy bien realizada de principio a fin
+12,25,6,La historia es interesante pero tiene varios problemas
+12,92,7,La actuacion es correcta pero no destaca demasiado
+12,57,8,Algunas partes son entretenidas y otras bastante flojas
+12,36,7,Es entretenida pero tiene varios altibajos
+12,22,9,La produccion es correcta pero poco memorable
+12,81,10,Una produccion que mantiene el interes
+12,39,9,Una experiencia muy entretenida y recomendable
+12,75,7,Algunas partes funcionan muy bien y otras no
+12,76,8,Algunas partes funcionan muy bien y otras no
+12,53,9,La produccion es buena aunque la historia pierde ritmo
+12,93,8,Excelente direccion y fotografia
+12,29,5,Tiene momentos memorables y otros bastante flojos
+12,99,4,La actuacion es correcta pero no destaca demasiado
+12,91,7,Una produccion sobresaliente y muy entretenida
+12,31,9,Buena idea aunque la ejecucion pudo ser mejor
+12,28,7,Algunas partes son entretenidas y otras bastante flojas
+12,63,6,Una experiencia muy entretenida y recomendable
+12,61,8,Muy buena fotografia y excelente montaje
+12,35,4,Los personajes estan muy bien desarrollados
+12,20,10,La ambientacion esta muy bien lograda
+12,90,6,Excelente direccion y fotografia
+12,42,8,Excelente narrativa y grandes actuaciones
+12,85,4,La historia es interesante pero tiene varios problemas
+12,25,8,La produccion es buena aunque la historia pierde ritmo
+12,30,5,Una obra muy bien realizada de principio a fin
+12,21,9,Tiene buenas escenas pero varios puntos debiles
+12,97,8,Una historia original y muy interesante
+12,27,7,Muy buena fotografia y excelente montaje
+12,56,8,La actuacion es correcta pero no destaca demasiado
+12,54,8,El ritmo es irregular y algunas partes son lentas
+12,36,10,La idea es buena aunque la ejecucion es irregular
+12,50,8,Una historia original y muy interesante
+12,84,10,Algunas partes funcionan muy bien y otras no
+12,72,8,Grandes actuaciones y excelente desarrollo
+12,67,9,Tiene momentos memorables y otros bastante flojos
+12,37,9,La produccion es correcta pero poco memorable
+12,41,10,Una historia memorable que vale la pena volver a ver
+12,59,8,Algunas partes funcionan muy bien y otras no
+12,88,10,Una experiencia muy entretenida y recomendable
+12,49,9,La produccion es correcta pero poco memorable
+12,52,7,Algunos momentos son excelentes y otros no tanto
+12,32,5,Muy buena fotografia y excelente montaje
+12,70,8,Algunos momentos son excelentes y otros no tanto
+12,82,5,Grandes actuaciones y excelente desarrollo
+12,80,9,Excelente historia y muy bien construida
+12,15,5,Hay buenas actuaciones pero el guion tiene problemas
+12,45,8,Algunas partes funcionan muy bien y otras no
+12,102,7,La idea es buena aunque la ejecucion es irregular
+12,63,7,Excelente historia y muy bien construida
+12,20,10,Buena idea aunque la ejecucion pudo ser mejor
+12,12,9,Tiene momentos memorables y otros bastante flojos
+12,23,8,Una historia memorable que vale la pena volver a ver
+12,60,7,Algunos momentos son excelentes y otros no tanto
+12,61,7,Es entretenida pero tiene varios altibajos
+12,94,9,La historia es aceptable aunque esperaba mucho mas
+12,76,4,Una produccion sobresaliente y muy entretenida
+12,38,9,La produccion es correcta pero poco memorable
+12,4,10,La pelicula tiene potencial pero no termina de convencer
+12,68,9,La ambientacion esta muy bien lograda
+12,57,8,Una experiencia muy entretenida y recomendable
+12,95,6,La ambientacion esta muy bien lograda
+12,74,10,Excelente direccion y fotografia
+12,70,8,La historia es interesante pero tiene varios problemas
+12,98,8,Los personajes estan muy bien desarrollados
+12,21,4,Los personajes estan muy bien desarrollados
+12,47,9,El desarrollo de personajes es excelente
+12,37,6,Grandes actuaciones y excelente desarrollo
+12,91,10,La ambientacion esta muy bien lograda
+12,89,6,Una historia memorable que vale la pena volver a ver
+12,11,5,La produccion es correcta pero poco memorable
+12,80,4,Tiene buenas escenas pero varios puntos debiles
+12,68,8,La idea es buena aunque la ejecucion es irregular
+12,93,6,El desarrollo de personajes es excelente
+12,90,9,Algunas partes funcionan muy bien y otras no
+12,19,10,Algunos momentos son excelentes y otros no tanto
+12,38,8,Algunas partes funcionan muy bien y otras no
+12,4,10,Una produccion sobresaliente y muy entretenida
+12,55,4,Excelente direccion y fotografia
+12,60,8,Algunos momentos son excelentes y otros no tanto
+12,33,5,Una obra muy bien realizada de principio a fin
+12,53,10,Tiene buenas escenas pero varios puntos debiles
+12,58,10,Algunos momentos son excelentes y otros no tanto
+12,69,8,Los personajes estan muy bien desarrollados
+12,94,5,Buena idea aunque la ejecucion pudo ser mejor
+12,3,7,El desarrollo de personajes es excelente
+12,52,9,Grandes actuaciones y excelente desarrollo
+12,10,9,Excelente narrativa y grandes actuaciones
+12,81,10,Una historia original y muy interesante
+12,54,8,Algunas partes funcionan muy bien y otras no
+12,28,6,La idea es buena aunque la ejecucion es irregular
+12,101,9,El resultado final es interesante pero mejorable
+12,69,5,Una experiencia muy entretenida y recomendable
+12,42,7,Una experiencia muy entretenida y recomendable
+12,49,9,Excelente historia y muy bien construida
+12,29,9,Algunos momentos son excelentes y otros no tanto
+12,96,6,La historia es interesante pero tiene varios problemas
+12,99,8,Excelente narrativa y grandes actuaciones
+12,59,7,Algunos momentos son excelentes y otros no tanto
+12,9,6,El desarrollo de personajes es excelente
+12,98,8,La ambientacion esta muy bien lograda
+12,34,4,La idea es buena aunque la ejecucion es irregular
+12,102,6,Hay buenas actuaciones pero el guion tiene problemas
+12,19,9,Una experiencia muy entretenida y recomendable
+12,86,7,Es entretenida pero tiene varios altibajos
+12,88,10,Algunas partes son entretenidas y otras bastante flojas
+12,51,8,Tiene momentos memorables y otros bastante flojos
+12,22,8,Una produccion sobresaliente y muy entretenida
+12,58,7,Algunos momentos son excelentes y otros no tanto
+12,7,8,Una historia original y muy interesante
+12,12,8,La historia es aceptable aunque esperaba mucho mas
+13,22,9,Una historia original y muy interesante
+13,81,9,Excelente narrativa y grandes actuaciones
+13,39,9,Una historia original y muy interesante
+13,21,9,Excelente narrativa y grandes actuaciones
+13,64,9,Excelente direccion y fotografia
+13,68,9,Excelente direccion y fotografia
+13,13,10,Los personajes estan muy bien desarrollados
+13,22,8,Los personajes estan muy bien desarrollados
+13,46,10,La ambientacion esta muy bien lograda
+13,67,10,Excelente narrativa y grandes actuaciones
+13,66,10,Muy buena fotografia y excelente montaje
+13,32,10,Una historia original y muy interesante
+13,44,9,Una obra muy bien realizada de principio a fin
+13,21,9,Una historia memorable que vale la pena volver a ver
+13,93,8,Una produccion sobresaliente y muy entretenida
+13,90,9,Grandes actuaciones y excelente desarrollo
+13,74,10,Una historia original y muy interesante
+13,42,10,Excelente historia y muy bien construida
+13,28,9,Una produccion sobresaliente y muy entretenida
+13,56,10,Una historia memorable que vale la pena volver a ver
+13,41,9,Una produccion sobresaliente y muy entretenida
+13,100,9,La ambientacion esta muy bien lograda
+13,81,9,Una produccion sobresaliente y muy entretenida
+13,73,10,Una historia original y muy interesante
+13,97,10,Excelente narrativa y grandes actuaciones
+13,72,9,Muy buena fotografia y excelente montaje
+13,1,9,Una produccion sobresaliente y muy entretenida
+13,7,10,Excelente direccion y fotografia
+13,69,9,Excelente historia y muy bien construida
+13,35,9,Una obra muy bien realizada de principio a fin
+13,63,9,Una experiencia muy entretenida y recomendable
+13,9,10,Excelente historia y muy bien construida
+13,94,9,Una experiencia muy entretenida y recomendable
+13,65,10,Grandes actuaciones y excelente desarrollo
+13,35,8,Una historia original y muy interesante
+13,88,9,Una historia memorable que vale la pena volver a ver
+13,17,9,Una produccion que mantiene el interes
+13,83,9,Grandes actuaciones y excelente desarrollo
+13,13,10,Una produccion sobresaliente y muy entretenida
+13,99,10,La ambientacion esta muy bien lograda
+13,53,8,Excelente historia y muy bien construida
+13,58,10,Gran guion y una produccion de alta calidad
+13,80,9,Una obra muy bien realizada de principio a fin
+13,66,9,La ambientacion esta muy bien lograda
+13,90,10,Excelente direccion y fotografia
+13,96,10,La ambientacion esta muy bien lograda
+13,23,9,Una produccion sobresaliente y muy entretenida
+13,92,10,El desarrollo de personajes es excelente
+13,27,9,Muy buena fotografia y excelente montaje
+13,83,10,Una historia original y muy interesante
+14,83,10,La ambientacion esta muy bien lograda
+14,86,9,Excelente historia y muy bien construida
+14,82,9,Excelente direccion y fotografia
+14,62,10,Excelente narrativa y grandes actuaciones
+14,66,10,Muy buena fotografia y excelente montaje
+14,101,8,Los personajes estan muy bien desarrollados
+14,64,9,Gran guion y una produccion de alta calidad
+14,43,9,Excelente historia y muy bien construida
+14,60,10,Excelente historia y muy bien construida
+14,8,10,El desarrollo de personajes es excelente
+14,4,9,La ambientacion esta muy bien lograda
+14,38,8,El desarrollo de personajes es excelente
+14,36,10,Una historia original y muy interesante
+14,19,9,Excelente historia y muy bien construida
+14,55,8,El desarrollo de personajes es excelente
+14,68,9,Una produccion que mantiene el interes
+14,54,8,El desarrollo de personajes es excelente
+14,22,9,Una historia memorable que vale la pena volver a ver
+14,98,10,Excelente direccion y fotografia
+14,20,10,Excelente historia y muy bien construida
+14,50,9,Una produccion que mantiene el interes
+14,30,10,Una historia memorable que vale la pena volver a ver
+14,61,9,Excelente narrativa y grandes actuaciones
+14,96,8,Una historia memorable que vale la pena volver a ver
+14,31,9,La ambientacion esta muy bien lograda
+15,1,9,Una historia memorable que vale la pena volver a ver
+15,29,9,Una historia original y muy interesante
+15,101,8,Una historia original y muy interesante
+15,37,10,Una produccion sobresaliente y muy entretenida
+15,99,10,Excelente narrativa y grandes actuaciones
+15,73,10,Una produccion sobresaliente y muy entretenida
+15,55,10,Una historia original y muy interesante
+15,19,10,El desarrollo de personajes es excelente
+15,87,10,Una produccion sobresaliente y muy entretenida
+15,73,10,Los personajes estan muy bien desarrollados
+15,16,10,Muy buena fotografia y excelente montaje
+15,9,8,Una historia memorable que vale la pena volver a ver
+15,43,10,Excelente direccion y fotografia
+15,48,10,Una obra muy bien realizada de principio a fin
+15,13,9,Una produccion sobresaliente y muy entretenida
+15,77,10,Excelente narrativa y grandes actuaciones
+15,72,9,El desarrollo de personajes es excelente
+15,24,10,Una produccion que mantiene el interes
+15,60,8,El desarrollo de personajes es excelente
+15,19,8,Una obra muy bien realizada de principio a fin
+15,51,10,La ambientacion esta muy bien lograda
+15,3,8,Una historia memorable que vale la pena volver a ver
+15,57,10,Los personajes estan muy bien desarrollados
+15,8,10,Gran guion y una produccion de alta calidad
+15,55,9,Los personajes estan muy bien desarrollados
+15,48,10,Excelente narrativa y grandes actuaciones
+15,18,10,Una obra muy bien realizada de principio a fin
+15,14,9,Una produccion que mantiene el interes
+15,15,10,Excelente direccion y fotografia
+15,63,10,Gran guion y una produccion de alta calidad
+15,46,9,Una historia memorable que vale la pena volver a ver
+15,17,9,Grandes actuaciones y excelente desarrollo
+15,60,9,Excelente historia y muy bien construida
+15,58,10,Excelente historia y muy bien construida
+15,63,9,La ambientacion esta muy bien lograda
+15,59,10,Excelente historia y muy bien construida
+15,88,8,Excelente direccion y fotografia
+15,99,10,Una experiencia muy entretenida y recomendable
+15,51,10,Excelente narrativa y grandes actuaciones
+15,92,10,Excelente narrativa y grandes actuaciones
+15,65,9,Una historia original y muy interesante
+15,95,9,Los personajes estan muy bien desarrollados
+15,100,9,Una produccion que mantiene el interes
+15,13,10,Una historia original y muy interesante
+15,65,10,Grandes actuaciones y excelente desarrollo
+15,7,9,Gran guion y una produccion de alta calidad
+15,21,10,Excelente narrativa y grandes actuaciones
+15,68,10,Grandes actuaciones y excelente desarrollo
+15,95,10,Una experiencia muy entretenida y recomendable
+15,14,10,Gran guion y una produccion de alta calidad
+15,101,9,Una obra muy bien realizada de principio a fin
+15,77,9,El desarrollo de personajes es excelente
+15,18,10,Excelente direccion y fotografia
+15,62,8,Una produccion sobresaliente y muy entretenida
+15,67,9,La ambientacion esta muy bien lograda
+15,79,10,Excelente narrativa y grandes actuaciones
+15,59,8,Muy buena fotografia y excelente montaje
+15,100,10,Grandes actuaciones y excelente desarrollo
+15,43,9,Los personajes estan muy bien desarrollados
+15,74,10,Una produccion sobresaliente y muy entretenida
+15,56,9,Muy buena fotografia y excelente montaje
+15,11,9,Muy buena fotografia y excelente montaje
+15,36,9,Una produccion sobresaliente y muy entretenida
+15,16,10,Excelente narrativa y grandes actuaciones
+15,11,10,Una produccion que mantiene el interes
+16,91,5,La actuacion es correcta pero no destaca demasiado
+16,43,10,El desarrollo de personajes pudo ser mejor
+16,78,8,Gran guion y una produccion de alta calidad
+16,22,7,Buena idea aunque la ejecucion pudo ser mejor
+16,98,5,Una historia memorable que vale la pena volver a ver
+16,92,6,Hay buenas actuaciones pero el guion tiene problemas
+16,1,7,El desarrollo de personajes es excelente
+16,39,8,Grandes actuaciones y excelente desarrollo
+16,39,10,Grandes actuaciones y excelente desarrollo
+16,49,6,Es entretenida pero tiene varios altibajos
+16,3,7,El desarrollo de personajes pudo ser mejor
+16,95,8,Tiene momentos memorables y otros bastante flojos
+16,79,8,Una produccion sobresaliente y muy entretenida
+16,12,9,Una produccion sobresaliente y muy entretenida
+16,30,9,El ritmo es irregular y algunas partes son lentas
+16,101,6,Hay buenas actuaciones pero el guion tiene problemas
+16,67,10,Algunas partes son entretenidas y otras bastante flojas
+16,90,9,Hay buenas actuaciones pero el guion tiene problemas
+16,18,10,La ambientacion esta muy bien lograda
+16,50,8,Los personajes estan muy bien desarrollados
+16,13,8,Algunos momentos son excelentes y otros no tanto
+16,83,5,El ritmo es irregular y algunas partes son lentas
+16,21,7,Excelente narrativa y grandes actuaciones
+16,29,10,Algunos momentos son excelentes y otros no tanto
+16,59,8,Muy buena fotografia y excelente montaje
+16,100,7,Grandes actuaciones y excelente desarrollo
+16,82,4,El resultado final es interesante pero mejorable
+16,66,7,Una produccion sobresaliente y muy entretenida
+16,74,8,La ambientacion esta muy bien lograda
+16,89,5,Es entretenida pero tiene varios altibajos
+16,67,6,La actuacion es correcta pero no destaca demasiado
+16,46,9,La idea es buena aunque la ejecucion es irregular
+16,27,10,Una produccion que mantiene el interes
+16,47,6,Una produccion sobresaliente y muy entretenida
+16,60,9,Es entretenida pero tiene varios altibajos
+16,87,7,Gran guion y una produccion de alta calidad
+16,19,4,La actuacion es correcta pero no destaca demasiado
+16,5,9,Algunas partes son entretenidas y otras bastante flojas
+16,40,9,Excelente historia y muy bien construida
+16,58,9,La produccion es buena aunque la historia pierde ritmo
+16,1,10,Una obra muy bien realizada de principio a fin
+16,92,8,Muy buena fotografia y excelente montaje
+16,75,7,Excelente historia y muy bien construida
+16,38,7,Gran guion y una produccion de alta calidad
+16,55,4,La produccion es correcta pero poco memorable
+16,33,7,El resultado final es interesante pero mejorable
+16,94,5,Una experiencia muy entretenida y recomendable
+16,88,8,Una obra muy bien realizada de principio a fin
+16,71,9,Algunas partes funcionan muy bien y otras no
+16,15,7,Excelente historia y muy bien construida
+16,61,7,La produccion es correcta pero poco memorable
+16,97,9,La actuacion es correcta pero no destaca demasiado
+16,23,7,Excelente direccion y fotografia
+16,31,5,Algunas partes funcionan muy bien y otras no
+16,70,10,Una produccion que mantiene el interes
+16,79,9,La historia es aceptable aunque esperaba mucho mas
+16,30,5,Algunas partes son entretenidas y otras bastante flojas
+16,86,9,Una produccion sobresaliente y muy entretenida
+16,14,5,La pelicula tiene potencial pero no termina de convencer
+16,90,4,La historia es aceptable aunque esperaba mucho mas
+16,62,6,Algunas partes son entretenidas y otras bastante flojas
+16,3,8,La idea es buena aunque la ejecucion es irregular
+16,70,10,Tiene momentos memorables y otros bastante flojos
+16,15,9,El resultado final es interesante pero mejorable
+16,12,9,Una historia memorable que vale la pena volver a ver
+16,52,7,Una obra muy bien realizada de principio a fin
+16,28,8,La historia es interesante pero tiene varios problemas
+16,54,5,Una historia memorable que vale la pena volver a ver
+16,50,9,La historia es aceptable aunque esperaba mucho mas
+16,96,9,La historia es aceptable aunque esperaba mucho mas
+16,45,7,Algunos momentos son excelentes y otros no tanto
+16,78,6,El desarrollo de personajes pudo ser mejor
+16,74,7,La historia es aceptable aunque esperaba mucho mas
+16,20,9,Una obra muy bien realizada de principio a fin
+16,44,10,Muy buena fotografia y excelente montaje
+16,60,8,Excelente narrativa y grandes actuaciones
+16,57,10,Una experiencia muy entretenida y recomendable
+16,85,6,Hay buenas actuaciones pero el guion tiene problemas
+16,10,7,Gran guion y una produccion de alta calidad
+16,72,8,La ambientacion esta muy bien lograda
+16,87,9,Excelente direccion y fotografia
+16,11,9,La actuacion es correcta pero no destaca demasiado
+16,40,5,La ambientacion esta muy bien lograda
+16,9,6,Una produccion sobresaliente y muy entretenida
+16,24,7,La produccion es correcta pero poco memorable
+16,64,5,Tiene buenas escenas pero varios puntos debiles
+16,37,4,Excelente narrativa y grandes actuaciones
+16,91,5,Algunas partes funcionan muy bien y otras no
+16,31,4,Es entretenida pero tiene varios altibajos
+16,16,6,Una obra muy bien realizada de principio a fin
+16,18,8,Gran guion y una produccion de alta calidad
+16,47,5,Grandes actuaciones y excelente desarrollo
+16,86,9,Tiene buenas escenas pero varios puntos debiles
+16,73,6,Excelente narrativa y grandes actuaciones
+16,68,9,Una produccion que mantiene el interes
+16,17,7,Una obra muy bien realizada de principio a fin
+16,27,5,Grandes actuaciones y excelente desarrollo
+16,81,4,Algunas partes son entretenidas y otras bastante flojas
+16,11,5,Una experiencia muy entretenida y recomendable
+16,26,10,La historia es interesante pero tiene varios problemas
+16,42,10,Algunas partes son entretenidas y otras bastante flojas
+16,43,9,El ritmo es irregular y algunas partes son lentas
+16,35,10,La idea es buena aunque la ejecucion es irregular
+16,72,9,La historia es interesante pero tiene varios problemas
+16,64,7,La historia es aceptable aunque esperaba mucho mas
+16,49,6,Es entretenida pero tiene varios altibajos
+16,69,8,Excelente narrativa y grandes actuaciones
+16,99,10,Tiene momentos memorables y otros bastante flojos
+16,83,10,Excelente narrativa y grandes actuaciones
+16,56,7,El resultado final es interesante pero mejorable
+17,12,10,Una historia memorable que vale la pena volver a ver
+17,36,9,Una experiencia muy entretenida y recomendable
+17,92,9,Grandes actuaciones y excelente desarrollo
+17,75,9,Excelente direccion y fotografia
+17,8,9,Gran guion y una produccion de alta calidad
+17,34,8,La ambientacion esta muy bien lograda
+17,38,9,Gran guion y una produccion de alta calidad
+17,48,9,Gran guion y una produccion de alta calidad
+17,50,10,Una obra muy bien realizada de principio a fin
+17,59,9,Excelente narrativa y grandes actuaciones
+17,29,10,Excelente narrativa y grandes actuaciones
+17,95,9,Los personajes estan muy bien desarrollados
+17,101,10,Una historia original y muy interesante
+17,67,9,El desarrollo de personajes es excelente
+17,27,10,Una obra muy bien realizada de principio a fin
+17,56,9,Excelente narrativa y grandes actuaciones
+17,24,10,Grandes actuaciones y excelente desarrollo
+17,58,10,Muy buena fotografia y excelente montaje
+17,95,10,Excelente direccion y fotografia
+17,47,9,Una obra muy bien realizada de principio a fin
+17,94,9,Una produccion que mantiene el interes
+17,57,10,Una historia original y muy interesante
+17,97,8,Una historia original y muy interesante
+17,29,10,Una obra muy bien realizada de principio a fin
+17,62,10,La ambientacion esta muy bien lograda
+17,46,9,Una historia memorable que vale la pena volver a ver
+17,27,10,Una produccion sobresaliente y muy entretenida
+17,38,10,Una experiencia muy entretenida y recomendable
+17,23,8,Gran guion y una produccion de alta calidad
+17,16,8,Una produccion sobresaliente y muy entretenida
+17,1,9,Grandes actuaciones y excelente desarrollo
+17,16,10,Grandes actuaciones y excelente desarrollo
+17,3,9,Una historia original y muy interesante
+17,17,9,La ambientacion esta muy bien lograda
+17,32,9,Muy buena fotografia y excelente montaje
+17,87,10,Excelente direccion y fotografia
+17,48,9,Muy buena fotografia y excelente montaje
+17,54,8,Excelente direccion y fotografia
+17,68,9,Una produccion sobresaliente y muy entretenida
+17,91,10,Los personajes estan muy bien desarrollados
+17,85,10,Excelente direccion y fotografia
+17,61,9,Excelente direccion y fotografia
+17,61,8,Una produccion sobresaliente y muy entretenida
+17,70,9,Los personajes estan muy bien desarrollados
+17,5,9,Gran guion y una produccion de alta calidad
+18,56,10,La ambientacion esta muy bien lograda
+18,77,9,Grandes actuaciones y excelente desarrollo
+18,44,9,Una obra muy bien realizada de principio a fin
+18,33,10,Una experiencia muy entretenida y recomendable
+18,56,10,Excelente historia y muy bien construida
+18,17,9,Una historia original y muy interesante
+18,93,10,Muy buena fotografia y excelente montaje
+18,4,10,El desarrollo de personajes es excelente
+18,10,10,Excelente narrativa y grandes actuaciones
+18,21,9,Una experiencia muy entretenida y recomendable
+18,55,10,Una produccion sobresaliente y muy entretenida
+18,44,8,Excelente direccion y fotografia
+18,91,9,La ambientacion esta muy bien lograda
+18,62,9,Una historia original y muy interesante
+18,65,10,La ambientacion esta muy bien lograda
+18,86,9,Muy buena fotografia y excelente montaje
+18,30,9,La ambientacion esta muy bien lograda
+18,93,9,Una produccion sobresaliente y muy entretenida
+18,61,8,Excelente narrativa y grandes actuaciones
+18,40,9,Una produccion que mantiene el interes
+18,22,10,La ambientacion esta muy bien lograda
+18,78,9,Una produccion sobresaliente y muy entretenida
+18,1,9,Grandes actuaciones y excelente desarrollo
+18,26,9,Muy buena fotografia y excelente montaje
+18,42,9,Muy buena fotografia y excelente montaje
+18,64,8,Grandes actuaciones y excelente desarrollo
+18,70,9,Una experiencia muy entretenida y recomendable
+18,25,10,Excelente direccion y fotografia
+18,33,10,Una obra muy bien realizada de principio a fin
+18,69,9,Muy buena fotografia y excelente montaje
+18,71,9,Gran guion y una produccion de alta calidad
+18,31,9,Excelente narrativa y grandes actuaciones
+18,8,10,Excelente direccion y fotografia
+18,32,9,Una produccion sobresaliente y muy entretenida
+18,81,9,Una historia original y muy interesante
+18,73,10,Una obra muy bien realizada de principio a fin
+18,88,10,Excelente direccion y fotografia
+18,35,10,El desarrollo de personajes es excelente
+18,45,10,Una experiencia muy entretenida y recomendable
+18,76,8,El desarrollo de personajes es excelente
+18,77,10,Muy buena fotografia y excelente montaje
+18,82,9,Una historia original y muy interesante
+18,102,8,Una experiencia muy entretenida y recomendable
+18,28,10,Excelente narrativa y grandes actuaciones
+18,80,9,El desarrollo de personajes es excelente
+18,74,10,Excelente narrativa y grandes actuaciones
+18,90,10,La ambientacion esta muy bien lograda
+18,96,9,Una historia original y muy interesante
+18,52,10,Muy buena fotografia y excelente montaje
+18,38,10,Una experiencia muy entretenida y recomendable
+18,82,9,Una produccion que mantiene el interes
+18,20,8,Una obra muy bien realizada de principio a fin
+18,12,9,Grandes actuaciones y excelente desarrollo
+18,41,10,Grandes actuaciones y excelente desarrollo
+18,84,10,Gran guion y una produccion de alta calidad
+18,23,9,Una produccion sobresaliente y muy entretenida
+18,97,10,Una historia original y muy interesante
+18,1,9,Excelente narrativa y grandes actuaciones
+18,7,9,Una obra muy bien realizada de principio a fin
+18,4,10,Una historia original y muy interesante
+18,66,9,Excelente narrativa y grandes actuaciones
+18,62,9,Una produccion sobresaliente y muy entretenida
+18,46,10,Muy buena fotografia y excelente montaje
+18,50,10,Gran guion y una produccion de alta calidad
+18,7,10,La ambientacion esta muy bien lograda
+18,83,10,Una produccion sobresaliente y muy entretenida
+18,66,9,Una experiencia muy entretenida y recomendable
+18,57,8,Grandes actuaciones y excelente desarrollo
+18,94,10,La ambientacion esta muy bien lograda
+18,84,9,Una historia memorable que vale la pena volver a ver
+18,55,9,Una historia original y muy interesante
+18,89,10,Excelente narrativa y grandes actuaciones
+18,5,10,Muy buena fotografia y excelente montaje
+18,63,9,La ambientacion esta muy bien lograda
+18,49,10,Una produccion que mantiene el interes
+18,47,10,Excelente historia y muy bien construida
+18,11,10,Una produccion que mantiene el interes
+18,25,9,Una produccion que mantiene el interes
+18,81,9,Excelente direccion y fotografia
+18,53,8,Excelente historia y muy bien construida
+19,81,7,La historia es interesante pero tiene varios problemas
+19,67,8,El desarrollo de personajes pudo ser mejor
+19,25,7,La pelicula tiene potencial pero no termina de convencer
+19,48,5,Buena idea aunque la ejecucion pudo ser mejor
+19,47,4,Tiene buenas escenas pero varios puntos debiles
+19,77,6,Algunas partes son entretenidas y otras bastante flojas
+19,75,8,Tiene buenas escenas pero varios puntos debiles
+19,88,7,La historia es interesante pero tiene varios problemas
+19,46,7,La historia es aceptable aunque esperaba mucho mas
+19,24,4,El ritmo es irregular y algunas partes son lentas
+19,93,4,La historia es aceptable aunque esperaba mucho mas
+19,13,6,La historia es interesante pero tiene varios problemas
+19,11,6,La pelicula tiene potencial pero no termina de convencer
+19,45,6,La historia es aceptable aunque esperaba mucho mas
+19,65,7,Tiene buenas escenas pero varios puntos debiles
+19,59,5,Buena idea aunque la ejecucion pudo ser mejor
+19,78,7,La actuacion es correcta pero no destaca demasiado
+19,14,6,La actuacion es correcta pero no destaca demasiado
+19,3,6,Algunas partes son entretenidas y otras bastante flojas
+19,1,6,La historia es aceptable aunque esperaba mucho mas
+19,56,6,La pelicula tiene potencial pero no termina de convencer
+19,99,8,La historia es aceptable aunque esperaba mucho mas
+19,28,6,La produccion es correcta pero poco memorable
+19,76,8,Tiene buenas escenas pero varios puntos debiles
+19,11,7,El desarrollo de personajes pudo ser mejor
+19,43,6,Buena idea aunque la ejecucion pudo ser mejor
+19,102,7,La pelicula tiene potencial pero no termina de convencer
+19,69,5,Tiene buenas escenas pero varios puntos debiles
+19,40,8,Tiene buenas escenas pero varios puntos debiles
+19,12,6,La historia es aceptable aunque esperaba mucho mas
+20,64,10,Grandes actuaciones y excelente desarrollo
+20,89,9,Una historia memorable que vale la pena volver a ver
+20,5,9,Una obra muy bien realizada de principio a fin
+20,37,9,Una produccion que mantiene el interes
+20,19,9,El desarrollo de personajes es excelente
+20,102,10,Una historia memorable que vale la pena volver a ver
+20,85,9,Una historia original y muy interesante
+20,25,10,Una experiencia muy entretenida y recomendable
+20,26,9,Gran guion y una produccion de alta calidad
+20,60,9,Los personajes estan muy bien desarrollados
+20,10,10,Una produccion que mantiene el interes
+20,85,8,Excelente direccion y fotografia
+20,33,9,Una historia memorable que vale la pena volver a ver
+20,75,8,Grandes actuaciones y excelente desarrollo
+20,18,8,El desarrollo de personajes es excelente
+20,82,9,Gran guion y una produccion de alta calidad
+20,16,8,Gran guion y una produccion de alta calidad
+20,55,10,Una produccion que mantiene el interes
+20,96,10,Una produccion que mantiene el interes
+20,15,10,Una experiencia muy entretenida y recomendable
+20,86,9,Excelente narrativa y grandes actuaciones
+20,80,9,Los personajes estan muy bien desarrollados
+20,89,8,Excelente historia y muy bien construida
+20,51,10,Una produccion que mantiene el interes
+20,78,10,Una historia original y muy interesante
+20,91,9,El desarrollo de personajes es excelente
+20,53,9,Una experiencia muy entretenida y recomendable
+20,75,8,Una experiencia muy entretenida y recomendable
+20,30,10,La ambientacion esta muy bien lograda
+20,39,9,Excelente narrativa y grandes actuaciones
+20,70,9,Excelente narrativa y grandes actuaciones
+20,51,8,Una obra muy bien realizada de principio a fin
+20,54,9,El desarrollo de personajes es excelente
+20,49,8,Una obra muy bien realizada de principio a fin
+20,18,10,Una produccion sobresaliente y muy entretenida
+20,34,8,Una historia original y muy interesante
+20,39,8,La ambientacion esta muy bien lograda

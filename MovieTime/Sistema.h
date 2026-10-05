@@ -36,8 +36,8 @@ private:
 
     Fondo objFondo;
 
-    static const int MIN_RATING_TENDENCIA = 8;   // rating >= 8/10
-    static const int MIN_POPULARIDAD_TENDENCIA = 5;
+    const double MIN_RATING_TENDENCIA = 8;   // rating >= 8/10
+    const double MIN_POPULARIDAD_TENDENCIA = 100;
 
   
     void refrescarPantallaConFondo() {
